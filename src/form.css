@@ -1,0 +1,147 @@
+/*----------------------- FORMAT PAGE -----------------------*/
+
+div#entete {
+ width   : 100%;
+ margin  : 50 px;
+ text-align:center;
+ text-shadow: 0 0 40px #FEFEFE
+}
+
+div#corps {
+ width	: 100%;
+ height	: 500 px;
+ margin	: auto;
+ 
+ line-height: 5em; /* hauteur de ligne (identique) */
+ white-space: nowrap; /* interdiction de passer à la ligne */
+}
+
+div#pied {
+ width	: auto;
+ height	: auto;
+ color	: gray;
+ text-align	: center;
+}
+
+div#elem1 {
+  text-align:center;
+  float: left;
+  width: 33%;
+}
+
+div#elem2 { width: auto; }
+
+div#elem2_col1 {
+  text-align:center;
+  float: left;
+  width: 33%;
+}
+
+div#elem2_col2 {  
+  text-align:center;
+  width: auto;
+}
+
+
+div#elem75 {
+  float: left;
+  width: 75%;
+}
+
+
+/*-------------------INSCRIPTION---------------------*/
+div#form {
+  text-align:center;
+  width:auto;
+  line-height:1em; /* hauteur de ligne (identique) */
+}
+
+
+
+
+/*-------------------INFORMATIONS---------------------*/
+div#elem50_col1 {
+ float: left;
+ text-align:center;
+ width: 50%;
+}
+div#elem50_col2 {
+ text-align:center;
+ width: auto;
+}
+
+/*----------------------- MENU -----------------------*/
+div#menu {
+	margin	: auto;
+	width	: 250px;
+	border	: 1px solid green;
+}
+
+	
+.element_menu {
+	float:center;
+} 
+
+
+/*----------------------- MISE EN FORME -----------------------*/
+body {
+ font-family	: Tahoma, Geneva, Kalimati, sans-serif;
+ }
+
+body.first {
+ background-color	: rgb(32,32,32,0.95);
+ color	:white;
+}
+
+body.principal {
+ background-image	: url("img/bkg1.jpg");
+ background-attachment: fixed;
+ background-repeat:no-repeat;
+ background-size: 100%;
+}
+
+body.rechch {
+ background-image : url("img/joli_bg.png");
+ background-repeat:no-repeat;
+ background-size: cover;
+}
+
+h1 {
+ text-align:center;
+}
+
+h2 {
+ border-bottom:1px dashed gray;
+ height:75%;
+}
+
+a.bottom {
+ color: lightgray;
+ text-decoration: none
+}
+
+div.zoom {
+ height	: auto;
+ margin	: auto;
+}
+div.zoom p {
+ text-align:center;
+}
+
+div.zoom img {
+ width	: 300px;
+ height	: 225px;
+}
+div.zoom img:hover {
+ width	: 400px;
+ height	: 300px;
+}
+div.zoom p:hover {
+ font-weight:bold;
+}
+
+div#param {
+ background-color: rgb(200,230,230,0.5);
+ text-align:right;
+}
+
