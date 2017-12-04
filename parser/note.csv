@@ -1,0 +1,989 @@
+id_note,type,note,id_enzyme
+1,transfered,"Testosterone 17-beta-dehydrogenase. Now EC 1.1.1.239, 3-alpha(17-beta)-hydroxysteroid dehydrogenase (NAD(+))",63
+2,transfered,"5,10-methylenetetrahydrofolate reductase. Now EC 1.5.1.20, methylenetetrahydrofolate reductase (NAD(P)H)",68
+3,transfered,D-glucuronolactone dehydrogenase. D-glucuronolactone dehydrogenase. Now included with EC 1.2.1.3 aldehyde dehydrogenase (NAD(+)),70
+4,deleted,D-aminopropanol dehydrogenase. reaction due to EC 1.1.1.4,74
+5,transfered,Dihydroxyisovalerate dehydrogenase (isomerizing). Now included with EC 1.1.1.86,89
+6,transfered,Now EC 1.3.1.28,109
+7,deleted,"L-idonate 2-dehydrogenase. The reaction described is covered by EC 1.1.1.264, L-idonate 5-dehydrogenase.",128
+8,transfered,Polyol dehydrogenase (NADP(+)). Now included with EC 1.1.1.21,139
+9,deleted,"Homoisocitrate dehydrogenase. The enzyme is identical to EC 1.1.1.87, homoisocitrate dehydrogenase",155
+10,transfered,"UDP-N-acetylmuramate dehydrogenase. Now EC 1.3.1.98, UDP-N-acetylmuramate dehydrogenase",158
+11,deleted,"Cholestanetetraol 26-dehydrogenase. The activity is part of EC 1.14.13.15, cholestanetriol 26-monooxygenase",161
+12,transfered,Now EC 1.5.1.20,171
+13,transfered,Mannonate dehydrogenase (NAD(P)(+)). Now included with EC 1.1.1.131,180
+14,transfered,"Fenchol dehydrogenase. Now included with EC 1.1.1.198, EC 1.1.1.227 and EC 1.1.1.228",182
+15,transfered,Xanthine dehydrogenase. The enzyme was incorrectly classified as acting on a CH-OH group,204
+16,transfered,Zeatin reductase. Now EC 1.3.1.69,242
+17,deleted,Revised and reinstated as EC 2.5.1.46,249
+18,transfered,Pteridine reductase. Now EC 1.5.1.33,253
+19,deleted,"Tropinone reductase I. This enzyme was already in the Enzyme List as EC 1.1.1.206, tropine dehydrogenase so EC 1.1.1.293 has been withdrawn at the public-review stage.",293
+20,transfered,UDP-glucuronic acid oxidase (UDP-4-keto-hexauronic acid decarboxylating),372
+21,transfered,Now EC 1.1.1.300,373
+22,transfered,UDP-N-acetyl-D-mannosamine dehydrogenase,374
+23,transfered,D-chiro-inositol 3-dehydrogenase,377
+24,transfered,Benzil reductase ((S)-benzoin forming),378
+25,transfered,L-idonate 5-dehydrogenase (NAD(+)),379
+26,transfered,D-galacturonate reductase,380
+27,transfered,Arabitol-phosphate dehydrogenase,381
+28,transfered,"Very-long-chain 3-oxoacyl-CoA reductase. Now EC 1.1.1.330, very-long-chain 3-oxoacyl-CoA reductase",384
+29,transfered,Geraniol dehydrogenase (NAD(+)),385
+30,transfered,"As the acceptor is now known, the enzyme has been transferred to EC 1.1.5.3, glycerol-3-phosphate dehydrogenase.",386
+31,transfered,Glycolate oxidase. Now included with EC 1.1.3.15,394
+32,transfered,Now EC 1.13.12.4,395
+33,transfered,Xanthine oxidase. The enzyme was incorrectly classified as acting on a CH-OH group,415
+34,transfered,"L-galactonolactone oxidase. L-galactonolactone oxidase. Now EC 1.3.3.12, L-galactonolactone oxidase. The enzyme had been incorrectly classified as acting upon a CH-OH donor rather than a CH-CH donor.",417
+35,deleted,"Cellobiose oxidase. Now included with EC 1.1.99.18, cellobiose dehydrogenase (acceptor)",418
+36,transfered,Columbamine oxidase. Now EC 1.21.3.2,419
+37,deleted,"Methanol oxidase. Cannot be distinguished from EC 1.1.3.13, alcohol oxidase",424
+38,transfered,(S)-stylopine synthase. Now EC 1.14.21.1,425
+39,transfered,S-cheilanthifoline synthase. Now EC 1.14.21.2,426
+40,transfered,Berbamunine synthase. Now EC 1.14.21.3,427
+41,transfered,Salutaridine synthase. Now EC 1.14.21.4,428
+42,transfered,(S)-canadine synthase. Now EC 1.14.21.5,429
+43,deleted,"Cellobiose dehydrogenase (quinone). Now known to be a proteolytic product of EC 1.1.99.18, cellobiose dehydrogenase (acceptor).",441
+44,transfered,"Alcohol dehydrogenase (azurin). Now EC 1.1.9.1, alcohol dehydrogenase (azurin) ",453
+45,transfered,"Glycerol-3-phosphate dehydrogenase. As the acceptor is now known, the enzyme has been transferred to EC 1.1.5.3, glycerol-3-phosphate dehydrogenase.",462
+46,transfered,"Alcohol dehydrogenase (acceptor). Now EC 1.1.2.7, methanol dehydrogenase (cytochrome c) and EC 1.1.2.8, alcohol dehydrogenase (cytochrome c)",465
+47,transfered,"Now included with EC 1.5.1.20, methylenetetrahydrofolate reductase (NAD(P)H).",472
+48,transfered,"Malate dehydrogenase (acceptor). malate dehydrogenase (acceptor). As the acceptor is now known, the enzyme has been transferred to EC 1.1.5.4, malate dehydrogenase (quinone).",473
+49,transfered,"Glucose dehydrogenase (pyrroloquinoline-quinone). The acceptor is now known to be ubiquinol so the entry has been reclassified as EC 1.1.5.2, quinoprotein glucose dehydrogenase",474
+50,transfered,Uracil dehydrogenase,476
+51,transfered,"Polyvinyl-alcohol dehydrogenase (acceptor). Now EC 1.1.2.6, polyvinyl alcohol dehydrogenase (cytochrome)",480
+52,transfered,"Quinate dehydrogenase (pyrroloquinoline-quinone). quinate dehydrogenase (pyrroloquinoline-quinone). Now EC 1.1.5.8, quinate dehydrogenase (quinone)",482
+53,transfered,"Glucose-6-phosphate dehydrogenase (coenzyme-F420). As the acceptor is now known, the enzyme has been transferred to EC 1.1.98.2, glucose-6-phosphate dehydrogenase (coenzyme-F420)",491
+54,transfered,"Formaldehyde dehydrogenase (glutathione). This enzyme was classified on the basis of an incorrect reaction. It has been replaced by two enzymes, EC 1.1.1.284, S-(hydroxymethyl)glutathione dehydrogenase and EC 4.4.1.22, S-(hydroxymethyl)glutathione synthase.",497
+55,deleted,Benzaldehyde dehydrogenase,502
+56,transfered,Now EC 1.1.1.205,510
+57,transfered,Now included with EC 1.1.1.131,530
+58,transfered,Now EC 1.1.1.203,531
+59,transfered,Now EC 1.1.1.204,533
+60,deleted,"3-alpha,7-alpha,12-alpha-trihydroxycholestan-26-al 26-oxidoreductase. The activity is part of EC 1.14.13.15, cholestanetriol 26-monooxygenase",536
+61,transfered,"4-carboxy-2-hydroxymuconate-6-semialdehyde dehydrogenase. Now EC 1.1.1.312, 2-hydroxy-4-carboxymuconate semialdehyde hemiacetal dehydrogenase.",541
+62,transfered,(R)-3-hydroxyacid ester dehydrogenase. Now EC 1.1.1.279,551
+63,transfered,(S)-3-hydroxyacid ester dehydrogenase. Now EC 1.1.1.280,552
+64,transfered,Mycothiol-dependent formaldehyde dehydrogenase. mycothiol-dependent formaldehyde dehydrogenase. Transferred EC 1.1.1.306,562
+65,transfered,"3,4-dehydroadipyl-CoA semialdehyde dehydrogenase",586
+66,transfered,Geranial dehydrogenase,588
+67,deleted,"Pyruvate dehydrogenase (cytochrome). Now covered by EC 1.2.5.1, pyruvate dehydrogenase (quinone).",590
+68,transfered,Now EC 1.1.3.22,594
+69,deleted,"Carbon-monoxide oxidase. Activity is due to EC 1.2.2.4, carbon-monoxide dehydrogenase (cytochrome b-561)",602
+70,deleted,"Retinal oxidase. Now included with EC 1.2.3.1, aldehyde oxidase",603
+71,transfered,Vanillate demethylase. Now EC 1.14.13.82,604
+72,transfered,2-oxoisocaproate dehydrogenase. Now included with EC 1.2.4.4,609
+73,deleted,"2-oxobutyrate synthase. Now included with EC 1.2.7.1, pyruvate synthase",613
+74,deleted,"2-oxoglutarate ferredoxin oxidoreductase. This enzyme is identical to EC 1.2.7.3, 2-oxoglutarate synthase",620
+75,transfered,Now EC 1.1.99.19,623
+76,transfered,"Cortisone alpha-reductase. Now EC 1.3.1.22, 3-oxo-5-alpha-steroid 4-dehydrogenase (NADP(+))",634
+77,deleted,"Cholestenone 5-beta-reductase. The enzyme is identical to EC 1.3.1.3, &amp;#916;&lt;small&gt;&lt;sup&gt;4&lt;/sup&gt;&lt;/small&gt;-3-oxosteroid &amp;#946;-reductase",653
+78,transfered,"Progesterone 5-alpha-reductase. Now EC 1.3.1.22, 3-oxo-5-alpha-steroid 4-dehydrogenase (NADP(+))",660
+79,transfered,Tetrahydroxynaphthalene reductase. Now EC 1.1.1.252,680
+80,transfered,"2-methyl-branched-chain-enoyl-CoA reductase. Now EC 1.3.8.5, 2-methyl-branched-chain-enoyl-CoA reductase",682
+81,deleted,"Cis-1,2-dihydroxycyclohexa-3,5-diene-1-carboxylate dehydrogenase. Enzyme is identical to EC 1.3.1.25, 1,6-dihydroxycyclohexa-2,4-diene-1-carboxylate dehydrogenase",685
+82,deleted,"1,2-dihydroxy-3-methyl-1,2-dihydrobenzoate dehydrogenase. No evidence in the paper cited that the enzyme exists.",689
+83,deleted,"Terephthalate 1,2-cis-dihydrodiol dehydrogenase. Enzyme is identical to EC 1.3.1.53, (3S,4R)-3,4-dihydroxycyclohexa-1,5-diene-1,4-dicarboxylate dehydrogenase.",691
+84,transfered,"3-(cis-5,6-dihydroxycyclohexa-1,3-dien-1-yl)propanoate dehydrogenase",737
+85,transfered,Now EC 1.3.99.2,738
+86,transfered,Now EC 1.3.99.3,739
+87,transfered,Dihydroorotate oxidase. Now EC 1.3.98.1 (dihydroorotate dehydrogenase (fumarate)),741
+88,transfered,"Lathosterol oxidase. NAD(P)H had not been included previously, so the enzyme had to be reclassified",742
+89,deleted,"Succinate dehydrogenase. The activty is included in EC 1.3.5.1, succinate dehydrogenase (quinone).",784
+90,transfered,"Butyryl-CoA dehydrogenase. butyryl-CoA dehydrogenase. Now EC 1.3.8.1, butyryl-CoA dehydrogenase",785
+91,transfered,"Acyl-CoA dehydrogenase. now EC 1.3.8.7, medium-chain acyl-CoA dehydrogenase, EC 1.3.8.8, long-chain acyl-CoA dehydrogenase and EC 1.3.8.9, very-long-chain acyl-CoA dehydrogenase",786
+92,transfered,"Glutaryl-CoA dehydrogenase. Now EC 1.3.8.6, glutaryl-CoA dehydrogenase",790
+93,transfered,Beta-cyclopiazonate dehydrogenase. Now EC 1.21.99.1,792
+94,transfered,"Isovaleryl-CoA dehydrogenase. Now EC 1.3.8.4, isovaleryl-CoA dehydrogenase",793
+95,transfered,"Dihydroorotate dehydrogenase. As the acceptor is now known, the enzyme has been transferred to EC 1.3.5.2, dihydroorotate dehydrogenase",794
+96,transfered,"Long-chain-acyl-CoA dehydrogenase. EC 1.3.8.8 created 1989 as EC 1.3.99.13, transferred 2012 to EC 1.3.8.8",796
+97,transfered,"Benzoyl-CoA reductase. benzoyl-CoA reductase. Now EC 1.3.7.8, benzoyl-CoA reductase",798
+98,transfered,"4-hydroxybenzoyl-CoA reductase. 4-hydroxybenzoyl-CoA reductase. Now EC 1.3.7.9, 4-hydroxybenzoyl-CoA reductase",803
+99,transfered,"(R)-benzylsuccinyl-CoA dehydrogenase. Now EC 1.3.8.3, (R)-benzylsuccinyl-CoA dehydrogenase",804
+100,transfered,2-iminoacetate synthase,820
+101,transfered,Now included with EC 1.4.4.1,827
+102,deleted,"Amine oxidase (copper-containing). This was classified on the basis of cofactor content rather than reaction catalyzed and is now known to contain two distinct enzyme activities. It has been replaced by two enzymes, EC 1.4.3.21 (primary-amine oxidase) and EC 1.4.3.22 (diamine oxidase)",851
+103,transfered,Tyramine oxidase. Now included with EC 1.4.3.4,854
+104,transfered,"Tryptophan alpha,beta-oxidase. Enzyme was incorrectly classified as acting on a CH-NH bond rather than a CH-CH bond. Now EC 1.3.3.10",862
+105,transfered,D-proline reductase (dithiol). Now EC 1.21.4.1,870
+106,transfered,"Methylamine dehydrogenase (amicyanin). methylamine dehydrogenase (amicyanin). Now EC 1.4.9.1, methylamine dehydrogenase (amicyanin)",876
+107,transfered,"Amine dehydrogenase. amine dehydrogenase. Now EC 1.4.9.1, methylamine dehydrogenase (amicyanin)",879
+108,transfered,"Aralkylamine dehydrogenase. aralkylamine dehydrogenase. Now EC 1.4.9.2, aralkylamine dehydrogenase (azurin)",880
+109,transfered,Dihydrofolate dehydrogenase. Now included with EC 1.5.1.3,885
+110,transfered,Nicotinate dehydrogenase,894
+111,transfered,"1,2-didehydropipecolate reductase. Now included with EC 1.5.1.21",895
+112,deleted,"FMN reductase. Now covered by EC 1.5.1.38 (FMN reductase (NADPH)), EC 1.5.1.39 [FMN reductase (NAD(P)H))] and EC 1.5.1.41 (riboflavin reductase (NAD(P)H))",910
+113,deleted,"1-pyrroline dehydrogenase. The enzyme is identical to EC 1.2.1.19, aminobutyraldehyde dehydrogenase, as the substrates 1-pyrroline and 4-aminobutanal are interconvertible.",916
+114,deleted,Spermine oxidase,931
+115,transfered,Now included with EC 1.3.3.8,936
+116,transfered,Reticuline oxidase. Now EC 1.21.3.3,937
+117,transfered,"Polyamine oxidase. Now included with EC 1.5.3.13 N(1)-acetylpolyamine oxidase, EC 1.5.3.14 polyamine oxidase (propane-1,3-diamine-forming), EC 1.5.3.15 N(8)-acetylspermidine oxidase (propane-1,3-diamine-forming), EC 1.5.3.16 spermine oxidase and EC 1.5.3.17 non-specific polyamine oxidase.",939
+118,transfered,Now EC 1.5.3.16,951
+119,transfered,Now EC 1.5.3.16,952
+120,transfered,Now EC 1.5.3.13,953
+121,transfered,Now EC 1.5.3.13,954
+122,transfered,Now EC 1.5.3.16,955
+123,transfered,Now EC 1.5.3.14,956
+124,transfered,Now EC 1.5.3.14,957
+125,transfered,Now EC 1.5.3.14,958
+126,transfered,Now EC 1.5.3.14,959
+127,transfered,Now EC 1.5.3.13,960
+128,transfered,"Sarcosine dehydrogenase. Now EC 1.5.8.3, sarcosine dehydrogenase.",972
+129,transfered,"Dimethylglycine dehydrogenase. Now EC 1.5.8.4, dimethylglycine dehydrogenase",973
+130,transfered,Trimethylamine dehydrogenase. Now EC 1.5.8.2,978
+131,transfered,Dimethylamine dehydrogenase. Now EC 1.5.8.1,981
+132,transfered,Now EC 1.6.99.3,989
+133,deleted,Cytochrome reductase (NADPH),991
+134,transfered,Cystine reductase (NADH). Now EC 1.8.1.6,1000
+135,transfered,Glutathione reductase (NADPH). Now EC 1.8.1.7,1001
+136,transfered,Now EC 1.8.1.4,1002
+137,transfered,Protein-disulfide reductase (NAD(P)H). Now EC 1.8.1.8,1003
+138,transfered,Thioredoxin reductase (NADPH). Now EC 1.8.1.9,1004
+139,transfered,CoA-glutathione reductase (NADPH). Now EC 1.8.1.10,1005
+140,transfered,Asparagusate reductase (NADH). Now EC 1.8.1.11,1006
+141,transfered,Trypanothione reductase. Now EC 1.8.1.12,1007
+142,transfered,Bis-gamma-glutamylcystine reductase (NADPH). Now EC 1.8.1.13,1008
+143,transfered,CoA-disulfide reductase (NADH). Now EC 1.8.1.14,1009
+144,deleted,Quinone reductase,1010
+145,transfered,Nitrate reductase (NADH). Now EC 1.7.1.1,1020
+146,transfered,Nitrate reductase (NAD(P)H). Now EC 1.7.1.2,1021
+147,transfered,Nitrate reductase (NADPH). Now EC 1.7.1.3,1022
+148,transfered,Nitrite reductase (NAD(P)H). Now EC 1.7.1.4,1023
+149,transfered,Now EC 1.7.99.3,1024
+150,transfered,Hyponitrite reductase. Now EC 1.7.1.5,1025
+151,transfered,Azobenzene reductase. Now EC 1.7.1.6,1026
+152,transfered,GMP reductase. Now EC 1.7.1.7,1027
+153,transfered,Nitroquinoline-N-oxide reductase. Now EC 1.7.1.9,1029
+154,transfered,Hydroxylamine reductase (NADH). Now EC 1.7.1.10,1030
+155,transfered,4-(dimethylamino)phenylazoxybenzene reductase. Now EC 1.7.1.11,1031
+156,transfered,N-hydroxy-2-acetamidofluorene reductase. Now EC 1.7.1.12,1032
+157,transfered,Now EC 1.18.1.2,1033
+158,transfered,Now EC 1.18.1.1,1034
+159,transfered,NAD(P)H dehydrogenase (FMN). now EC 1.5.1.29,1035
+160,transfered,NADPH dehydrogenase (flavin). now EC 1.5.1.30,1036
+161,transfered,NAD(P)H dehydrogenase (quinone). The enzyme was erroneously transferred from this sub-subclass in 1965.,1038
+162,transfered,Now EC 1.18.1.2,1040
+163,transfered,"NADPH dehydrogenase (quinone). NADPH dehydrogenase (quinone). Transferred to EC 1.6.5.10, NADPH dehydrogenase (quinone) ",1042
+164,transfered,Dihydropteridine reductase. Now EC 1.5.1.34,1043
+165,transfered,Aquacobalamin reductase. Now EC 1.16.1.3,1044
+166,transfered,Cob(II)alamin reductase. Now EC 1.16.1.4,1045
+167,transfered,"Now included with EC 1.5.1.34, 6,7-dihydropteridine reductase",1046
+168,transfered,Aquacobalamin reductase (NADPH). Now EC 1.16.1.5,1047
+169,transfered,"Cyanocobalamin reductase (NADPH, cyanide-eliminating). Now EC 1.16.1.6",1048
+170,transfered,Ferric-chelate reductase. Now EC 1.16.1.7,1049
+171,deleted,Trimethylamine-N-oxide reductase (NAD+). withdrawn in the light of further information on the acceptor.,1058
+172,transfered,"Hydroxylamine oxidase. Now covered by EC 1.7.2.6, hydroxylamine dehydrogenase, and EC 1.7.3.6, hydroxylamine oxidase (cytochrome)",1075
+173,deleted,Nitric-oxide reductase. Reaction may have been due to the combined action of EC 1.7.99.6 and EC 1.7.99.7,1084
+174,transfered,"Nitrite reductase. now included with EC 1.7.2.1, nitrite reductase (NO-forming)",1085
+175,deleted,"5,10-methylenetetrahydrofolate reductase (FADH(2)). Now included with EC 1.5.1.20, methylenetetrahydrofolate reductase (NAD(P)H). Based on the reference, it had been thought that this was a separate enzyme from EC 1.5.1.20 but the reference upon which the entry was based has since been disproved.",1087
+176,transfered,"Nitrous-oxide reductase. Now EC 1.7.2.4, nitrous-oxide reductase",1088
+177,transfered,Nitric-oxide reductase. Now EC 1.7.2.5 nitric oxide reductase (cytochrome c),1089
+178,deleted,Cysteamine dehydrogenase,1091
+179,transfered,Methionine-S-oxide reductase,1124
+180,deleted,"Protein-methionine-S-oxide reductase. EC 1.8.4.6 created 1984, deleted 2006 ",1125
+181,transfered,Nitrate-ester reductase. Now included with EC 2.5.1.18,1138
+182,transfered,Now EC 1.8.4.8,1146
+183,transfered,"Pseudomonas cytochrome oxidase. now included with EC 1.7.2.1, nitrite reductase (NO-forming)",1148
+184,transfered,Sulochrin oxidase ((+)-bisdechlorogeodin-forming). Now EC 1.21.3.4,1160
+185,transfered,Sulochrin oxidase ((-)-bisdechlorogeodin-forming). Now EC 1.21.3.5,1161
+186,transfered,Plastoquinol--plastocyanin reductase. Now EC 1.10.9.1 plastoquinol--plastocyanin reductase,1169
+187,transfered,Now EC 1.13.11.11,1175
+188,transfered,Now EC 1.18.99.1,1198
+189,transfered,Now EC 1.18.99.1,1205
+190,transfered,Coenzyme F420 hydrogenase. Now EC 1.12.98.1,1211
+191,deleted,"Coenzyme-M-7-mercaptoheptanoylthreonine-phosphate-heterodisulfide hydrogenase. Now shown to be two enzymes, EC 1.12.98.3, Methanosarcina-phenazine hydrogenase and EC 1.8.98.1, CoB--CoM heterodisulfide reductase.",1212
+192,transfered,Hydrogen:quinone oxidoreductase. Now EC 1.12.5.1,1213
+193,transfered,"N(5),N(10)-methenyltetrahydromethanopterin hydrogenase. Now EC 1.12.98.2",1214
+194,deleted,"3,4-dihydroxyquinoline 2,4-dioxygenase. Identical to EC 1.13.11.47",1215
+195,transfered,Now EC 1.13.11.1,1217
+196,transfered,Now EC 1.13.11.2,1218
+197,transfered,Now EC 1.13.11.3,1219
+198,transfered,Now EC 1.13.11.4,1220
+199,transfered,Now EC 1.13.11.5,1221
+200,transfered,Now EC 1.13.11.6,1222
+201,deleted,"3,4-dihydroxyphenylacetate 3,4-dioxygenase",1223
+202,transfered,Now EC 1.13.11.8,1224
+203,transfered,Now EC 1.13.11.9,1225
+204,transfered,Now EC 1.13.11.10,1226
+205,transfered,Now EC 1.13.99.1,1227
+206,transfered,Now EC 1.13.11.11,1228
+207,transfered,Now EC 1.13.11.12,1229
+208,deleted,"3,4-dihydroxyphenylacetate 3,4-dioxygenase",1236
+209,deleted,"Ascorbate 2,3-dioxygenase. The activity is the sum of several enzymatic and spontaneous reactions.",1242
+210,transfered,Now EC 1.14.99.36,1250
+211,transfered,"2-nitropropane dioxygenase. 2-nitropropane dioxygenase. Now EC 1.13.12.16, nitronate monooxygenase ",1261
+212,deleted,"Indoleamine-pyrrole 2,3-dioxygenase. indoleamine-pyrrole 2,3-dioxygenase",1271
+213,transfered,"Linoleate diol synthase. Activity is covered by EC 1.13.11.60, linoleate 8R-lipoxygenase and EC 5.4.4.6, 9,12-octadecadienoate 8-hydroperoxide 8S-isomerase.",1273
+214,transfered,"2-aminophenol 1,6-dioxygenase",1307
+215,transfered,"Beta-carotene 15,15'-dioxygenase",1308
+216,deleted,Lysine 6-monooxygenase. Reaction covered by EC 1.14.13.59,1318
+217,deleted,"Methylphenyltetrahydropyridine N-monooxygenase. The activity is due to EC 1.14.13.8, flavin-containing monooxygenase.",1319
+218,transfered,"Apo-beta-carotenoid-14',13'-dioxygenase. The enzyme was misclassified and has been transferred to EC 1.13.11.67, 8-apo-beta-carotenoid 14,13-cleaving dioxygenase ",1320
+219,transfered,"Chlorophyllide-a oxygenase. Now EC 1.14.13.122, chlorophyllide-a oxygenase",1322
+220,transfered,"Benzoate 1,2-dioxygenase. Now EC 1.14.12.10",1331
+221,transfered,"4-chlorophenylacetate 3,4-dioxygenase. Now EC 1.14.12.9",1333
+222,transfered,Now EC 1.13.11.47,1334
+223,transfered,Now EC 1.14.14.1,1335
+224,transfered,Now EC 1.14.13.9,1336
+225,transfered,Squalene hydroxylase. Now covered by EC 1.14.99.7 and EC 5.4.99.7,1337
+226,transfered,Now EC 1.14.99.2,1338
+227,transfered,Now EC 1.14.13.5,1339
+228,transfered,Now EC 1.14.15.4,1340
+229,transfered,Now EC 1.14.99.9,1341
+230,transfered,Now EC 1.14.99.10,1342
+231,deleted,Cholesterol 20-hydroxylase,1343
+232,transfered,Now EC 1.14.99.11,1344
+233,deleted,Oestriol 2-hydroxylase,1345
+234,transfered,Now EC 1.14.17.1,1346
+235,transfered,Now EC 1.13.11.27,1347
+236,transfered,Now EC 1.14.16.1,1348
+237,deleted,"5-hydroxymethyluracil,2-oxoglutarate dioxygenase. Now included with EC 1.14.11.6 thymine dioxygenase",1353
+238,transfered,L-asparagine oxygenase,1393
+239,transfered,Now EC 1.14.13.35,1398
+240,transfered,Now EC 1.14.13.66,1402
+241,transfered,Benzoyl-CoA dioxygenase/reductase,1419
+242,transfered,"4-hydroxyphenylacetate 3-monooxygenase. 4-hydroxyphenylacetate 3-monooxygenase. Now EC 1.14.14.9, 4-hydroxyphenylacetate 3-monooxygenase.",1422
+243,deleted,"Hydroxyphenylacetonitrile 2-monooxygenase. The activity is covered by EC 1.14.13.68, 4-hydroxyphenylacetaldehyde oxime monooxygenase, that performs the two consecutive reactions in the conversion of (Z)-4-hydroxyphenylacetaldehyde oxime to (S)-4-hydroxymandelonitrile",1461
+244,transfered,CMP-N-acetylneuraminate monooxygenase. Now EC 1.14.18.2,1464
+245,transfered,"27-hydroxycholesterol 7-alpha-monooxygenase. Now included with EC 1.14.13.100, 25-hydroxycholesterol 7-alpha-hydroxylase ",1479
+246,deleted,2-hydroxyquinoline 8-monooxygenase,1484
+247,transfered,"Carotenoid isomerooxygenase. The enzyme was discovered at the public-review stage to have been misclassified and was transferred to EC 1.13.11.65, carotenoid isomerooxygenase",1583
+248,transfered,Phenylalanine N-monooxygenase,1608
+249,transfered,Tryptophan N-monooxygenase,1609
+250,transfered,3-(3-hydroxy-phenyl)propanoic acid hydroxylase,1610
+251,transfered,Vitamin D(3) 24-hydroxylase,1611
+252,transfered,"Phenylacetyl-CoA 1,2-epoxidase. Now 1.14.13.149, phenylacetyl-CoA 1,2-epoxidase",1616
+253,transfered,Benzopyrene 3-monooxygenase. Now included with EC 1.14.14.1,1618
+254,deleted,Choline monooxygenase. Identical to EC 1.14.15.7,1620
+255,transfered,Methanesulfonate monooxygenase,1622
+256,transfered,Pyrimidine monooxygenase,1631
+257,transfered,"Camphor 1,2-monooxygenase. Now EC 1.14.13.162, 2,5-diketocamphane 1,2-monooxygenase",1633
+258,transfered,4-coumarate 3-monooxygenase. Now included with EC 1.14.18.1,1652
+259,transfered,Now EC 1.14.19.4,1666
+260,transfered,Now EC 1.14.19.5,1667
+261,transfered,Now EC 1.14.19.6,1668
+262,transfered,Now EC 1.14.19.1,1688
+263,transfered,Now EC 1.14.19.2,1689
+264,transfered,"Squalene monooxygenase. squalene monooxygenase. Transferred to EC 1.14.13.132, squalene monooxygenase.",1690
+265,transfered,Arene monooxygenase (epoxidizing). Now included with EC 1.14.14.1,1691
+266,transfered,Now EC 1.14.13.23,1696
+267,transfered,Methylsterol monooxygenase. Now EC 1.14.13.72,1699
+268,transfered,Now EC 1.14.16.5,1700
+269,deleted,CMP-N-acetylneuraminate monooxygenase,1701
+270,transfered,Now EC 1.14.19.3,1708
+271,transfered,"Linalool 8-monooxygenase. Now EC 1.14.13.151, linalool 8-monooxygenase",1711
+272,transfered,"Carotene 7,8-desaturase. Now EC 1.3.5.6, 9,9'-dicis-zeta-carotene desaturase.",1713
+273,transfered,"All-trans-8'-apo-beta-carotenal 15,15'-oxygenase. Now EC 1.13.11.75, all-trans-8'-apo-beta-carotenal 15,15'-oxygenase",1724
+274,transfered,"All-trans-8'-apo-beta-carotenal 15,15'-oxygenase",1732
+275,transfered,"Carotenoid-9',10'-cleaving dioxygenase",1733
+276,transfered,"Zeaxanthin 7,8-dioxygenase",1734
+277,transfered,"All-trans-10'-apo-beta-carotenal 13,14-cleaving dioxygenase",1736
+278,transfered,Iron:rusticyanin reductase. Now EC 1.16.9.1,1753
+279,transfered,"Bile-acid 7-alpha-dehydroxylase. now EC 1.17.99.5, bile-acid 7-alpha-dehydroxylase. It is now known that FAD is the acceptor and not NAD(+) as was thought previously.",1759
+280,transfered,"4-hydroxy-3-methylbut-2-en-1-yl diphosphate synthase. As ferredoxin and not protein-disulfide is now known to take part in the reaction, the enzyme has been transferred to EC 1.17.7.1, (E)-4-hydroxy-3-methylbut-2-enyl-diphosphate synthase. ",1769
+281,transfered,Now EC 1.18.6.1,1786
+282,transfered,Now EC 1.18.99.1,1787
+283,transfered,Now EC 1.15.1.2,1789
+284,transfered,Hydrogenase. Now EC 1.12.7.2,1790
+285,transfered,"Arsenate reductase (azurin). arsenate reductase (azurin). Now EC 1.20.9.1, arsenate reductase (azurin)",1798
+286,transfered,Now EC 1.20.4.1,1824
+287,transfered,Now EC 1.20.99.1,1825
+288,transfered,Now EC 1.20.4.2,1826
+289,transfered,Now EC 1.18.99.1,1832
+290,transfered,Now EC 1.14.14.1,1833
+291,transfered,Now EC 1.14.16.1,1834
+292,deleted,Nicotinate 6-hydroxylase,1835
+293,deleted,Tryptophan 5-hydroxylase,1836
+294,transfered,Now EC 1.14.13.9,1837
+295,deleted,Steroid 11-alpha-hydroxylase,1838
+296,transfered,Now EC 1.14.15.4,1839
+297,deleted,Steroid 6-beta-hydroxylase,1840
+298,transfered,Now EC 1.14.99.9,1841
+299,deleted,Steroid 19-hydroxylase,1842
+300,transfered,Now EC 1.14.99.10,1843
+301,deleted,Alkoxyaryl hydroxylase,1844
+302,transfered,Squalene cyclohydroxylase. Now covered by EC 1.14.99.7 and EC 5.4.99.7,1845
+303,transfered,Now EC 1.13.11.27,1846
+304,transfered,Now EC 1.13.11.12,1847
+305,transfered,Now EC 1.13.11.1,1848
+306,transfered,Now EC 1.13.11.3,1849
+307,transfered,Now EC 1.13.11.4,1850
+308,transfered,Now EC 1.13.11.5,1851
+309,transfered,Now EC 1.13.99.1,1852
+310,transfered,"Protein-arginine N-methyltransferase. Now listed as EC 2.1.1.124, EC 2.1.1.125 and EC 2.1.1.126",1875
+311,transfered,"Protein-gamma-glutamate O-methyltransferase. Now listed as EC 2.1.1.77, EC 2.1.1.80 and EC 2.1.1.100",1876
+312,deleted,tRNA (purine-2- or -6-)-methyltransferase. Reactions previously described are due to EC 2.1.1.32,1882
+313,transfered,tRNA (guanine-N(1)-)-methyltransferase. Now covered by EC 2.1.1.221 (tRNA (guanine(9)-N(1))-methyltransferase) and EC 2.1.1.228 (tRNA (guanine(37)-N(1))-methyltransferase),1883
+314,transfered,"tRNA (guanine-N(2)-)-methyltransferase. Now covered by by EC 2.1.1.213 (tRNA (guanine(10)-N(2))-dimethyltransferase), EC 2.1.1.214 (tRNA (guanine(10)-N(2))-monomethyltransferase), EC 2.1.1.215 (tRNA (guanine(26)-N(2)/guanine(27)-N(2))-dimethyltransferase) and EC 2.1.1.216 (tRNA (guanine(26)-N(2))-dimethyltransferase)",1884
+315,transfered,"tRNA (adenine-N(1)-)-methyltransferase. Now covered by EC 2.1.1.217 (tRNA (adenine(22)-N(1))-methyltransferase), EC 2.1.1.218 (tRNA (adenine(9)-N(1))-methyltransferase), EC 2.1.1.219 (tRNA (adenine(57)-N(1)/adenine(58)-N(1))-methyltransferase), EC 2.1.1.220 (tRNA (adenine(58)-N(1))-methyltransferase)",1888
+316,transfered,"rRNA (adenine-N(6)-)-methyltransferase. rRNA (adenine-N(6)-)-methyltransferase. Now covered by EC 2.1.1.181 (23S rRNA (adenine(1618)-N(6))-methyltransferase), EC 2.1.1.182 (16S rRNA adenine(1518)-N(6)/adenine(1519)-N(6))-dimethyltransferase), EC 2.1.1.183 (18S rRNA (adenine(1779)-N(6)/adenine(1780)-N(6))-dimethyltransferase) and EC 2.1.1.184 (23S rRNA (adenine(2085)-N(6))-dimethyltransferase)",1900
+317,transfered,rRNA (guanine-N(1)-)-methyltransferase. rRNA (guanine-N(1)-)-methyltransferase. Now covered by EC 2.1.1.187 (23S rRNA (guanine(745)-N(1))-methyltransferase) and EC 2.1.1.188 (23S rRNA (guanine(748)-N(1))-methyltransferase). ,1903
+318,transfered,"rRNA (guanine-N(2)-)-methyltransferase. Transferred entry: rRNA (guanine-N(2)-)-methyltransferase. Now covered by EC 2.1.1.171 (16S rRNA (guanine(966)-N(2))-methyltransferase), EC 2.1.1.172 (16S rRNA (guanine(1207)-N(2))-methyltransferase), EC 2.1.1.173 (23S rRNA (guanine(2445)-N(2))-methyltransferase) and EC 2.1.1.174 (23S rRNA (guanine(1835)-N(2))-methyltransferase)",1904
+319,transfered,mRNA (adenosine-2'-O-)-methyltransferase. Now included with EC 2.1.1.57,1910
+320,deleted,"Site-specific DNA-methyltransferase (cytosine-specific). Reaction is that of EC 2.1.1.37, DNA (cytosine-5-)-methyltransferase",1925
+321,transfered,Nicotine N-methyltransferase. Now included with EC 2.1.1.49,1933
+322,deleted,"Bergaptol O-methyltransferase. Now included with EC 2.1.1.69, 5-hydroxyfuranocoumarin 5-O-methyltransferase. The reaction with bergaptol is a specific example of the general reaction associated with EC 2.1.1.69",1944
+323,deleted,"Xanthotoxol O-methyltransferase. Enzyme is identical to EC 2.1.1.70, 8-hydroxyfuranocoumarin 8-O-methyltransferase.",1945
+324,transfered,Myo-inositol 6-O-methyltransferase. Now EC 2.1.1.129,1986
+325,transfered,(Methionine synthase)-cobalamin methyltransferase (cob(II)alamin reducing). Now EC 1.16.1.8,1987
+326,deleted,"Methylarsonite methyltransferase. Reaction due to EC 2.1.1.137, arsonite methyltransferase",1990
+327,deleted,"Myricetin O-methyltransferase. Now covered by EC 2.1.1.267, flavonoid 3',5'-methyltransferase.",2001
+328,deleted,"23S rRNA (adenine(2503)-C(2),C(8))-methyltransferase. A mixture of EC 2.1.1.192 (23S rRNA (adenine(2503)-C(2))-methyltransferase) and EC 2.1.1.224 (23S rRNA (adenine(2503)-C(8))-methyltransferase)",2046
+329,transfered,tRNA(Ser) (uridine(44)-2'-O-)-methyltransferase,2154
+330,transfered,Selenocysteine Se-methyltransferase,2155
+331,transfered,Protein N-terminal methyltransferase,2157
+332,transfered,Geranyl diphosphate 2-C-methyltransferase,2158
+333,transfered,Salicylate carboxymethyltransferase,2161
+334,transfered,Indole-3-acetate O-methyltransferase,2162
+335,transfered,Pavine N-methyltransferase,2166
+336,transfered,Ribosomal protein L3 N(5)-glutamine methyltransferase,2167
+337,transfered,Peptide chain release factor N(5)-glutamine methyltransferase,2168
+338,transfered,Glutamate formyltransferase. Now included with EC 2.1.2.5,2174
+339,transfered,Now EC 2.1.1.74,2180
+340,transfered,UDP-4-amino-4-deoxy-L-arabinose formyltransferase,2182
+341,deleted,Malonyl-CoA carboxyltransferase,2186
+342,transfered,Kanamycin 6'-N-acetyltransferase. Now EC 2.3.1.82,2264
+343,deleted,"CDP-acylglycerol O-arachidonoyltransferase. This enzyme was deleted following a retraction of the evidence upon which the entry had been drafted (Thompson, W. and Zuk, R.T. Acylation of CDP-monoacylglycerol cannot be confirmed. J. Biol. Chem. 258 (1983) 9623. (PMID: 6885763)).",2279
+344,deleted,"1-alkenylglycerophosphocholine O-acyltransferase. The activity is covered by EC 2.3.1.25, plasmalogen synthase.",2313
+345,deleted,6'-deoxychalcone synthase. The reaction listed is due to EC 2.3.1.74,2329
+346,deleted,Already listed as EC 2.3.1.20,2333
+347,transfered,UDP-3-O-(3-hydroxymyristoyl)-D-glucosamine N-acyltransferase,2442
+348,transfered,"3-ketoacyl-CoA synthase. Now EC 2.3.1.199, very-long-chain 3-oxoacyl-CoA synthase",2449
+349,transfered,Bisdemethoxycurcumin synthase,2450
+350,transfered,Phosphate propanoyltransferase,2451
+351,transfered,"3-oxo-5,6-didehydrosuberyl-CoA thiolase",2452
+352,transfered,Amylomaltase. Now included with EC 2.4.1.25,2494
+353,deleted,Maltose 3-glycosyltransferase,2497
+354,transfered,UDPglucuronate-estriol 17-beta-D-glucuronosyltransferase. Now included with EC 2.4.1.17,2533
+355,transfered,"UDP-N-acetylglucosamine-glycoprotein N-acetylglucosaminyltransferase. Now listed as EC 2.4.1.101, EC 2.4.1.143, EC 2.4.1.144 and EC 2.4.1.145",2542
+356,transfered,Now EC 2.7.8.14,2546
+357,transfered,UDPglucuronate-estradiol glucuronosyltransferase. Now included with EC 2.4.1.17,2550
+358,transfered,UDPglucuronate-estriol 16-alpha-glucuronosyltransferase. Now included with EC 2.4.1.17,2552
+359,transfered,Now EC 2.4.2.24,2563
+360,deleted,"UDP-galacturonosyltransferase. Insufficient evidence to conclude that this is a different enzyme from EC 2.4.1.43, polygalacturonate 4-alpha-galacturonosyltransferase.",2566
+361,transfered,UDPglucuronate-bilirubin glucuronosyltransferase. Now included with EC 2.4.1.17,2567
+362,transfered,UDPglucuronate-bilirubin-glucuronoside glucuronosyltransferase. Now included with EC 2.4.1.17,2568
+363,transfered,"UDPglucuronate-1,2-diacylglycerol glucuronosyltransferase. Now included with EC 2.4.1.17",2575
+364,transfered,Galactosylglucosaminylgalactosylglucosylceramide alpha-L-fucosyltransferase. Now included with EC 2.4.1.69,2580
+365,transfered,"Inulin fructotransferase (depolymerizing, difructofuranose-1,2':2,3'-dianhydride-forming). The enzyme was wrongly classified as a transferase rather than a lyase.",2584
+366,transfered,UDPgalactose-N-acetylglucosamine beta-D-galactosyl-transferase. Now included with EC 2.4.1.90,2589
+367,transfered,UDPglucuronate-testosterone glucuronosyltransferase. Now included with EC 2.4.1.17,2598
+368,transfered,UDPglucuronate-phenol glucuronosyltransferase. Now included with EC 2.4.1.17,2599
+369,deleted,"Alpha-1,4-glucan-protein synthase (UDP-forming). The protein referred to in this entry is now known to be glycogenin so the entry has been incorporated into EC 2.4.1.186, glycogenin glucosyltransferase",2603
+370,transfered,N-acetyllactosamine 3-alpha-galactosyltransferase. EC 2.4.1.87 transferred from EC 2.4.1.124 and EC 2.4.1.151,2615
+371,transfered,"Dolichyl-phosphate-mannose--glycolipid alpha-mannosyltransferase. Now covered by EC 2.4.1.258 (Dol-P-Man:Man(5)GlcNAc(2)-PP-Dol alpha-1,3-mannosyltransferase), EC 2.4.1.259 (Dol-P-Man:Man(6)GlcNAc(2)-PP-Dol alpha-1,2-mannosyltransferase), EC 2.4.1.260 (Dol-P-Man:Man(7)GlcNAc(2)-PP-Dol alpha-1,6-mannosyltransferase) and EC 2.4.1.261 (Dol-P-Man:Man(8)GlcNAc(2)-PP-Dol alpha-1,2-mannosyltransferase)",2621
+372,transfered,"N-acetyllactosaminide alpha-1,3-galactosyltransferase. now included with EC 2.4.1.87",2642
+373,deleted,"Globotriosylceramide beta-1,6-N-acetylgalactosaminyl-transferase. The enzyme is identical to EC 2.4.1.79, globotriaosylceramide 3-beta-N-acetylgalactosaminyltransferase. The reference cited referred to a 1-&gt;3 linkage and not to a 1-&gt;6 linkage, as indicated in the enzyme entry.",2645
+374,transfered,Xyloglucan 6-xylosyltransferase. Now EC 2.4.2.39,2660
+375,transfered,"Inulin fructotransferase (depolymerizing, difructofuranose-1,2':2',1-dianhydride-forming). The enzyme was wrongly classified as a transferase rather than a lyase.",2691
+376,transfered,Zeatin O-beta-D-xylosyltransferase. Now EC 2.4.2.40,2695
+377,deleted,"Anthocyanidin 3-O-glucosyltransferase. The enzyme is identical to EC 2.4.1.115, anthocyanidin 3-O-glucosyltransferase",2724
+378,deleted,"Cyanidin 3-O-rutinoside 5-O-glucosyltransferase. Enzyme is identical to EC 2.4.1.116, cyanidin 3-O-rutinoside 5-O-glucosyltransferase",2726
+379,transfered,Now EC 2.4.1.245,2816
+380,transfered,N-acetylglucosamine-inositol-phosphate N-acetylglucosaminyltransferase,2818
+381,transfered,Now EC 2.4.1.131,2819
+382,transfered,Starch synthase (maltosyl-transferring),2820
+383,transfered,Now EC 2.5.1.6,2833
+384,transfered,"Deoxyuridine phosphorylase. This activity has been shown to be catalyzed by EC 2.4.2.2, pyrimidine-nucleoside phosphorylase, EC 2.4.2.3, uridine phosphorylase, and EC 2.4.2.4, thymidine phosphorylase.",2843
+385,transfered,Undecaprenyl phosphate-alpha-4-amino-4-deoxy-L-arabinose arabinosyl transferase,2878
+386,transfered,"tRNA isopentenyltransferase. tRNA isopentenyltransferase. As it is now known that the substrate is dimethylallyl diphosphate, the enzyme has been transferred to EC 2.5.1.75, tRNA dimethylallyltransferase",2906
+387,transfered,Trans-octaprenyltranstransferase. trans-octaprenyltranstransferase. Now covered by EC 2.5.1.84 (all-trans-nonaprenyl-diphosphate synthase (geranyl-diphosphate specific)) and EC 2.5.1.85 (all-trans-nonaprenyl diphosphate synthase (geranylgeranyl-diphosphate specific)),2909
+388,transfered,Glutathione S-alkyltransferase. Now included with EC 2.5.1.18,2910
+389,transfered,Glutathione S-aryltransferase. Now included with EC 2.5.1.18,2911
+390,transfered,Glutathione S-aralkyltransferase. Now included with EC 2.5.1.18,2912
+391,transfered,"Trans-pentaprenyltranstransferase. trans-pentaprenyltranstransferase. Now covered by EC 2.5.1.82 (hexaprenyl diphosphate synthase (geranylgeranyl-diphosphate specific)) and EC 2.5.1.83 (hexaprenyl-diphosphate synthase ((2E,6E)-farnesyl-diphosphate specific))",2931
+392,transfered,Leukotriene-C(4) synthase. The enzyme was incorrectly classified as a transferase.,2935
+393,transfered,Now EC 4.2.3.9,2938
+394,transfered,"2-succinyl-6-hydroxy-2,4-cyclohexadiene-1-carboxylate synthase. 2-succinyl-6-hydroxy-2,4-cyclohexadiene-1-carboxylate synthase. The reaction that was attributed to this enzyme is now known to be catalyzed by two separate enzymes: EC 2.2.1.9 (2-succinyl-5-enolpyruvyl-6-hydroxy-3-cyclohexene-1-carboxylic-acid synthase) and EC 4.2.99.20 (2-succinyl-6-hydroxy-2,4-cyclohexadiene-1-carboxylate synthase).",2962
+395,transfered,Now EC 2.2.1.9,3019
+396,transfered,Geranylfarnesyl diphosphate synthase,3020
+397,transfered,Now EC 2.5.1.73,3021
+398,transfered,Adenylate dimethylallyltransferase (ADP/ATP-dependent),3022
+399,transfered,[CysO sulfur-carrier protein]-thiocarboxylate-dependent cysteine synthase,3023
+400,transfered,"7,8-dihydropterin-6-yl-methyl-4-(beta-D-ribofuranosyl)aminobenzene 5'-phosphate synthase",3024
+401,transfered,2-(3-amino-3-carboxypropyl)histidine synthase,3025
+402,transfered,Homogentisate phytyltransferase,3026
+403,transfered,D-aspartate transaminase. Now included with EC 2.6.1.21,3036
+404,deleted,Tyrosine-pyruvate transaminase,3046
+405,transfered,Thyroxine transaminase. Now included with EC 2.6.1.24,3051
+406,transfered,Now EC 1.4.1.13,3079
+407,deleted,"(R)-3-amino-2-methylpropionate transaminase. Enzyme is identical to EC 2.6.1.40, (R)-3-amino-2-methylpropionate--pyruvate transaminase",3087
+408,deleted,"N(2)-acetylornithine 5-transaminase. Enzyme is identical to EC 2.6.1.11, acetylornithine transaminase",3095
+409,deleted,"UDP-4-amino-4,6-dideoxy-N-acetyl-alpha-D-glucosamine transaminase. This entry was removed since it was identical to EC 2.6.1.34, UDP-N-acetylbacillosamine transaminase",3117
+410,transfered,UDP-4-amino-4-deoxy-L-arabinose aminotransferase,3134
+411,transfered,Lysine--8-amino-7-oxononanoate transaminase,3135
+412,transfered,Now EC 2.1.4.1,3136
+413,deleted,Acetylaminodeoxyglucose kinase,3150
+414,transfered,Protein kinase,3178
+415,transfered,Phosphorylase kinase,3179
+416,deleted,Mannitol kinase,3198
+417,deleted,"Protamine kinase. This enzyme is not dependent on cAMP as was thought and is therefore identical to EC 2.7.11.1, non-specific serine/threonine protein kinase.",3211
+418,transfered,Thymidine kinase. Now EC 2.7.1.21,3216
+419,transfered,NADH kinase. Now included with EC 2.7.1.86,3237
+420,deleted,Now included with EC 2.7.1.125. Identical with EC 2.7.11.14 rhodopsin kinase,3238
+421,deleted,Phosphoenolpyruvate-fructose phosphotransferase,3239
+422,transfered,[Pyruvate dehydrogenase (lipoamide)] kinase,3240
+423,transfered,Diphosphate--protein phosphotransferase,3245
+424,transfered,[Hydroxymethylglutaryl-CoA reductase (NADPH)] kinase,3250
+425,transfered,Dephospho-[reductase kinase] kinase,3251
+426,transfered,Now listed as EC 2.7.1.128,3252
+427,transfered,Protein-tyrosine kinase,3253
+428,transfered,[3-methyl-2-oxobutanoate dehydrogenase (lipoamide)] kinase,3256
+429,transfered,[Isocitrate dehydrogenase (NADP(+))] kinase,3257
+430,transfered,[Myosin-light-chain] kinase,3258
+431,transfered,Caldesmon kinase. Now part of EC 2.7.11.17,3261
+432,transfered,Ca(2+)/calmodulin-dependent protein kinase,3264
+433,transfered,[Tyrosine 3-monooxygenase] kinase,3265
+434,transfered,Rhodopsin kinase,3266
+435,transfered,[Beta-adrenergic-receptor] kinase,3267
+436,transfered,[Acetyl-CoA carboxylase] kinase,3269
+437,transfered,[Myosin-heavy-chain] kinase,3270
+438,transfered,[Low-density-lipoprotein] kinase,3272
+439,transfered,Tropomyosin kinase,3273
+440,transfered,Inositol-trisphosphate 6-kinase. Now EC 2.7.1.134,3274
+441,transfered,[Tau-protein] kinase,3276
+442,transfered,Inositol-trisphosphate 5-kinase. Now EC 2.7.1.134,3280
+443,transfered,[RNA-polymerase]-subunit kinase,3282
+444,transfered,Inositol-hexakisphosphate kinase. Now EC 2.7.4.21,3293
+445,transfered,"Diphosphoinositol-pentakisphosphate kinase. diphosphoinositol-pentakisphosphate kinase. Now EC 2.7.4.24, diphosphoinositol-pentakisphosphate kinase. The enzyme had been incorrectly classified as the reaction involves transfer of a phospho group to another phospho group (EC 2.7.4) rather than to an hydroxy group (EC 2.7.1).",3296
+446,transfered,Anhydro-N-acetylmuramic acid kinase,3324
+447,transfered,Now EC 2.7.1.161,3325
+448,transfered,Now EC 2.7.1.164,3326
+449,transfered,Nicotinate riboside kinase,3327
+450,transfered,Diacylglycerol kinase (CTP dependent),3328
+451,transfered,Now EC 2.7.1.163,3329
+452,transfered,UDP-N-acetylglucosamine kinase,3330
+453,transfered,Maltokinase,3331
+454,transfered,Now EC 6.3.4.16,3336
+455,transfered,Now EC 6.3.5.5,3340
+456,transfered,Protein-histidine pros-kinase,3357
+457,transfered,Protein-histidine tele-kinase,3358
+458,transfered,Deoxycytidylate kinase. Now included with EC 2.7.4.14,3363
+459,transfered,"([pyruvate, phosphate dikinase] phosphate) phosphotransferase",3386
+460,transfered,Now EC 5.4.2.2,3388
+461,transfered,Now EC 5.4.2.3,3389
+462,transfered,Now EC 5.4.2.11 and EC 5.4.2.12,3390
+463,transfered,Now EC 5.4.2.4,3391
+464,transfered,Now EC 5.4.2.5,3392
+465,transfered,Now EC 5.4.2.7,3393
+466,transfered,Now EC 5.4.2.8,3394
+467,transfered,Now EC 3.1.27.5,3415
+468,transfered,Now EC 3.1.27.1,3416
+469,deleted,This entry was identical with EC 2.7.7.25,3419
+470,transfered,"tRNA cytidylyltransferase. Now EC 2.7.7.72, CCA tRNA nucleotidyltransferase",3420
+471,transfered,"tRNA adenylyltransferase. Now EC 2.7.7.72, CCA tRNA nucleotidyltransferase",3424
+472,transfered,Now EC 3.1.27.3,3425
+473,deleted,"Hexose-1-phosphate guanylyltransferase. Enzyme is not specific for GTP and therefore is identical to EC 2.7.7.28, nucleoside-triphosphate-hexose-1-phosphate nucleotidyltransferase.",3428
+474,transfered,Now EC 2.7.7.67,3488
+475,transfered,Sulfur carrier protein ThiS adenylyltransferase,3489
+476,transfered,Molybdopterin synthase sulfur-carrier protein adenylyltransferase. Now EC 2.7.7.80,3490
+477,transfered,Molybdopterin adenylyltransferase,3491
+478,transfered,1-alkyl-2-acetylglycerol choline phosphotransferase. Now included with EC 2.7.8.2,3507
+479,transfered,Undecaprenyl-phosphate 4-deoxy-4-formamido-L-arabinose transferase,3532
+480,transfered,UDP-GlcNAc:undecaprenyl-phosphate GlcNAc-1-phosphate transferase,3533
+481,transfered,"[Pyruvate, phosphate dikinase] kinase",3574
+482,transfered,"[Pyruvate, water dikinase] kinase",3575
+483,transfered,Molybdopterin synthase sulfurtransferase,3594
+484,deleted,"Heparitin sulfotransferase. Enzyme identical to EC 2.8.2.8, [heparan sulfate]-glucosamine N-sulfotransferase",3606
+485,transfered,Tyrosylprotein sulfotransferase,3631
+486,deleted,Butyrate CoA-transferase,3636
+487,transfered,Now EC 2.9.1.2,3662
+488,deleted,Benzoylcholinesterase. A side reaction of EC 3.1.1.8,3672
+489,transfered,Vitamin A esterase. Now believed to be identical with EC 3.1.1.1 carboxylesterase,3675
+490,deleted,4-carboxymethyl-4-hydroxyisocrotonolactonase. This reaction was due to a mixture of EC 5.3.3.4 (muconolactone D-isomerase) and EC 3.1.1.24 (3-oxoadipate enol-lactonase),3679
+491,transfered,Aldonolactonase. Now included with EC 3.1.1.17,3681
+492,deleted,"Retinyl-palmitate esterase. Now known to be catalyzed by EC 3.1.1.1, carboxylesterase and EC 3.1.1.3, triacylglycerol lipase.",3684
+493,transfered,Now listed as EC 3.5.1.47,3725
+494,transfered,"N-acetylglucosaminylphosphatidylinositol deacetylase. now EC 3.5.1.89, N-acteylglucosaminylphosphatidylinositol deacetylase. Previously classified erroneously as an enzyme that hydrolyzed an ester and not an amide",3732
+495,transfered,N-acetyl-1-D-myo-inositol-2-amino-2-deoxy-alpha-D-glucopyranoside deacetylase,3759
+496,transfered,S-acetoacylglutathione hydrolase. Now included with EC 3.1.2.6,3767
+497,deleted,S-acetoacetylhydrolipoate hydrolase,3768
+498,transfered,"2-(2-hydroxyphenyl)benzenesulfinate hydrolase. The enzyme was incorrectly classified as a thiolester hydrolase when the bond broken is a C-S bond, which is not an ester",3783
+499,transfered,"1,4-dihydroxy-2-naphthoyl-CoA hydrolase",3790
+500,transfered,(3S)-malyl-CoA thioesterase,3791
+501,transfered,3'-phosphoadenylylsulfate 3'-phosphatase. Now included with EC 3.1.3.31,3821
+502,deleted,"Inositol-1,4,5-trisphosphate 1-phosphatase",3852
+503,transfered,"Inositol-1,3-bisphosphate 3-phosphatase. Now EC 3.1.3.64",3856
+504,transfered,"Phosphatidylinositol-3,4,5-trisphosphate 5-phosphatase",3887
+505,transfered,ADP-ribose 1''-phosphate phosphatase,3888
+506,transfered,Now EC 3.1.3.78,3889
+507,transfered,2-hydroxy-3-keto-5-methylthiopentenyl-1-phosphate phosphatase,3890
+508,transfered,L-galactose 1-phosphate phosphatase,3891
+509,transfered,Now EC 3.1.21.1,3896
+510,transfered,Now EC 3.1.22.1,3897
+511,transfered,Now EC 3.1.31.1,3898
+512,transfered,Now EC 3.1.27.3,3899
+513,transfered,Now EC 3.1.30.2,3900
+514,transfered,1-phosphatidylinositol phosphodiesterase. Now EC 4.6.1.13,3901
+515,transfered,Now EC 3.1.16.1,3909
+516,transfered,Now EC 3.1.13.3,3910
+517,transfered,Now EC 3.1.13.1,3911
+518,transfered,Now EC 3.1.30.1,3912
+519,transfered,Now EC 3.1.27.5,3913
+520,transfered,Now EC 3.1.27.1,3914
+521,deleted,Endoribonuclease III,3915
+522,transfered,Now EC 3.1.11.1,3916
+523,deleted,Exodeoxyribonuclease II,3917
+524,transfered,Now EC 3.1.11.2,3918
+525,transfered,Now EC 3.1.11.3,3919
+526,deleted,Oligodeoxyribonucleate exonuclease,3920
+527,transfered,Now EC 3.1.21.2,3921
+528,transfered,Now EC 3.1.11.4,3922
+529,deleted,Endodeoxyribonuclease (ATP- and S-adenosylmethionine-dependent). See EC 3.1.21.3 and EC 3.1.21.5,3923
+530,deleted,Endodeoxyribonuclease (ATP-hydrolyzing). See EC 3.1.21.3 and EC 3.1.21.5,3924
+531,deleted,"Hybrid nuclease. See subclasses EC 3.1.15, EC 3.1.16, EC 3.1.30 and EC 3.1.31",3925
+532,transfered,"1,2-cyclic-inositol-phosphate phosphodiesterase. Now EC 3.1.4.43",3927
+533,transfered,Variant-surface-glycoprotein phospholipase C. Now EC 4.6.1.14,3938
+534,transfered,Now EC 3.1.4.53,3948
+535,deleted,Sinigrin sulfohydrolase,3954
+536,transfered,Now EC 3.1.21.7,4007
+537,transfered,Endodeoxyribonuclease Alu I. Now EC 3.1.21.4,4010
+538,transfered,Endodeoxyribonuclease Asu I. Now EC 3.1.21.4,4011
+539,transfered,Endodeoxyribonuclease Ava I. Now EC 3.1.21.4,4012
+540,transfered,Endodeoxyribonuclease Ava II. Now EC 3.1.21.4,4013
+541,transfered,Endodeoxyribonuclease Bal I. Now EC 3.1.21.4,4014
+542,transfered,Endodeoxyribonuclease Bam HI. Now EC 3.1.21.4,4015
+543,transfered,Endodeoxyribonuclease Bbv I. Now EC 3.1.21.4,4016
+544,transfered,Endodeoxyribonuclease Bcl I. Now EC 3.1.21.4,4017
+545,transfered,Endodeoxyribonuclease Bgl I. Now EC 3.1.21.4,4018
+546,transfered,Endodeoxyribonuclease Bgl II. Now EC 3.1.21.4,4019
+547,transfered,Endodeoxyribonuclease Bpu I. Now EC 3.1.21.4,4020
+548,transfered,Endodeoxyribonuclease Dpn I. Now EC 3.1.21.4,4021
+549,transfered,Endodeoxyribonuclease Eco RI. Now EC 3.1.21.4,4022
+550,transfered,Endodeoxyribonuclease Eco RII. Now EC 3.1.21.4,4023
+551,transfered,Endodeoxyribonuclease Hae I. Now EC 3.1.21.4,4024
+552,transfered,Endodeoxyribonuclease Hae II. Now EC 3.1.21.4,4025
+553,transfered,Endodeoxyribonuclease Hae III. Now EC 3.1.21.4,4026
+554,transfered,Endodeoxyribonuclease Hga I. Now EC 3.1.21.4,4027
+555,transfered,Endodeoxyribonuclease Hha I. Now EC 3.1.21.4,4028
+556,transfered,Endodeoxyribonuclease Hind II. Now EC 3.1.21.4,4029
+557,transfered,Endodeoxyribonuclease Hind III. Now EC 3.1.21.4,4030
+558,transfered,Endodeoxyribonuclease Hinf I. Now EC 3.1.21.4,4031
+559,transfered,Endodeoxyribonuclease Hpa I. Now EC 3.1.21.4,4032
+560,transfered,Endodeoxyribonuclease Hpa II. Now EC 3.1.21.4,4033
+561,transfered,Endodeoxyribonuclease Hph I. Now EC 3.1.21.4,4034
+562,transfered,Endodeoxyribonuclease Kpn I. Now EC 3.1.21.4,4035
+563,transfered,Endodeoxyribonuclease Mbo I. Now EC 3.1.21.4,4036
+564,transfered,Endodeoxyribonuclease Mbo II. Now EC 3.1.21.4,4037
+565,transfered,Endodeoxyribonuclease Mnl I. Now EC 3.1.21.4,4038
+566,transfered,Endodeoxyribonuclease Pfa I. Now EC 3.1.21.4,4039
+567,transfered,Endodeoxyribonuclease Pst I. Now EC 3.1.21.4,4040
+568,transfered,Endodeoxyribonuclease Pvu I. Now EC 3.1.21.4,4041
+569,transfered,Endodeoxyribonuclease Pvu II. Now EC 3.1.21.4,4042
+570,transfered,Endodeoxyribonuclease Sac I. Now EC 3.1.21.4,4043
+571,transfered,Endodeoxyribonuclease Sac II. Now EC 3.1.21.4,4044
+572,transfered,Endodeoxyribonuclease Sac III. Now EC 3.1.21.4,4045
+573,transfered,Endodeoxyribonuclease Sal I. Now EC 3.1.21.4,4046
+574,transfered,Endodeoxyribonuclease Sgr I. Now EC 3.1.21.4,4047
+575,transfered,Endodeoxyribonuclease Taq I. Now EC 3.1.21.4,4048
+576,transfered,Endodeoxyribonuclease Taq II. Now EC 3.1.21.4,4049
+577,transfered,Endodeoxyribonuclease Xba I. Now EC 3.1.21.4,4050
+578,transfered,Endodeoxyribonuclease Xho I. Now EC 3.1.21.4,4051
+579,transfered,Endodeoxyribonuclease Xho II. Now EC 3.1.21.4,4052
+580,transfered,Endodeoxyribonuclease Xma I. Now EC 3.1.21.4,4053
+581,transfered,Endodeoxyribonuclease Xni I. Now EC 3.1.21.4,4054
+582,transfered,Endodeoxyribonuclease Aim I. Now EC 3.1.21.4,4055
+583,transfered,Endodeoxyribonuclease Acc I. Now EC 3.1.21.4,4056
+584,transfered,Endodeoxyribonuclease Acc II. Now EC 3.1.21.4,4057
+585,transfered,Endodeoxyribonuclease Atu AI. Now EC 3.1.21.4,4058
+586,transfered,Endodeoxyribonuclease Atu BVI. Now EC 3.1.21.4,4059
+587,transfered,Endodeoxyribonuclease Aca I. Now EC 3.1.21.4,4060
+588,transfered,Endodeoxyribonuclease Acy I. Now EC 3.1.21.4,4061
+589,transfered,Endodeoxyribonuclease Aos I. Now EC 3.1.21.4,4062
+590,transfered,Endodeoxyribonuclease Asu II. Now EC 3.1.21.4,4063
+591,transfered,Endodeoxyribonuclease Ava III. Now EC 3.1.21.4,4064
+592,transfered,Endodeoxyribonuclease Avr II. Now EC 3.1.21.4,4065
+593,transfered,Endodeoxyribonuclease Bce 14579. Now EC 3.1.21.4. Assumed to be the same as endodeoxyribonuclease Bce 14579 I see  http://rebase.neb.com/rebase/rebase.html,4066
+594,transfered,Endodeoxyribonuclease Bce 1229. Now EC 3.1.21.4. Assumed to be the same as endodeoxyribonuclease Bce 1229 I see  http://rebase.neb.com/rebase/rebase.html,4067
+595,transfered,Endodeoxyribonuclease Bme 899. Now EC 3.1.21.4. Assumed to be the same as endodeoxyribonuclease Bme 899 I see  http://rebase.neb.com/rebase/rebase.html,4068
+596,transfered,Endodeoxyribonuclease Eco B. Now EC EC 3.1.21.3. Assumed to be the same as endodeoxyribonuclease Eco B I see  http://rebase.neb.com/rebase/rebase.html,4069
+597,transfered,Endodeoxyribonuclease Eco K. Now EC EC 3.1.21.3. Assumed to be the same as endodeoxyribonuclease Eco KI see  http://rebase.neb.com/rebase/rebase.html,4070
+598,transfered,Endodeoxyribonuclease Eco PI. Now EC EC 3.1.21.5. The name is misprinted in supplement 3 of the 1978 edition.,4071
+599,transfered,Endodeoxyribonuclease Eco P15. Now EC EC 3.1.21.5. Assumed to be the same as endodeoxyribonuclease Eco P15I see  http://rebase.neb.com/rebase/rebase.html,4072
+600,transfered,Now EC 4.2.99.18,4074
+601,transfered,Now EC 3.1.26.12,4088
+602,deleted,Licheninase,4106
+603,deleted,"Amylopectin-1,6-glucosidase",4110
+604,transfered,Cycloheptaglucanase. Now included with EC 3.2.1.54,4113
+605,transfered,Cyclohexaglucanase. Now included with EC 3.2.1.54,4114
+606,deleted,Heparinase,4120
+607,deleted,"Alpha-1,3-glucosidase",4128
+608,transfered,Chitobiase. Now included with EC 3.2.1.52,4130
+609,transfered,Beta-D-acetylglucosaminidase. Now included with EC 3.2.1.52,4131
+610,transfered,Chondroitinase. Now included with EC 3.2.1.35,4135
+611,transfered,Amylopectin 6-glucanohydrolase. Now included with EC 3.2.1.41,4170
+612,transfered,Alpha-L-arabinofuranoside hydrolase. Now included with EC 3.2.1.55,4180
+613,deleted,"Arabinogalactan endo-1,3-beta-galactosidase. Not sufficiently characterized",4191
+614,deleted,"Mucinaminylserine mucinaminidase. The enzyme is identical to EC 3.2.1.97, glycopeptide alpha-N-acetylgalactosaminidase",4211
+615,transfered,Anhydrosialidase. Now EC 4.2.2.15,4239
+616,transfered,"Ribosylhomocysteinase. now EC 4.4.1.21, S-ribosylhomocysteine lyase",4249
+617,deleted,"Xyloglucan-specific exo-beta-1,4-glucanase. The enzyme was shown to be identical to EC 3.2.1.155, xyloglucan-specific exo-beta-1,4-glucanase, during the public-review process so was withdrawn before being made official.",4261
+618,transfered,Glycopeptide N-glycosidase. Now included with EC 3.5.1.52,4317
+619,transfered,Now EC 3.2.1.147,4329
+620,transfered,"Ribosylhomocysteinase. now  EC 4.4.1.21, S-ribosylhomocysteine lyase",4332
+621,transfered,"Epoxide hydrolase. Now known to comprise two enzymes, microsomal epoxide hydrolase (EC 3.3.2.9) and soluble epoxide hydrolase (EC 3.3.2.10).",4335
+622,transfered,Now EC 3.4.11.1,4347
+623,transfered,Now EC 3.4.11.2,4348
+624,transfered,Now EC 3.4.11.4,4349
+625,transfered,Now EC 3.4.11.5,4350
+626,transfered,Now EC 3.4.17.1,4351
+627,transfered,Now EC 3.4.17.2,4352
+628,transfered,"Now EC 3.4.17.4, Gly-Xaa carboxypeptidase",4353
+629,transfered,Now EC 3.4.13.18,4354
+630,transfered,Now EC 3.4.13.18,4355
+631,transfered,"Now EC 3.4.13.3, Xaa-His dipeptidase",4356
+632,transfered,"Now EC 3.4.13.5, Xaa-methyl-His dipeptidase",4357
+633,transfered,Now EC 3.4.13.6,4358
+634,transfered,Now EC 3.4.13.8,4359
+635,transfered,"Now EC 3.4.13.9, Xaa-Pro dipeptidase",4360
+636,transfered,Now EC 3.4.23.1,4361
+637,transfered,Now EC 3.4.23.2,4362
+638,transfered,Now EC 3.4.23.4,4363
+639,transfered,Now EC 3.4.21.4,4364
+640,transfered,Now EC 3.4.21.1,4365
+641,transfered,Now EC 3.4.21.1,4366
+642,transfered,Now covered by EC 3.4.21.36 and EC 3.4.21.37,4367
+643,transfered,Now EC 3.4.21.9,4368
+644,transfered,Now EC 3.4.14.1,4369
+645,transfered,Now EC 3.4.22.2,4370
+646,transfered,Now EC 3.4.22.6,4371
+647,transfered,Now EC 3.4.22.3,4372
+648,transfered,Now EC 3.4.21.5,4373
+649,transfered,Now EC 3.4.21.7,4374
+650,transfered,Now EC 3.4.23.15,4375
+651,transfered,Now covered by EC 3.4.21.62 to EC 3.4.21.67,4376
+652,transfered,Now covered by EC 3.4.23.20 to EC 3.4.23.30,4377
+653,transfered,Now EC 3.4.22.10,4378
+654,transfered,Now EC 3.4.24.3,4379
+655,transfered,Now EC 3.4.22.8,4380
+656,transfered,Now covered by EC 3.4.21.34 and EC 3.4.21.35,4381
+657,transfered,Now EC 3.4.23.3,4382
+658,transfered,Now EC 3.4.23.5,4383
+659,transfered,Bromelain. Now covered by EC 3.4.22.32 and EC 3.4.22.33,4384
+660,deleted,Streptomyces alkalophilic keratinase,4385
+661,transfered,Now EC 3.4.19.3,4393
+662,deleted,Aminopeptidase,4396
+663,deleted,Thermophilic aminopeptidase,4397
+664,transfered,Now EC 3.4.11.24,4412
+665,transfered,Now EC 3.4.16.1,4413
+666,transfered,Now EC 3.4.17.1,4414
+667,transfered,Now EC 3.4.17.2,4415
+668,transfered,Now EC 3.4.16.2,4416
+669,transfered,Now EC 3.4.19.10,4417
+670,transfered,Now EC 3.4.17.8,4418
+671,transfered,Now EC 3.4.17.3,4419
+672,transfered,"Now EC 3.4.17.4, Gly-Xaa carboxypeptidase",4420
+673,deleted,Aspartate carboxypeptidase,4421
+674,transfered,Now EC 3.4.19.9,4422
+675,transfered,Now EC 3.4.17.6,4423
+676,transfered,Now EC 3.4.16.1,4424
+677,deleted,Gamma-glutamylglutamate carboxypeptidase,4425
+678,transfered,Now EC 3.4.13.18,4426
+679,transfered,Now EC 3.4.13.18,4427
+680,deleted,"Xaa-His dipeptidase. Xaa-His dipeptidase. The activity is covered by EC 3.4.13.18, cytosol nonspecific dipeptidase and EC 3.4.13.20, beta-Ala-His dipeptidase.",4428
+681,transfered,Now EC 3.4.11.2,4431
+682,transfered,Now EC 3.4.13.18,4433
+683,transfered,Now EC 3.4.19.5,4435
+684,transfered,Now EC 3.4.13.18,4436
+685,transfered,Now included with EC 3.4.13.3,4438
+686,deleted,Gamma-glutamyldipeptidase,4439
+687,transfered,Now included with EC 3.4.13.18,4440
+688,deleted,Aspartylphenylalanine dipeptidase,4441
+689,transfered,Now EC 3.4.19.1,4450
+690,deleted,Tetralysine endopeptidase,4454
+691,transfered,Now covered by EC 3.4.14.9 and EC 3.4.14.10,4455
+692,transfered,Now EC 3.4.19.2,4461
+693,transfered,Now EC 3.4.15.5,4462
+694,transfered,Now covered by EC 3.4.16.5 and EC 3.4.16.6,4466
+695,transfered,Now included with EC 3.4.16.5,4468
+696,deleted,Aspartate carboxypeptidase,4476
+697,transfered,Now included with EC 3.5.1.28,4478
+698,transfered,Now included with EC 3.4.17.4 Gly-Xaa carboxypeptidase,4480
+699,deleted,N-acetylmethionylpeptide peptidase,4499
+700,transfered,Now EC 3.4.17.21,4503
+701,transfered,Now included with EC 3.5.1.28,4505
+702,transfered,Kallikrein. Now covered by EC 3.4.21.34 and EC 3.4.21.35,4517
+703,transfered,Now covered by EC 3.4.21.36 and EC 3.4.21.37,4520
+704,transfered,Now EC 3.4.16.5,4522
+705,transfered,Now covered by EC 3.4.21.62 to EC 3.4.21.65 and EC 3.4.21.67,4523
+706,transfered,Now EC 3.4.21.63,4524
+707,deleted,Alternaria serine proteinase,4525
+708,deleted,Arthrobacter serine proteinase,4526
+709,deleted,Tenebrio alpha-proteinase,4527
+710,deleted,Vipera russelli proteinase,4532
+711,deleted,Red cell neutral endopeptidase,4533
+712,transfered,Now included with EC 3.4.21.74,4537
+713,transfered,Now included with EC 3.4.21.74,4538
+714,transfered,Now included with EC 3.4.21.74,4539
+715,transfered,Now covered by EC 3.4.21.68 and EC 3.4.21.73,4540
+716,deleted,Entomophthora collagenolytic proteinase,4542
+717,deleted,Submandibular proteinase A,4549
+718,transfered,Now included with EC 3.4.21.43,4553
+719,deleted,Leukocyte-membrane neutral endopeptidase,4560
+720,deleted,Cathepsin R,4561
+721,deleted,Euphorbain,4565
+722,deleted,Prohormone serine proteinase,4567
+723,transfered,Omptin,4596
+724,transfered,Now covered by EC 3.4.22.32 and EC 3.4.22.33,4634
+725,transfered,Now EC 3.4.22.33,4635
+726,transfered,Now EC 3.4.21.48,4639
+727,transfered,Now EC 3.4.24.56,4641
+728,transfered,Now EC 3.4.19.9,4642
+729,deleted,Staphylococcal cysteine proteinase,4643
+730,transfered,"Calpain. Now EC 3.4.22.52, calpain-1 and EC 3.4.22.53, calpain-2EC.",4647
+731,transfered,Now included with EC 3.4.21.26,4648
+732,transfered,Now included with EC 3.4.24.15,4649
+733,deleted,Dinorphin-converting enzyme,4650
+734,transfered,Now included with EC 3.4.25.1,4651
+735,transfered,Now EC 3.4.24.37,4652
+736,transfered,Now included with EC 3.4.21.61,4653
+737,transfered,Now covered by EC 3.4.23.18 to EC 3.4.23.28 and EC 3.4.23.30,4707
+738,transfered,Now EC 3.4.23.20,4708
+739,transfered,Now EC 3.4.23.25,4709
+740,transfered,Now EC 3.4.23.21,4710
+741,transfered,Now EC 3.4.23.22,4711
+742,deleted,Thyroid aspartic proteinase,4712
+743,deleted,Lotus aspartic proteinase,4714
+744,deleted,Sorghum aspartic proteinase,4715
+745,transfered,Physaropepsin. Now EC 3.4.21.103,4728
+746,transfered,Now EC 3.4.21.101,4734
+747,transfered,Now EC 3.4.21.100,4738
+748,deleted,Sepia proteinase,4755
+749,transfered,"Now covered by EC 3.4.24.25 to EC 3.4.24.32, EC 3.4.24.39 and EC 3.4.24.40",4757
+750,transfered,Lens neutral proteinase. Now included with EC 3.4.22.17 and EC 3.4.25.1,4758
+751,transfered,Now included with EC 3.4.24.3,4761
+752,deleted,Trichophyton schoenleinii collagenase,4762
+753,deleted,Trichophyton mentagrophytes keratinase,4763
+754,transfered,Now EC 3.4.23.28,4843
+755,deleted,Agavain,4844
+756,deleted,Angiotensinase,4845
+757,transfered,Now EC 3.4.23.12,4846
+758,transfered,Now EC 3.4.24.3,4847
+759,transfered,Now EC 3.4.24.21,4848
+760,deleted,Euphorbain,4849
+761,deleted,Gliocladium proteinase,4850
+762,deleted,Hurain,4851
+763,transfered,Now EC 3.4.24.56,4852
+764,deleted,Streptomyces alkalophilic keratinase,4853
+765,deleted,Trichophyton mentagrophytes keratinase,4854
+766,transfered,Now EC 3.4.24.32,4855
+767,deleted,Mexicanain,4856
+768,deleted,Paecilomyces proteinase,4857
+769,deleted,Penicillium notatum extracellular proteinase,4858
+770,deleted,Peptidoglycan endopeptidase,4859
+771,deleted,Pinguinain,4860
+772,transfered,Now EC 3.4.23.15,4861
+773,deleted,Scopulariopsis proteinase,4862
+774,deleted,Solanain,4863
+775,transfered,Now EC 3.4.24.29,4864
+776,deleted,Tabernamontanain,4865
+777,deleted,Tenebrio alpha-proteinase,4866
+778,transfered,Now included with EC 3.4.23.21,4867
+779,transfered,Now covered by EC 3.4.21.73 and EC 3.4.21.68,4868
+780,deleted,Echis carinatus prothrombin-activatingproteinase,4869
+781,transfered,Now EC 3.4.21.60,4870
+782,deleted,Myxobacter AL-1 proteinase I,4871
+783,transfered,Now included with EC 3.4.24.20,4872
+784,transfered,Now included with EC 3.4.24.15,4873
+785,transfered,Now EC 3.4.24.20,4874
+786,deleted,Cathepsin R,4875
+787,deleted,Mytilidase,4876
+788,transfered,Now EC 3.4.23.36,4877
+789,transfered,Now EC 3.4.21.89,4878
+790,deleted,RecA peptidase,4879
+791,transfered,Now EC 3.4.23.17,4880
+792,deleted,Pseudomurein endopeptidase,4881
+793,deleted,Pro-gonadoliberin proteinase,4882
+794,transfered,Now EC 3.4.24.64,4883
+795,deleted,Leucyllysine endopeptidase,4884
+796,transfered,Now EC 3.4.23.42,4885
+797,transfered,Now EC 3.4.24.55,4886
+798,transfered,Now EC 3.4.24.56,4887
+799,transfered,Now EC 3.4.25.1,4888
+800,transfered,Acetylhistidine deacetylase. Now included with EC 3.4.13.5,4922
+801,transfered,Now included with EC 3.5.1.26,4925
+802,transfered,Urease (ATP-hydrolyzing). Now listed as EC 6.3.4.6,4933
+803,deleted,"N-acetylgalactosamine-6-phosphate deacetylase. identical to EC 3.5.1.25, N-acteylglucosamine-6-phosphate deacetylase",4968
+804,transfered,UDP-3-O-acyl-N-acetylglucosamine deacetylase,5005
+805,transfered,Now EC 3.5.1.99,5006
+806,transfered,Peroxyureidoacrylate/ureidoacrylate amidohydrolase,5008
+807,transfered,Cephalosporinase. Now included with EC 3.5.2.6,5016
+808,transfered,"Deoxycytidine deaminase. Now included in EC 3.5.4.5, (deoxy)cytidine deaminase",5067
+809,transfered,S-methyl-5'-thioadenosine deaminase,5094
+810,transfered,GTP cyclohydrolase IV,5095
+811,transfered,Now EC 4.2.1.104,5098
+812,transfered,Adenosinetriphosphatase (Mg-activated). Now included with EC 3.6.1.3,5117
+813,deleted,M(7)G(5')pppN diphosphatase. Now covered by EC 3.6.1.59 (m(7)GpppX diphosphatase) and EC 3.6.1.62(m(7)GpppN-mRNA hydrolase),5143
+814,transfered,Now EC 3.6.4.1,5145
+815,transfered,Now EC 3.6.4.2,5146
+816,transfered,Now EC 3.6.3.14,5147
+817,transfered,Now EC 3.6.3.6,5148
+818,transfered,Now EC 3.6.3.10,5149
+819,transfered,Now EC 3.6.3.9,5150
+820,transfered,Now EC 3.6.3.8,5151
+821,transfered,Heterotrimeric G-protein GTPase. Now EC 3.6.5.1,5159
+822,transfered,Small monomeric GTPase. Now EC 3.6.5.2,5160
+823,transfered,Protein-synthesizing GTPase. Now EC 3.6.5.3,5161
+824,transfered,Signal-recognition-particle GTPase. Now EC 3.6.5.4,5162
+825,transfered,Dynamin GTPase. Now EC 3.6.5.5,5163
+826,transfered,Tubulin GTPase. Now EC 3.6.5.6,5164
+827,transfered,"UDP-2,3-diacylglucosamine diphosphatase",5184
+828,deleted,Aminophospholipid-transporting ATPase. Identical to EC 3.6.3.1,5199
+829,deleted,"Steroid-transporting ATPase. Now included with EC 3.6.3.44, xenobiotic-transporting ATPase",5231
+830,transfered,Cu(+) exporting ATPase,5242
+831,transfered,"2-hydroxy-6-oxonona-2,4-dienedioate hydrolase",5285
+832,transfered,"3D-(3,5/4)-trihydroxycyclohexane-1,2-dione acylhydrolase (decyclizing)",5286
+833,transfered,Thyroxine deiodinase. Now EC 1.97.1.10. The enzyme had been incorrectly classified as a hydrolase.,5290
+834,transfered,Now EC 3.1.8.2,5298
+835,deleted,"5-deoxyribos-5-ylhomocysteinase. The activity is most probably attributable to EC 4.4.1.21, S-ribosylhomocysteine lyase.",5307
+836,transfered,Aminomalonate decarboxylase. Now included with EC 4.1.1.12,5318
+837,deleted,Carbamoylaspartate decarboxylase,5321
+838,transfered,DOPA decarboxylase. Now included with EC 4.1.1.28,5334
+839,transfered,Tryptophan decarboxylase. Now included with EC 4.1.1.28,5335
+840,transfered,2-oxo-4-hydroxy-4-carboxy-5-ureidoimidazoline decarboxylase,5406
+841,transfered,Ethylmalonyl-CoA decarboxylase,5407
+842,transfered,Hydroxyoxobutyrate aldolase. Now included with EC 4.1.3.16,5408
+843,deleted,Pentosealdolase,5410
+844,deleted,Allothreonine aldolase. Reaction is due to EC 2.1.2.1,5413
+845,transfered,Ketose-1-phosphate aldolase. Now included with EC 4.1.2.13,5414
+846,transfered,2-dehydro-3-deoxy-phosphoheptonate aldolase. Now EC 2.5.1.54,5422
+847,transfered,2-dehydro-3-deoxy-phosphooctonate aldolase. Now EC 2.5.1.55,5423
+848,transfered,2-oxo-4-hydroxyglutarate aldolase. Now included with EC 4.1.3.16,5438
+849,transfered,Hydroxynitrilase. hydroxynitrilase. Now covered by EC 4.1.2.46 (aliphatic (R)-hydroxynitrile lyase) and EC 4.1.2.47 ((S)-hydroxynitrile ketone-lyase (cyanide forming)),5444
+850,deleted,"Hydroxynitrilase. The enzyme is identical to EC 4.1.2.37, hydroxynitrilase.",5446
+851,transfered,Benzoyl-CoA-dihydrodiol lyase,5464
+852,transfered,2-keto-3-deoxy-L-rhamnonate aldolase,5466
+853,transfered,4-hydroxy-2-oxoheptanedioate aldolase,5467
+854,transfered,"2-amino-3,7-dideoxy-D-threo-hept-6-ulosonate synthase",5468
+855,transfered,"2-amino-4,5-dihydroxy-6-oxo-7-(phosphonooxy)heptanoate synthase",5469
+856,transfered,Malate synthase. Now EC 2.3.3.9,5471
+857,transfered,Hydroxymethylglutaryl-CoA synthase. Now EC 2.3.3.10,5474
+858,transfered,Citrate (si)-synthase. Now EC 2.3.3.1,5476
+859,transfered,ATP citrate (pro-S)-lyase. Now EC 2.3.3.8,5477
+860,transfered,2-hydroxyglutarate synthase. Now EC 2.3.3.11,5478
+861,transfered,3-ethylmalate synthase. Now EC 2.3.3.7,5479
+862,transfered,3-propylmalate synthase. Now EC 2.3.3.12,5480
+863,transfered,2-isopropylmalate synthase. Now EC 2.3.3.13,5481
+864,transfered,2-hydroxy-3-oxoadipate synthase. Now EC 2.2.1.5,5484
+865,transfered,Acetolactate synthase. Now EC 2.2.1.6,5487
+866,transfered,N-acetylneuraminate synthase. Now EC 2.5.1.56,5488
+867,transfered,N-acylneuraminate-9-phosphate synthase. Now EC 2.5.1.57,5489
+868,transfered,Homocitrate synthase. Now EC 2.3.3.14,5490
+869,transfered,Decylcitrate synthase. Now EC 2.3.3.2,5492
+870,transfered,Citrate (re)-synthase. Now EC 2.3.3.3,5497
+871,transfered,Decylhomocitrate synthase. Now 2.3.3.4,5498
+872,transfered,2-methylcitrate synthase. Now 2.3.3.5,5500
+873,transfered,2-ethylmalate synthase. Now EC 2.3.3.6,5502
+874,transfered,1-deoxy-D-xylulose 5-phosphate synthase. Now EC 2.2.1.7,5506
+875,transfered,4-hydroxy-2-oxohexanoate aldolase,5516
+876,transfered,1-aminocyclopropane-1-carboxylate deaminase. Now EC 3.5.99.7,5520
+877,transfered,Now EC 4.2.3.6,5522
+878,transfered,Now EC 4.2.3.9,5523
+879,transfered,Now EC 4.2.3.14,5524
+880,transfered,Now EC 4.2.3.15,5525
+881,transfered,Now EC 4.2.3.16,5526
+882,deleted,"S-specific spore photoproduct lyase. S-specific spore photoproduct lyase. This enzyme was classified on the basis of an incorrect reaction. The activity is covered by EC 4.1.99.14, spore photoproduct lyase",5531
+883,deleted,"Citrate dehydratase. citrate dehydratase. Now known to be a partial reaction catalyzed by EC 4.2.1.3, aconitate hydratase.",5540
+884,transfered,Now EC 4.3.1.17,5549
+885,transfered,Now EC 4.3.1.18,5550
+886,transfered,Homoserine dehydratase. Now EC 4.4.1.1,5551
+887,transfered,Now EC 4.3.1.19,5552
+888,transfered,Now included with EC 4.2.1.22,5557
+889,deleted,Methylcysteine synthase. The reaction was due to a side-reaction of EC 4.2.1.22,5559
+890,transfered,"Aminodeoxygluconate dehydratase. The enzyme is identical to EC 4.3.1.9, glucosaminate ammonia-lyase",5562
+891,transfered,Indoleacetaldoxime dehydratase,5565
+892,transfered,Now EC 3.3.2.4,5573
+893,transfered,Now EC 4.3.1.20,5574
+894,transfered,"Dihydrodipicolinate synthase. Now EC 4.3.3.7, 4-hydroxy-2,3,4,5-tetrahydrodipicolinate synthase",5588
+895,deleted,"Crotonoyl-[acyl-carrier-protein] hydratase. The reaction described is covered by 4.2.1.59, 3-hydroxyacyl-[acyl-carrier-protein] dehydratase.",5594
+896,deleted,"3-hydroxydecanoyl-[acyl-carrier-protein] dehydratase. The reaction described is covered by 4.2.1.59, 3-hydroxyacyl-[acyl-carrier-protein] dehydratase.",5596
+897,transfered,Now EC 3.3.2.3,5599
+898,transfered,Now EC 3.3.2.3,5600
+899,deleted,"Acetylenecarboxylate hydratase. This enzyme is identical to EC 4.2.1.27, acetylenecarboxylate hydratase.",5607
+900,transfered,Acetylenedicarboxylate hydratase. Now EC 4.1.1.78,5608
+901,deleted,"16-dehydroprogesterone hydratase. (reaction is identical to that of EC 4.2.1.98, 16-alpha-hydroxyprogesterone dehydratase)",5622
+902,transfered,Now EC 4.2.1.100,5638
+903,transfered,N-acetylmuramic acid 6-phosphate etherase,5688
+904,transfered,"Very-long-chain (3R)-3-hydroxyacyl-[acyl-carrier protein] dehydratase. Now EC 4.2.1.134, very-long-chain (3R)-3-hydroxyacyl-[acyl-carrier protein] dehydratase",5689
+905,transfered,"Chondroitin ABC lyase. Now known to comprise two enzymes: EC 4.2.2.20, chondroitin-sulfate-ABC endolyase and EC 4.2.2.21, chondroitin-sulfate-ABC exolyase.",5693
+906,deleted,"Pinene synthase. Now covered by EC 4.2.3.119, (-)-alpha-pinene synthase, and EC 4.2.3.120, (-)-beta-pinene synthase",5730
+907,transfered,Now EC 4.2.3.38,5861
+908,transfered,Gamma-humulene synthase. Now EC 4.2.3.56,5863
+909,transfered,(-)-camphene synthase,5864
+910,transfered,(-)-beta-phellandrene synthase. Now EC 4.2.3.52,5865
+911,transfered,Terpinolene synthase,5866
+912,transfered,(-)-alpha-pinene synthase,5867
+913,transfered,Now EC 4.2.3.44,5869
+914,transfered,(-)-gamma-cadinene synthase,5870
+915,transfered,Zingiberene synthase. Now EC 4.2.3.65,5872
+916,transfered,(-)-germacrene D synthase,5873
+917,transfered,2-methylisoborneol synthase,5874
+918,transfered,Now EC 4.2.2.1,5875
+919,transfered,Now EC 4.2.3.1,5876
+920,transfered,Now EC 4.2.2.2,5877
+921,transfered,Now EC 4.2.2.3,5878
+922,deleted,Polyglucuronide lyase,5879
+923,transfered,"Chondroitin sulfate lyase. Now included with EC 4.2.2.5, 4.2.2.20 and EC 4.2.2.21",5880
+924,transfered,Now EC 4.2.3.2,5881
+925,transfered,Cysteine synthase. Now EC 2.5.1.47,5882
+926,transfered,O-succinylhomoserine (thiol)-lyase. Now EC 2.5.1.48,5883
+927,transfered,O-acetylhomoserine (thiol)-lyase. Now EC 2.5.1.49,5884
+928,transfered,Now EC 4.2.3.3,5885
+929,transfered,Beta-(9-cytokinin)-alanine synthase. Now EC 2.5.1.50,5887
+930,transfered,Beta-pyrazolylalanine synthase (acetylserine). Now EC 2.5.1.51,5888
+931,transfered,L-mimosine synthase. Now EC 2.5.1.52,5889
+932,transfered,Uracilylalanine synthase. Now EC 2.5.1.53,5890
+933,transfered,Now EC 4.2.99.14,5891
+934,transfered,2-hydroxypropyl-CoM lyase. The enzyme was incorrectly classified as acting on a C-O bond rather than a C-S bond,5893
+935,transfered,Now EC 4.2.99.20,5897
+936,transfered,"Phenylalanine ammonia-lyase. phenylalanine ammonia-lyase. Now divided into EC 4.3.1.23 (tyrosine ammonia-lyase), EC 4.3.1.24 (phenylalanine ammonia-lyase) and EC 4.3.1.25 (phenylalanine/tyrosine ammonia-lyase).",5902
+937,transfered,"Hydroxymethylbilane synthase. Now EC 2.5.1.61, hydroxymethylbilane synthase",5905
+938,deleted,Dihydroxyphenylalanine ammonia-lyase. The entry had been drafted on the basis of a single abstract that did not provide experimental evidence of the enzyme-catalyzed reaction.,5908
+939,deleted,"Aminodeoxygluconate ammonia-lyase. Enzyme is identical to EC 4.3.1.9, glucosaminate ammonia-lyase",5918
+940,transfered,3-amino-4-hydroxybenzoate synthase,5941
+941,transfered,Now EC 4.2.1.104,5942
+942,transfered,S-(hydroxyalkyl)glutathione lyase. Now included with EC 2.5.1.18,5952
+943,deleted,"Sulfoacetaldehyde lyase. Activity due to EC 2.3.3.15, sulfoacetaldehyde acetyltransferase.",5957
+944,transfered,Prenylcysteine lyase. Now EC 1.8.3.5,5963
+945,transfered,Now EC 4.2.3.4,5980
+946,transfered,Now EC 4.2.3.5,5981
+947,transfered,Now EC 4.2.3.7,5982
+948,transfered,Now EC 4.2.3.8,5984
+949,transfered,Now EC 4.2.3.10,5985
+950,transfered,Now EC 4.2.3.11,5986
+951,transfered,Now EC 4.2.3.12,5987
+952,transfered,Now EC 4.2.3.13,5988
+953,transfered,N-acetylneuraminate epimerase,6057
+954,transfered,Retinol isomerase. Now EC 3.1.1.64,6072
+955,deleted,4-hydroxyphenylacetaldehyde-oxime isomerase. The existence of this enzyme has been called into question by one of the authors of the reference cited,6076
+956,deleted,Erythrose isomerase,6081
+957,transfered,Now EC 3.5.99.6,6089
+958,deleted,Acetylglucosaminephosphate isomerase,6090
+959,deleted,"Glucose isomerase. Reaction is due to EC 5.3.1.9, in the presence of arsenate, or EC 5.3.1.5",6097
+960,transfered,Now EC 2.6.1.16,6098
+961,transfered,5-deoxy-glucuronate isomerase,6110
+962,transfered,"Ribose 1,5-bisphosphate isomerase",6111
+963,transfered,"2,3-diketo-5-methylthiopentyl-1-phosphate enolase",6120
+964,deleted,Hydroperoxide isomerase. Reaction due to combined action of EC 4.2.1.92 and EC 5.3.99.6,6140
+965,transfered,2-keto-myo-inositol isomerase,6151
+966,transfered,"Precorrin-8X methylmutase. Now classified as EC 5.4.99.61, precorrin-8X methylmutase.",6153
+967,transfered,"Phosphoglycerate mutase. Now recognized as two separate enzymes EC 5.4.2.11, phosphoglycerate mutase (2,3-diphosphoglycerate-dependent) and EC 5.4.2.12, phosphoglycerate mutase (2,3-diphosphoglycerate-independent)",6155
+968,deleted,"Ornithine 4,5-aminomutase. This reaction was due to a mixture of EC 5.1.1.12 and EC 5.4.3.5",6167
+969,transfered,"Isochorismate synthase. Now EC 5.4.4.2, isochorismate synthase",6189
+970,transfered,Now included with EC 5.4.99.11,6193
+971,transfered,Beta-amyrin synthase,6245
+972,transfered,Lupeol synthase,6246
+973,transfered,"Copal-8-ol diphosphate hydratase. This enzyme was misclassified at the public-review stage and so was withdrawn. See EC 4.2.1.133, copal-8-ol diphosphate hydratase ",6267
+974,transfered,Now EC 5.5.1.19,6272
+975,deleted,D-alanine-sRNA synthetase,6284
+976,transfered,Now EC 6.3.1.13,6304
+977,transfered,Now EC 6.1.1.27,6305
+978,transfered,Now included with EC 6.2.1.30,6327
+979,deleted,"3-alpha,7-alpha,12-alpha-trihydroxy-5-beta-cholestanate--CoA ligase. The enzyme is identical to EC 6.2.1.7, cholate--CoA ligase",6335
+980,transfered,3-hydroxybenzoate--CoA ligase,6347
+981,transfered,Now EC 6.3.4.13,6352
+982,transfered,"Carbapenam-3-carboxylate synthase. carbapenam-3-carboxylate synthetase. The enzyme was discovered at the public-review stage to have been misclassified and so was withdrawn. See EC 6.3.3.6, carbapenam-3-carboxylate synthase.",6365
+983,deleted,"UDP-N-acetylmuramoylalanyl-D-glutamyl-2,6-diamino-pimelate-D-alanyl-D-alanine ligase. The activity observed is due to EC 6.3.2.10, UDP-N-acetylmuramoyl-tripeptide--D-alanyl-D-alanine ligase",6381
+984,transfered,Diphthine--ammonia ligase. Now EC 6.3.1.14,6388
+985,transfered,UDP-N-acetylmuramoyl-L-alanyl-D-glutamate--D-lysine ligase,6409
+986,transfered,N-acetylaspartylglutamate synthase,6414
+987,transfered,"GMP synthase. Now included in EC 6.3.5.2, GMP synthase (glutamine-hydrolyzing) ",6421
+988,transfered,"Aminodeoxychorismate synthase. Now EC 2.6.1.85, aminodeoxychorismate synthase. As ATP is not hydrolyzed during the reaction, the classification of the enzyme as a ligase was incorrect.",6451
