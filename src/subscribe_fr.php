@@ -113,8 +113,9 @@
 				echo'<p>Bienvenue '.stripslashes(htmlspecialchars($_POST['pseudo'])).'</p>
 			<p>Cliquez <a href="./fpage_fr.php">Page principale</a> </p>';
 				try {
-					$query=$db->prepare('INSERT INTO members(membre_pseudo, membre_mdp, membre_email)
-					VALUES (:pseudo, :pass, :email)');
+					$query=$db->prepare('INSERT INTO members(membre_id,membre_pseudo, membre_mdp, membre_email)
+					VALUES (:membre_id, :pseudo, :pass, :email)');
+					$query->bindValue(':membre_id', $id);
 					$query->bindValue(':pseudo', $pseudo);
 					$query->bindValue(':pass', $pass);
 					$query->bindValue(':email', $email);
