@@ -90,7 +90,10 @@
 			//~ $page = htmlspecialchars($_POST['page']);
 			//~ echo '<a class="bottom" href=accueil_fr.php>Accueil</a><br>
 			//~ <a class="bottom" href="'.$page.'">Page précédente</a><br>';
-			echo '<a class="bottom" href=accueil_fr.php>Accueil</a>';
+			
+			header('Location: accueil_fr.php');
+			echo 'Si la redirection n\'est pas automatique, cliquez <a class="bottom" href=accueil_fr.php>ICI</a>';
+			exit();
 		}
 	?>
 		

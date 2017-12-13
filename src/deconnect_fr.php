@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="fr">
+	<head>
+	  <meta charset="UTF-8">
+	  <title>EnzymSearch</title>
+	  <link rel="stylesheet" type="text/css" href="./form.css">
+	</head>
+	
 	<body class = "first">	
 		<?php
 			session_start();
@@ -8,12 +14,11 @@
 			$titre="Déconnexion";
 			include("./includes/debut.php");
 
-			if ($id==0) erreur(ERR_IS_NOT_CO);
-
-			echo '<p>Déconnecté<br />
-			<a href="'.htmlspecialchars($_SERVER['HTTP_REFERER']).'">Page précédente</a><br />
-			<a href="./fpage_fr.php">Page principale</a> pour revenir à la page principale</p>';
-			echo '</div></body></html>';
+			if ($id==0)	erreur(ERR_IS_NOT_CO);
+			else {
+				header('Location: fpage_fr.php');
+				exit();
+			}
 		?>
 	</body>
 </html>

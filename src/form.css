@@ -4,7 +4,7 @@ div#entete {
  width   : 100%;
  margin  : 50 px;
  text-align:center;
- text-shadow: 0 0 40px #FEFEFE
+ text-shadow: 0 0 40px #FEFEFE;
 }
 
 div#corps {
@@ -72,16 +72,48 @@ div#elem50_col2 {
 
 /*----------------------- MENU -----------------------*/
 div#menu {
-	margin	: auto;
-	width	: 250px;
-	border	: 1px solid green;
+ height : 50px;
+ width	: 100%;
+ display : inline;
 }
 
-	
-.element_menu {
-	float:center;
-} 
+#menu .menu_item {
+/*
+ border : 1px ridge #CD5C5C;
+*/
+ border-right : 1px ridge #CD5C5C;
+ float:left;
+ width:25%;
+ line-height: 50px;
+ background-color : #FFA07A;
+}
 
+#menu .menu_item:hover{
+ border-bottom:10px solid purple;
+ height: 40px;
+}
+
+/*
+
+ul#menuh {
+ height : 50px;
+ margin : 2em 0 0 0;
+ padding : 0em;
+ list-style-type : none;
+ display:inline;
+}
+*/
+
+/*
+ul#menuh li { 
+ float:left;
+ border : 1px ridge #CD5C5C;
+ line-height: 30px;
+ display:inline;
+ width:24.89%;
+ background-color : #FFA07A;
+}
+*/
 
 /*----------------------- MISE EN FORME -----------------------*/
 body {
@@ -89,21 +121,20 @@ body {
  }
 
 body.first {
+ background-image	: url("img/bck_fp.png");
+ background-attachment: fixed;
+ background-repeat:no-repeat;
+/*
  background-color	: rgb(32,32,32,0.95);
+*/
  color	:white;
 }
 
 body.principal {
- background-image	: url("img/bkg1.jpg");
+ background-image	: url("img/bg.png");
  background-attachment: fixed;
  background-repeat:no-repeat;
  background-size: 100%;
-}
-
-body.rechch {
- background-image : url("img/joli_bg.png");
- background-repeat:no-repeat;
- background-size: cover;
 }
 
 h1 {
@@ -145,3 +176,26 @@ div#param {
  text-align:right;
 }
 
+
+/*----------------------- FORMULAIRE -----------------------*/
+.form {
+ width:450px;
+ height:45px;
+ font-size:20pt;"
+}
+
+.form_ec {
+ width:110px;
+ text-align:center;
+ height:45px;
+ font-size:20pt;
+ }
+
+
+/*----------------------- POPUP -----------------------*/
+#pop_info {
+	border:1px ridge blue;
+	background-color:lightblue;
+	color:black;
+	font-size:xx-small;
+}

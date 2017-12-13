@@ -4,7 +4,8 @@
 	include("./includes/identifiants.php");
 	include("./includes/debut.php");
 
-	if ($id>0) echo MENU;
+	if ($id>0) echo'<a href=accueil_fr.php>Accueil</a><br>
+		<a href=deconnect_fr.php>Déconnexion</a>';
 ?>
 
 <!DOCTYPE html>

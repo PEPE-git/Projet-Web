@@ -1,5 +1,11 @@
 <!DOCTYPE html>
 <html>
+	
+	<head>
+	  <meta charset="UTF-8">
+	  <title>Enzym search - Connexion</title>
+	  <link rel="stylesheet" type="text/css" href="./form.css">
+	</head>
 
 	<body class = "first">		
 		
@@ -13,7 +19,7 @@
 		if ($id > 0) erreur(ERR_IS_CO);
 
 
-		if (empty($_POST['pseudo'])){ // Si on la variable est vide, on peut considérer qu'on est sur la page de formulaire
+		if (empty($_POST['pseudo'])){ // vide --> sur page formulaire
 			echo '<div id="entete">
 				<h1>EnzymSearch</h1>
 				</div>
@@ -22,19 +28,16 @@
 				<div id="corps">
 					<div id="form">
 						<form method="post" action="subscribe_fr.php" enctype="multipart/form-data">
-
-							<fieldset><legend>Identifiants</legend>
-								<label for="pseudo">Identifiant : </label>  <input name="pseudo" type="text" id="pseudo" /> (3 à 15 caractères)<br />
-								<label for="password">Mot de Passe :</label><input type="password" name="password" id="password" /><br />
-								<label for="confirm">Confirmer le mot de passe :</label><input type="password" name="confirm" id="confirm" />
-							</fieldset>
-
-							<fieldset><legend>Contact</legend>
-								<label for="email">Votre adresse Mail :</label><input type="text" name="email" id="email" /><br />
-							</fieldset>
-
-							<input type="checkbox" name="case"> Je ne suis pas un robot.<br>
-							<p><input type="submit" value="S\'inscrire" /></p></form>
+						<fieldset><legend>Identifiants</legend>
+						<label for="pseudo">Identifiant :</label>  <input name="pseudo" type="text" id="pseudo" /> (3 à 15 caractères)<br />
+						<label for="password">Mot de Passe :</label><input type="password" name="password" id="password" /><br />
+						<label for="confirm">Confirmer le mot de passe :</label><input type="password" name="confirm" id="confirm" />
+						</fieldset>
+						<fieldset><legend>Contact</legend>
+						<label for="email">Votre adresse Mail :</label><input type="email" name="email" id="email" /><br />
+						</fieldset>
+						<input type="checkbox" name="case"> Je ne suis pas un robot.<br>
+						<p><input type="submit" value="S\'inscrire" /></p></form>
 					</form>
 				</div>
 			</div>
@@ -70,7 +73,7 @@
 			
 			//Vérification du pseudo
 			$query=$db->prepare('SELECT COUNT(*) AS nbr FROM members WHERE membre_pseudo =:pseudo');
-			$query->bindValue(':pseudo',$pseudo);
+			$query->bindValue(':pseudo',$pseudo, PDO::PARAM_STR);
 			$query->execute();
 			$pseudo_free=($query->fetchColumn()==0)?1:0;
 			$query->CloseCursor();
@@ -89,7 +92,7 @@
 			}
 			//Vérification de l'adresse email
 			$query=$db->prepare('SELECT COUNT(*) AS nbr FROM members WHERE membre_email =:mail');
-			$query->bindValue(':mail',$email);
+			$query->bindValue(':mail',$email, PDO::PARAM_STR);
 			$query->execute();
 			$mail_free=($query->fetchColumn()==0)?1:0;
 			$query->CloseCursor();
@@ -99,7 +102,7 @@
 				$i++;
 			}
 			if (!preg_match("#^[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]{2,}\.[a-z]{2,4}$#", $email) || empty($email)) {
-				$email_erreur2 = "Format email invalide";
+				$email_erreur2 = "Formet email invalide";
 				$i++;
 			}
 			//Vérification case cochée
@@ -111,28 +114,19 @@
 			if ($i==0) {
 				echo'<h1>Inscription terminée</h1>';
 				echo'<p>Bienvenue '.stripslashes(htmlspecialchars($_POST['pseudo'])).'</p>
-			<p>Cliquez <a href="./fpage_fr.php">Page principale</a> </p>';
-				try {
-					$query=$db->prepare('INSERT INTO members(membre_id,membre_pseudo, membre_mdp, membre_email)
-					VALUES (:membre_id, :pseudo, :pass, :email)');
-					$query->bindValue(':membre_id', $id);
-					$query->bindValue(':pseudo', $pseudo);
-					$query->bindValue(':pass', $pass);
-					$query->bindValue(':email', $email);
-					$query->execute();
+			<p>Cliquez <a href="./accueil_fr.php">Accédez au site</a> </p>';
+			
+				$query=$db->prepare('INSERT INTO members (membre_pseudo, membre_mdp, membre_email)
+				VALUES (:pseudo, :pass, :email)');
+				$query->bindValue(':pseudo', $pseudo, PDO::PARAM_STR);
+				$query->bindValue(':pass', $pass, PDO::PARAM_INT);
+				$query->bindValue(':email', $email, PDO::PARAM_STR);
+				$query->execute();
 
-					//Et on définit les variables de sessions
-					$_SESSION['pseudo'] = $pseudo;
-					$_SESSION['id'] = $db->lastInsertId('membre_id');
-
-					$query->CloseCursor();
-					
-				} catch (Exception $e) {
-					echo "Error in connection to database" . $e->getMessage() . "</br>";
-					die();
-					
-				}
-				
+				//Et on définit les variables de sessions
+				$_SESSION['pseudo'] = $pseudo;
+				$_SESSION['id'] = $db->lastInsertId(); ;
+				$query->CloseCursor();
 			}
 			else {
 				echo'<h1>Inscription interrompue</h1>';

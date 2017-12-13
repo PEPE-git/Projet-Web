@@ -9,38 +9,20 @@
 	</head>
 	
 	<body class="principal">
-		<?php
+	<?php
 		session_start();
 		$titre="Accueil";
 		include("./includes/identifiants.php");
 		include("./includes/debut.php");
 
 		if ($id==0)	erreur(ERR_IS_NOT_CO.REDIRECT);
+		echo MENU;
 	?>
 		
-	<div id="entete">
-		<div id = "param">
-			<a class="a_entete" href="./deconnect_fr.php">Déconnexion</a><br>
-			<b>fr</b> - <a class="a_entete" href="./accueil_en.php">en</a>
-		</div>
-		
-		<div id="menu">
-			<div id="menu_item">
-				<a class="a_entete" href="./accueil.html">Accueil</a>
-			</div>
-			<div id="menu_item">
-				<a class="a_entete" href="./recherche_simple.php">Recherche simple</a>
-			</div>
-			<div id="menu_item">
-				<a class="a_entete" href="./recherche_avancee.html">Recherche avancée</a>
-			</div>
-		</div>
-	</div>
-
-	<br><br><br>
+	
 
 	<div id="corps">
-		<h1>Bienvenue <?php echo $_SESSION['pseudo'] ?> </h1>
+		<h1>Bienvenue <?php echo $_SESSION['pseudo'] ?></h1>
 	
 		<h2>EnzymSearch</h2>
 		<p>
