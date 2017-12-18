@@ -49,8 +49,8 @@
 <!--
 							<label for="ec">EC Number</label> </br>
 -->
-							<input class="form_ec" type="number" name="ec1" id="ec1" list="ec1"  maxlength="15" size="6" value="<?php echo isset($_POST['ec1']) ? $_POST['ec1'] : '' ?>">
-							- <input class="form_ec" type="number"  name="ec2" id="ec2" list="ec2" maxlength="15" size="6" value="<?php echo isset($_POST['ec2']) ? $_POST['ec2'] : '' ?>" >
+							<input class="form_ec" type="number" name="ec1" id="ec1" list="ec1"  maxlength="15" size="6" value="<?php echo isset($_POST['ec1']) ? $_POST['ec1'] : '' ?>" autofocus>
+							- <input class="form_ec" type="number"  name="ec2" id="ec2" list="ec2" maxlength="15" size="6" value="<?php echo isset($_POST['ec2']) ? $_POST['ec2'] : '' ?>">
 							- <input class="form_ec" type="number"  name="ec3" id="ec3" list="ec3" maxlength="15" size="6" value="<?php echo isset($_POST['ec3']) ? $_POST['ec3'] : '' ?>" >
 							- <input class="form_ec" type="number"  name="ec4" id="ec" list="ec4" maxlength="15" size="6" value="<?php echo isset($_POST['ec4']) ? $_POST['ec4'] : '' ?>" >
 							<br><br>
@@ -80,7 +80,7 @@
 					<div>
 						<!--Rechercher les informations associées à une activité enzymatique -->	
 						<fieldset>
-							<legend>Recherche par fonction d'enzyme<SUP><a id="pop_info" href="rechsp_fr.php" onClick="popup('./popup/info_enz_fct.html')">?</a></SUP></legend>
+							<legend>Recherche d'enzymes faisant intervenir des composés chimiques pour leur activités<SUP><a id="pop_info" href="rechsp_fr.php" onClick="popup('./popup/info_enz_fct.html')">?</a></SUP></legend>
 <!--
 							<label for="act">Activité</label> </br>
 -->
@@ -93,7 +93,7 @@
 					<div>
 						<!--Rechercher les enzymes et informations associés à un unique cofacteur -->
 						<fieldset>
-							<legend>Recherche des enzymes ayant comme cofacteur<SUP><a id="pop_info" href="rechsp_fr.php" onClick="popup('./popup/info_enz_fct.html')">?</a></SUP></legend>
+							<legend>Recherche d'enzymes ayant comme cofacteur(s)<SUP><a id="pop_info" href="rechsp_fr.php" onClick="popup('./popup/info_enz_fct.html')">?</a></SUP></legend>
 <!--
 							<label for="cofactors">Cofactors</label></br>
 -->

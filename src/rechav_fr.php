@@ -60,7 +60,6 @@
 						</fieldset>
 						<input type="submit" value="Rechercher">
 						</form></div></div>';
-		//~ var_dump($_POST);
 	?>
 	</body>
 </html>

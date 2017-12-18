@@ -85,7 +85,7 @@
 							</tr>';
 							
 							while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
-								$file=$file.$row['ec'].'\t'.$row['accepted_name'].'\t'.$row['systematic_name'].'\t'.$row['synonym'].'\t'.$row['cofactors'].'\t'.$row['activity'].'\t'.$row['history'].'\n';
+								$file=$file.$row['ec']."\t".$row['accepted_name']."\t".$row['systematic_name']."\t".$row['synonym']."\t".$row['cofactors']."\t".$row['activity']."\t".$row['history'].'\n';
 								echo '
 								<tr>
 								   <td>'.$row['ec'].'</td>
@@ -122,7 +122,7 @@
 								</tr>';
 
 								while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
-									$res=$res.$row['ec'].'\t'.$row['accepted_name'].'\t'.$row['systematic_name'].'\t'.$row['synonym'].'\t'.$row['cofactors'].'\t'.$row['activity'].'\t'.$row['history'].'\n';
+									$res=$res.$row['ec']."\t".$row['accepted_name']."\t".$row['systematic_name']."\t".$row['synonym']."\t".$row['cofactors']."\t".$row['activity']."\t".$row['history'].'\n';
 									echo '
 									<tr>
 									   <td>'.$row['ec'].'</td>
@@ -159,7 +159,7 @@
 									</tr>';
 									
 									while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
-										$res=$res.$row['ec'].'\t'.$row['accepted_name'].'\t'.$row['systematic_name'].'\t'.$row['synonym'].'\t'.$row['cofactors'].'\t'.$row['activity'].'\t'.$row['history'].'\n';
+										$res=$res.$row['ec']."\t".$row['accepted_name']."\t".$row['systematic_name']."\t".$row['synonym']."\t".$row['cofactors']."\t".$row['activity']."\t".$row['history'].'\n';
 										echo '
 										<tr>
 										   <td>'.$row['ec'].'</td>
