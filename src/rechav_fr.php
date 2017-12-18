@@ -16,10 +16,11 @@
 		if ($id==0)	erreur(ERR_IS_NOT_CO.REDIRECT);
 		else echo MENU;
 
+		$var_opt="<option>EC1<option>EC2<option>EC3<option>EC4<option>titre article<option>année publication<option>auteur(s) article (séparés par des espaces)<option>activité chimique (composés)<option>cofacteurs<option>commentaires<option>historique<option>notes";
 		echo '<div id="corps">
-					<h1>Recherche avancée</h1>
+					<h1>'.$titre.'</h1>
 					<div id="form">
-						<form method="post" action="rechav_fr.php" enctype="multipart/form-data">
+						<form method="post" action="traitementav_fr.php" enctype="multipart/form-data" target=_blank>
 						
 						<fieldset><legend>Formulaire</legend>
 								
@@ -35,8 +36,8 @@
 								<option value="note">Notes</option>
 							</select> <br \>
 							<br \>
-			
-							<select name="list_0" size="1"><option>a<option>b<option>c<option>d<option>e</select> <input type="input" name="name_0_0" /> <span id="champs_0_1"><a href="javascript:create_champOR(0,1)">OU</a><br/>
+							
+							<select name="list_0" size="1">'.$var_opt.'</select> <input type="input" name="name_0_0" /> <span id="champs_0_1"><a href="javascript:create_champOR(0,1)">OU</a><br/>
 							<span id="champs_1_0"><a href="javascript:create_champAND(1,0)">ET</a>
 						</fieldset>
 						<input type="submit" value="Rechercher">
@@ -49,6 +50,8 @@
 <script>
 	// variables globales
 	var ncol=3; var nrow=5;
+	var var_opt="<option>EC1<option>EC2<option>EC3<option>EC4<option>titre article<option>année publication<option>auteur(s) article (séparés par des espaces)<option>activité chimique (composés)<option>cofacteurs<option>commentaires<option>historique<option>notes";
+	// sortir uniquement les résultats qui ont toutes les informations, code swissprot/prosite,
 	
 	// Ajout d'une colonne (condition OU)
 	function create_champOR(i,j) {
@@ -88,11 +91,11 @@
 		
 		if(l<nrow) {
 			// création du nouveau champ et du lien pour créer un nouveau champ ET
-			document.getElementById('champs_'+i+'_'+j).innerHTML = 'ET <select name="list_'+i+'" size="1"><option>a<option>b<option>c<option>d<option>e</select> <input type="input" name="name_'+i+'_'+j+'"></span>';
+			document.getElementById('champs_'+i+'_'+j).innerHTML = 'ET <select name="list_'+i+'" size="1">'+var_opt+'</select> <input type="input" name="name_'+i+'_'+j+'"></span>';
 			document.getElementById('champs_'+i+'_'+j).innerHTML+='<span id="champs_'+i+'_'+k+'"><a href="javascript:create_champOR('+i+','+k+')">OU</a><br/><span id="champs_'+l+'_0"><a href="javascript:create_champAND('+l+',0)">ET</a></span>';
 		} else {
 			// création du nouveau champ
-			document.getElementById('champs_'+i+'_'+j).innerHTML = 'ET <select name="list_'+i+'" size="1"><option>a<option>b<option>c<option>d<option>e</select><input type="input" name="name_'+i+'_'+j+'"></span>';
+			document.getElementById('champs_'+i+'_'+j).innerHTML = 'ET <select name="list_'+i+'" size="1">'+var_opt+'</select> <input type="input" name="name_'+i+'_'+j+'"></span>';
 			document.getElementById('champs_'+i+'_'+j).innerHTML+='<span id="champs_'+i+'_'+k+'"><a href="javascript:create_champOR('+i+','+k+')">OU</a><br/>';
 		}
 	} // fin fonction creation_champAND
