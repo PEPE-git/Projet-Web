@@ -59,7 +59,7 @@
 		
 		if(k<ncol) {
 			// création du nouveau champ et du lien pour créer un nouveau champ OU
-			if(j!=1) {
+			if(j<1) {
 				document.getElementById('champs_'+i+'_'+j).innerHTML = 'OU <input type="input" name="name_'+i+'_'+j+'"></span>';
 				document.getElementById('champs_'+i+'_'+j).innerHTML+='<span id="champs_'+i+'_'+k+'"><a href="javascript:create_champOR('+i+','+k+')">OU</a><br/>';
 			}
