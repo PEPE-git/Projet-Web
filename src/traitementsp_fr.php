@@ -15,16 +15,16 @@
 
 			if ($id==0)	erreur(ERR_IS_NOT_CO.REDIRECT);
 			else echo MENU;
-		?>
+		
 
-		<div id="corps">
-			<h1><?php echo $titre ?></h1>
+			echo '<div id="corps">
+				<h1><?php echo $titre ?></h1>
+				
+				<form method="post" action="dwl.php">
+					<input type="submit" style = "display: block; margin : auto;" name="export" value="Exporter" />
+				</form>';
+				
 			
-			<form method="post" action="dwl.php">
-				<input type="submit" style = "display: block; margin : auto;" name="export" value="Exporter" />
-			</form>
-			
-			<?php
 				$res="EC Number\tAccepted Names\tSystematic Names\tSynonyms\tCofactors\tActivity\tHistory\n";
 				//~ Requete sur le numéro EC d'un enzyme
 				if(!empty($_POST['rech_ec'])) {
@@ -102,7 +102,7 @@
 						
 					}
 					else {
-						//~ Requete sur la fonction d'un enzyme
+						//~ Requete sur un composé chimique réagissant dans une réaction enzymatique
 						if(!empty($_POST['rech_act'])) {
 							if(isset($_POST['act'])) {
 								$act=$_POST['act'];

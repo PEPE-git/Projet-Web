@@ -16,12 +16,12 @@
 		if ($id==0)	erreur(ERR_IS_NOT_CO.REDIRECT);
 		else echo MENU;
 
-		$var_opt="<option>EC1<option>EC2<option>EC3<option>EC4<option>titre article<option>année publication<option>auteur(s) article (séparés par des espaces)<option>activité chimique (composés)<option>cofacteurs<option>commentaires<option>historique<option>notes";
+		$var_opt="<option value=enzyme.ec1>EC1<option value=enzyme.ec2>EC2<option value=enzyme.ec3>EC3<option value=enzyme.ec4>EC4<option value=article.title>titre de l'article (un mot clé)<option value=article.year>année de publication<option value=article.authors>auteur(s) article (séparés par des espaces)<option value=enzyme.activity>activité chimique (composés)<option value=enzyme.cofactors>cofacteurs<option value=comments.comments>commentaires<option value=enzyme.history>historique<option value=notes.type>notes";
 		
 		//~ $sign = '<input type="radio" id="radio1" name="radio_0_0" value="<"><label for="radio1">></label>';
 		//~ $sign .= '<input type="radio" id="radio2" name="radio_0_0" value="="><label for="radio2">=</label>';
 		//~ $sign .= '<input type="radio" id="radio3" name="radio_0_0" value=">"><label for="radio3"><</label> ';
-		$sign = '<select name="sign_0_0"><option value="egal">Egal à</option><option value="diff">Différent de</option><option value="sup">Supérieur à</option><option value="<">Inférieur à</option></select>';
+		$sign = '<select name="sign_0_0"><option value="=">Egal à</option><option value="!=">Différent de</option><option value=">">Supérieur à</option><option value="<">Inférieur à</option></select>';
 		 
 		echo '<div id="corps">
 					<h1>'.$titre.'</h1>
@@ -31,26 +31,27 @@
 						<fieldset><legend>Formulaire</legend>
 								
 							<label for="select">Informations que vous désirez<br/><br/></label>
-							<select multiple >
-								<option value="tous">Toutes les informations disponibles</option>
+							<select multiple name="selection[]">
+								<option value="*">Toutes les informations disponibles</option>
 								<optgroup label="Enzyme">
-								<option value="ec">Numéro EC</option>
-								<option value="enzyme">Enzyme - Nom(s)</option>
-								<option value="synonym">Enzyme - Synonyme(s)</option>
-								<option value="activity">Activité(s) enzymatique(s)</option>
+								<option value="enzyme.ec1,enzyme.ec2,enzyme.ec3,enzyme.ec4">Numéro EC</option>
+								<option value="enzyme.accepted_name,enzyme.systematic_name">Enzyme - Nom(s)</option>
+								<option value="synonym.synonyme">Enzyme - Synonyme(s)</option>
+								<option value="enzyme.activity">Activité(s) enzymatique(s)</option>
 								</optgroup>
 								<optgroup label="Références">
-								<option value="titre">swissprot</option>
-								<option value="titre">prosite</option>
+								<option value="swissprot.num_swissprot,swissprot.code_swissprot">swissprot</option>
+								<option value="prosite.num_prosite">prosite</option>
 								</optgroup>
 								<optgroup label="Littérature">
-								<option value="titre">titre</option>
-								<option value="auteurs">auteur</option>
-								<option value="année de publication">année</option>
+								<option value="article.title">titre</option>
+								<option value="article.authors">auteur</option>
+								<option value="article.year">année</option>
+								<option value="edition.editorial_place,edition.city,edition.edition,edition.editor">Informations d\'édition</option>
 								</optgroup>
-								<optgroup label="Notes">
-								<option value="comments">Commentaires</option>
-								<option value="note">Notes</option>
+								<optgroup label="Notes et commentaires">
+								<option value="comments.comments">Commentaires</option>
+								<option value="note.type,note.note">Notes</option>
 								</optgroup>
 							</select> <br \>
 							<br \>
@@ -67,7 +68,7 @@
 <script>
 	// variables globales
 	var ncol=3; var nrow=5;
-	var var_opt="<option>EC1<option>EC2<option>EC3<option>EC4<option>titre article<option>année publication<option>auteur(s) article (séparés par des espaces)<option>activité chimique (composés)<option>cofacteurs<option>commentaires<option>historique<option>notes";
+	var	var_opt="<option value=enzyme.ec1>EC1<option value=enzyme.ec2>EC2<option value=enzyme.ec3>EC3<option value=enzyme.ec4>EC4<option value=article.title>titre de l'article (un mot clé)<option value=article.year>année de publication<option value=article.authors>auteur(s) article (séparés par des espaces)<option value=enzyme.activity>activité chimique (composés)<option value=enzyme.cofactors>cofacteurs<option value=comments.comments>commentaires<option value=enzyme.history>historique<option value=note.type>notes";
 	// sortir uniquement les résultats qui ont toutes les informations, code swissprot/prosite,
 	
 	function create_sign(x,y) {
@@ -76,8 +77,8 @@
 		 //~ sign += '<input type="radio" id="radio2" name="radio_'+x+'_'+y+'" value="="><label for="radio2">=</label>';
 		 //~ sign += '<input type="radio" id="radio3'+x+'_'+y+'" name="radio_'+x+'_'+y+'" value=">"><label for="radio3"><</label> ';
 		 
-		 // Liste
-		 sign = '<select name="sign_'+x+'_'+y+'"><option value="egal">Egal à</option><option value="diff">Différent de</option><option value="sup">Supérieur à</option><option value="<">Inférieur à</option></select>';
+		 // List
+		 sign = '<select name="sign_'+x+'_'+y+'"><option value="=">Egal à</option><option value="!=">Différent de</option><option value="sup">Supérieur à</option><option value="<">Inférieur à</option></select>';
 		 return sign;
 	}
 	
