@@ -56,18 +56,18 @@
 							$name_type=$_POST['name_type'];
 							$name=$_POST['name'];
 							if($name_type == "1") {
-								$q=$q."SELECT * FROM enzyme WHERE accepted_name='$name';";
+								$q=$q."SELECT * FROM enzyme WHERE accepted_name LIKE '%$name%';";
 							}
 							else {
 								if($name_type == "2") {
-									$q=$q."SELECT * FROM enzyme WHERE systematic_name='$name';";
+									$q=$q."SELECT * FROM enzyme WHERE systematic_name LIKE'%$name%';";
 								}
 								else {
 									if($name_type == "3") {
-										$q=$q."SELECT * FROM enzyme,synonym WHERE synonym.synonyme='$name' AND synonym.id_enzyme=enzyme.id_enzyme;";
+										$q=$q."SELECT * FROM enzyme,synonym WHERE synonym.synonyme LIKE'%$name%' AND synonym.id_enzyme=enzyme.id_enzyme;";
 									}
 									else {
-										$q=$q."SELECT * FROM enzyme,synonym WHERE synonym.id_enzyme=enzyme.id_enzyme AND (accepted_name='$name' OR systematic_name='$name' OR synonym.synonyme='$name');";
+										$q=$q."SELECT * FROM enzyme,synonym WHERE synonym.id_enzyme=enzyme.id_enzyme AND (accepted_name LIKE '%$name%' OR systematic_name LIKE '%$name%' OR synonym.synonyme LIKE '%$name%');";
 									}
 								}
 							}
