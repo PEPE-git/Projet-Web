@@ -15,11 +15,11 @@
 	</script>
 	
 	<!--
-	<script type="text/javascript">       
+	<script type="text/javascript">        s
 		var win = window.open();
 		var txt = " <?php echo $q_result ?> "; 
 		win.document.write(txt);
-	</script>
+	</script> 
 	 -->
 	
 	<script type="text/javascript">

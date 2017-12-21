@@ -15,7 +15,7 @@
 
 			if ($id==0)	erreur(ERR_IS_NOT_CO.REDIRECT);
 			else echo MENU;
-		
+		 
 
 			echo '<div id="corps">
 				<h1><?php echo $titre ?></h1>
