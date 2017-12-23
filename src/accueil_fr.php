@@ -3,9 +3,7 @@
 <html lang="fr">
 	
 	<head>
-	  <meta charset="UTF-8">
-	  <title>Enzym search - Connexion</title>
-	  <link rel="stylesheet" type="text/css" href="./form.css">
+		<link rel="stylesheet" type="text/css" href="./form.css">
 	</head>
 	
 	<body class="principal">
@@ -18,29 +16,27 @@
 		if ($id==0)	erreur(ERR_IS_NOT_CO.REDIRECT);
 		echo MENU;
 	?>
-		
-	
 
 	<div id="corps">
-		<h1>Bienvenue <?php echo $_SESSION['pseudo'] ?></h1>
+		<h1>Bienvenue <?php echo $_SESSION['pseudo'] ?><br/><?php echo $titre ?></h1>
 	
-		<h2>EnzymSearch</h2>
-		<p>
-			<b>EnzymSearch</b> blablabla <br>
-			Dernière mise à jour : 01/2018
-			
-		</p>
+		<ul>
 		
-		<h2>Informations sur les données</h2>
-		<p>
-			blablabla
-		</p>
+		<li>EnzymSearch</li>
+		<b>EnzymSearch</b> est un site permettant de recueillir des informations sur les enzymes dont la nomenclatures suit les recommendations du Comité de Nomenclature de l'Union Internationale de Biochimie et de Biologie Moléculaire (e.g. Nomenclature Committee of the International Union of Biochemistry and Molecular Biology, IUBMB).
+		La dernière mise à jour a été réalisé en janvier 2018.
 		
-		<h2>Informations sur la base de données</h2>
-		<p>
-			blablabla sur les différentes recherches<br>
-			--> version mySQL utilisée <br>
-			--> schéma relationel --> du coup, possibilité de rentrer une commande SQL ?? <br>
+		<li>Informations sur les données</li>
+		Les données sont issues de : <br/>
+		- Intenz : Integrated relational Enzyme database<br/>
+		- ENZYME : Enzyme nomenclature database<br/>
+		Les enzymes possédent des numéros EC (Enzyme Classification) uniques  qui les identifient et fournissent des indications sur la nature des réactions catalisées <a style="color:gray" href="http://www.ebi.ac.uk/intenz/browse.jsp">(informations supplémentaires)</a>.
+		
+		
+		<li>Informations sur la base de données</li>
+		blablabla sur les différentes recherches<br>
+		--> version mySQL utilisée <br>
+		--> insertion image du schéma relationel --> du coup, possibilité de rentrer une commande SQL ?? <br>
 		</p>
 		
 		<h2>Aide</h2>
@@ -50,6 +46,8 @@
 			oph.dasilva@gmail.com <br>
 			<b>[--> voir comment mettre un lien de création direct' d'email]
 			[Logo upsud]</b>
+		
+		</ul>
 	</div>
 	
 	<div id="pied">

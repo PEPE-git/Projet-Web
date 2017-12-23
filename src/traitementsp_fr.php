@@ -59,10 +59,11 @@
 						</tr>';
 						
 						while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
-							$file=$file.$row['ec1'].$row['ec2'].$row['ec3'].$row['ec4']."\t".$row['accepted_name']."\t".$row['systematic_name']."\t".$row['synonym']."\t".$row['cofactors']."\t".$row['activity']."\t".$row['history'].'\n';
+							//~ $file=$file.$row['ec1'].$row['ec2'].$row['ec3'].$row['ec4']."\t".$row['accepted_name']."\t".$row['systematic_name']."\t".$row['synonym']."\t".$row['cofactors']."\t".$row['activity']."\t".$row['history'].'\n';
+							$file=$file.$row['ec']."\t".$row['accepted_name']."\t".$row['systematic_name']."\t".$row['synonym']."\t".$row['cofactors']."\t".$row['activity']."\t".$row['history'].'\n';
 							echo '
 							<tr>
-							   <td>'.$row['ec1'].$row['ec2'].$row['ec3'].$row['ec4'].'</td>
+							   <td>'.$row['ec'].'</td>
 							   <td>'.$row['accepted_name'].'</td>
 							   <td>'.$row['systematic_name'].'</td>
 							   <td>'.$row['synonym'].'</td>
@@ -123,10 +124,11 @@
 								</tr>';
 								
 								while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
-									$file=$file.$row['ec1'].$row['ec2'].$row['ec3'].$row['ec4']."\t".$row['accepted_name']."\t".$row['systematic_name']."\t".$row['synonym']."\t".$row['cofactors']."\t".$row['activity']."\t".$row['history'].'\n';
+									//~ $file=$file.$row['ec1'].$row['ec2'].$row['ec3'].$row['ec4']."\t".$row['accepted_name']."\t".$row['systematic_name']."\t".$row['synonym']."\t".$row['cofactors']."\t".$row['activity']."\t".$row['history'].'\n';
+									$file=$file.$row['ec']."\t".$row['accepted_name']."\t".$row['systematic_name']."\t".$row['synonym']."\t".$row['cofactors']."\t".$row['activity']."\t".$row['history'].'\n';
 									echo '
 									<tr>
-									   <td>'.$row['ec1'].$row['ec2'].$row['ec3'].$row['ec4'].'</td>
+									   <td>'.$row['ec'].'</td>
 									   <td>'.$row['accepted_name'].'</td>
 									   <td>'.$row['systematic_name'].'</td>
 									   <td>'.$row['synonym'].'</td>
@@ -161,10 +163,11 @@
 								</tr>';
 								
 								while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
-									$file=$file.$row['ec1'].$row['ec2'].$row['ec3'].$row['ec4']."\t".$row['accepted_name']."\t".$row['systematic_name']."\t".$row['synonym']."\t".$row['cofactors']."\t".$row['activity']."\t".$row['history'].'\n';
+									//~ $file=$file.$row['ec1'].$row['ec2'].$row['ec3'].$row['ec4']."\t".$row['accepted_name']."\t".$row['systematic_name']."\t".$row['synonym']."\t".$row['cofactors']."\t".$row['activity']."\t".$row['history'].'\n';
+									$file=$file.$row['ec']."\t".$row['accepted_name']."\t".$row['systematic_name']."\t".$row['synonym']."\t".$row['cofactors']."\t".$row['activity']."\t".$row['history'].'\n';
 									echo '
 									<tr>
-									   <td>'.$row['ec1'].$row['ec2'].$row['ec3'].$row['ec4'].'</td>
+									   <td>'.$row['ec'].'</td>
 									   <td>'.$row['accepted_name'].'</td>
 									   <td>'.$row['systematic_name'].'</td>
 									   <td>'.$row['synonym'].'</td>
@@ -198,10 +201,11 @@
 									</tr>';
 									
 									while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
-										$file=$file.$row['ec1'].$row['ec2'].$row['ec3'].$row['ec4']."\t".$row['accepted_name']."\t".$row['systematic_name']."\t".$row['synonym']."\t".$row['cofactors']."\t".$row['activity']."\t".$row['history'].'\n';
+										//~ $file=$file.$row['ec1'].$row['ec2'].$row['ec3'].$row['ec4']."\t".$row['accepted_name']."\t".$row['systematic_name']."\t".$row['synonym']."\t".$row['cofactors']."\t".$row['activity']."\t".$row['history'].'\n';
+										$file=$file.$row['ec']."\t".$row['accepted_name']."\t".$row['systematic_name']."\t".$row['synonym']."\t".$row['cofactors']."\t".$row['activity']."\t".$row['history'].'\n';
 										echo '
 										<tr>
-										   <td>'.$row['ec1'].$row['ec2'].$row['ec3'].$row['ec4'].'</td>
+										   <td>'.$row['ec'].'</td>
 										   <td>'.$row['accepted_name'].'</td>
 										   <td>'.$row['systematic_name'].'</td>
 										   <td>'.$row['synonym'].'</td>
@@ -221,3 +225,7 @@
 		</div>
 	</body>
 </html>
+<!--
+<td>'.$row['ec1'].$row['ec2'].$row['ec3'].$row['ec4'].'</td>
+-->
+							   

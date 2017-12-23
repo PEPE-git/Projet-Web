@@ -11,6 +11,7 @@ div#corps {
  width  : 100%;
  height : 500 px;
  margin : auto;
+ line-height: 5em;
  }
 
 div#pied {
@@ -80,7 +81,7 @@ div#menu {
 */
  border-right : 1px ridge #CD5C5C;
  float:left;
- width:24.7%;
+ width:23%;
  line-height: 50px;
  background-color : #FFA07A;
 }
@@ -90,31 +91,10 @@ div#menu {
  height: 40px;
 }
 
-/*
-
-ul#menuh {
- height : 50px;
- margin : 2em 0 0 0;
- padding : 0em;
- list-style-type : none;
- display:inline;
-}
-*/
-
-/*
-ul#menuh li { 
- float:left;
- border : 1px ridge #CD5C5C;
- line-height: 30px;
- display:inline;
- width:24.89%;
- background-color : #FFA07A;
-}
-*/
-
 /*----------------------- MISE EN FORME -----------------------*/
 body {
  font-family  : Tahoma, Geneva, Kalimati, sans-serif;
+ color:white;
  }
 
 body.first {
@@ -143,9 +123,28 @@ h2 {
  height:75%;
 }
 
+ul {
+ line-height: 2em;
+}
+
+li {
+ line-height: 3em;
+ border-bottom:1px dashed orange;
+ width:98%;
+ font-weight:bold;
+ font-size:1.6em;
+ list-style-type:disclosure-closed;
+}
+
 a.bottom {
  color: lightgray;
  text-decoration: none
+}
+
+a.a_entete {
+ color: purple;
+ text-decoration: none;
+ font-size:1.2em;
 }
 
 div.zoom {
@@ -175,16 +174,26 @@ div#param {
 
 /*----------------------- TABLEAU -----------------------*/
 table {
+/*
   table-layout:fixed;
+*/
+/*
   width: 100%;
-   
+*/
+ line-height:1.2em ;
+ border-collapse:collapse;
 }
 
 table, th, td {
-   border: 1px solid black;
+   border: 1px solid white;
    text-align: center;
+/*
    background-color: #ffe6ff;
+*/
+/*
    word-wrap: break-word;
+*/
+   vertical-align:middle;
 }
 
 

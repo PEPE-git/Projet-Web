@@ -34,10 +34,11 @@
 							<select multiple name="selection[]">
 								<option value="*">Toutes les informations disponibles</option>
 								<optgroup label="Enzyme">
-								<option value="enzyme.ec1,enzyme.ec2,enzyme.ec3,enzyme.ec4">Numéro EC</option>
+								<option value="enzyme.ec">Numéro EC</option>
 								<option value="enzyme.accepted_name,enzyme.systematic_name">Enzyme - Nom(s)</option>
 								<option value="synonym.synonyme">Enzyme - Synonyme(s)</option>
 								<option value="enzyme.activity">Activité(s) enzymatique(s)</option>
+								<option value="enzyme.cofactors">Cofacteur(s)</option>
 								</optgroup>
 								<optgroup label="Références">
 								<option value="swissprot.num_swissprot,swissprot.code_swissprot">swissprot</option>
@@ -67,7 +68,7 @@
 
 <script>
 	// variables globales
-	var ncol=3; var nrow=5;
+	var ncol=3; var nrow=10;
 	var	var_opt="<option value=enzyme.ec1>EC1<option value=enzyme.ec2>EC2<option value=enzyme.ec3>EC3<option value=enzyme.ec4>EC4<option value=article.title>titre de l'article (un mot clé)<option value=article.year>année de publication<option value=article.authors>auteur(s) article (séparés par des espaces)<option value=enzyme.activity>activité chimique (composés)<option value=enzyme.cofactors>cofacteurs<option value=comments.comments>commentaires<option value=enzyme.history>historique<option value=note.type>notes";
 	// sortir uniquement les résultats qui ont toutes les informations, code swissprot/prosite,
 	

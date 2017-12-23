@@ -37,8 +37,7 @@
 			foreach($_POST as $key => $val) {
 				// Création de la sélection sur gros tableau (clauses SELECT+FROM)
 				if(preg_match("#^selection#", $key)) {
-					$key_select= $_POST["selection"];
-					$select= "SELECT ";
+					$select= "SELECT DISTINCT ";
 					$f=true;
 					foreach($val as $i => $j) {
 						if($f) {
@@ -91,7 +90,19 @@
 												if($var=="article.title") {
 													//~ if(condition de validité);
 													$cdt=substr($cdt, 0, -1);
-													$val= " LIKE %$val%";
+													$val= " LIKE '%$val%'";
+												}
+												else {
+													if($var=="enzyme.cofactors") {
+														$cdt=substr($cdt, 0, -1);
+														$val= " LIKE '%$val%'";
+													}
+													else {
+														if($var=="enzyme.activity") {
+															$cdt=substr($cdt, 0, -1);
+															$val= " LIKE '%$val%'";
+														}
+													}
 												}
 											}	
 										}
@@ -107,26 +118,40 @@
 			$q=$select.$cdt;
 			echo $q;
 			
-			echo "1";
+			//~ $key_select=array();
+			//~ foreach($_POST["selection"] as $key) {
+				//~ $tmp=preg_split("#,#",$key);
+				//~ $key_select=array_merge($key_select,$tmp);
+			//~ }
+			//~ echo var_dump($key_select);
+								
+			//~ $t = array("a1" => "b1","a2" => "b2","a3" => "b3");					
+			//~ for ($i=0;$i<sizeof($key_select);$i++) {
+				//~ echo $t[$i];
+			//~ }
+			
+			
 			
 			//REQUETE AVANCEE - AFFICHAGE DES RESULTATS
-			$query=$db->query($q);
-			
-			echo print_r($query);
-			echo "2";
-			
+			//~ $db->setAttribute(PDO::MYSQL_ATTR_USE_BUFFERED_QUERY, false);
+			$query=$db->query($q);			
+			$res="";
+			echo '<table>';
 			while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
-				echo "OK";
 				//~ echo '<tr>';
-				//~ for ($i=0; $i<sizeof($key_select); $i++) {
-					//~ echo $i;
-					//~ echo $key_select($i);
-					//~ $res=$res."\t".$row[$key_select[$i]];
-					//~ echo '<td>'.$row[$key_select[$i]].'</td>';
-				//~ }
+				$tmp='<tr>';
+				foreach ($row as $key => $val ) {
+					$res=$res."\t".$val;
+					//~ echo '<td>'.$val.'</td>';					
+					$t='<td>'.$val.'</td>';					
+					$tmp.=$t;					
+				}
 				//~ echo '</tr>';
-				//~ $res.="\n";
+				$tmp.='</tr>';
+				echo $tmp;
+				$res.="\n";
 			}
+			echo '</table>';
 		?>
 	</body>
 </html>
