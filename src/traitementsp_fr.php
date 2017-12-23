@@ -15,7 +15,7 @@
 
 			if ($id==0)	erreur(ERR_IS_NOT_CO.REDIRECT);
 			else echo MENU;
-		 
+		
 
 			echo '<div id="corps">
 				<h1><?php echo $titre ?></h1>
@@ -28,31 +28,60 @@
 				$res="EC Number\tAccepted Names\tSystematic Names\tSynonyms\tCofactors\tActivity\tHistory\n";
 				//~ Requete sur le numéro EC d'un enzyme
 				if(!empty($_POST['rech_ec'])) {
-					if(isset($_POST['ec1'])) {
+					if(!empty($_POST['ec1'])) {
 						$q="SELECT * FROM enzyme ";
 						$ec1 =$_POST['ec1'];
-						$q=$q."WHERE ec1='$ec1' ";
-						if(isset($_POST['ec2'])) {
+						$q=$q."WHERE ec1=$ec1 ";
+						if(!empty($_POST['ec2'])) {
 							$ec2=$_POST['ec2'];
-							$q=$q+"AND ec2='$ec2' ";
-							if(isset($_POST['ec3'])) {
-								$ec2=$_POST['ec3'];
-								$q=$q+"AND ec3='$ec3' ";
-								if(isset($_POST['ec4'])) {
-									$ec2=$_POST['ec4'];
-									$q=$q+"AND ec4='$ec4' ";
+							$q=$q."AND ec2=$ec2 ";
+							if(!empty($_POST['ec3'])) {
+								$ec3=$_POST['ec3'];
+								$q=$q."AND ec3=$ec3 ";
+								if(!empty($_POST['ec4'])) {
+									$ec4=$_POST['ec4'];
+									$q=$q."AND ec4=$ec4 ";
 								}
 							}
 						}
+					
+						echo $q."</br>";
+						$query = $db->query($q);
+						echo '<table> 
+						<tr>
+							<th>EC Number</th>
+							<th>Accepted Names</th>
+							<th>Systematic Names</th>
+							<th>Synonyms</th>
+							<th>Cofactors</th>
+							<th>Activity</th>
+							<th>History</th>			
+						</tr>';
+						
+						while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
+							$file=$file.$row['ec1'].$row['ec2'].$row['ec3'].$row['ec4']."\t".$row['accepted_name']."\t".$row['systematic_name']."\t".$row['synonym']."\t".$row['cofactors']."\t".$row['activity']."\t".$row['history'].'\n';
+							echo '
+							<tr>
+							   <td>'.$row['ec1'].$row['ec2'].$row['ec3'].$row['ec4'].'</td>
+							   <td>'.$row['accepted_name'].'</td>
+							   <td>'.$row['systematic_name'].'</td>
+							   <td>'.$row['synonym'].'</td>
+							   <td>'.$row['cofactors'].'</td>
+							   <td>'.$row['activity'].'</td>
+							   <td>'.$row['history'].'</td>
+						   </tr>';			
+						}
+						echo '</table>';
 					}
+
 					else {
-						echo 'Requête non conforme : veuillez indiquer un numéro pour le premier champ EC';
+						echo 'Requête non conforme : veuillez remplir les numéros EC de la gauche vers la droite';
 					}
 				}
 				else {
 					//~ Requete sur le nom d'un enzyme
 					if(!empty($_POST['rech_name'])) {
-						if(isset($_POST['name_type'])) {
+						if(!empty($_POST['name_type'])) {
 							$name_type=$_POST['name_type'];
 							$name=$_POST['name'];
 							if($name_type == "1") {
@@ -73,31 +102,41 @@
 							}
 							echo $q."</br>";
 							$query = $db->query($q);
-							echo '<table> 
-							<tr>
-								<td>EC Number</td>
-								<td>Accepted Names</td>
-								<td>Systematic Names</td>
-								<td>Synonyms</td>
-								<td>Cofactors</td>
-								<td>Activity</td>
-								<td>History</td>			
-							</tr>';
-							
-							while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
-								$file=$file.$row['ec']."\t".$row['accepted_name']."\t".$row['systematic_name']."\t".$row['synonym']."\t".$row['cofactors']."\t".$row['activity']."\t".$row['history'].'\n';
-								echo '
-								<tr>
-								   <td>'.$row['ec'].'</td>
-								   <td>'.$row['accepted_name'].'</td>
-								   <td>'.$row['systematic_name'].'</td>
-										   <td>'.$row['synonym'].'</td>
-								   <td>'.$row['cofactors'].'</td>
-								   <td>'.$row['activity'].'</td>
-								   <td>'.$row['history'].'</td>
-							   </tr>';			
+
+							#FONCTIONNE PAS !!!!!!!!
+							#Test si le résultat de la requête est vide et renvoie msg d'erreur.
+							echo $query->fetchColumn();
+							if ($query->fetchColumn() > 0) { 
+								echo 'Query returned nothing, please try again.';
 							}
-							echo '</table>';
+
+							else{
+								echo '<table> 
+								<tr>
+									<th>EC Number</th>
+									<th>Accepted Names</th>
+									<th>Systematic Names</th>
+									<th>Synonyms</th>
+									<th>Cofactors</th>
+									<th>Activity</th>
+									<th>History</th>			
+								</tr>';
+								
+								while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
+									$file=$file.$row['ec1'].$row['ec2'].$row['ec3'].$row['ec4']."\t".$row['accepted_name']."\t".$row['systematic_name']."\t".$row['synonym']."\t".$row['cofactors']."\t".$row['activity']."\t".$row['history'].'\n';
+									echo '
+									<tr>
+									   <td>'.$row['ec1'].$row['ec2'].$row['ec3'].$row['ec4'].'</td>
+									   <td>'.$row['accepted_name'].'</td>
+									   <td>'.$row['systematic_name'].'</td>
+									   <td>'.$row['synonym'].'</td>
+									   <td>'.$row['cofactors'].'</td>
+									   <td>'.$row['activity'].'</td>
+									   <td>'.$row['history'].'</td>
+								   </tr>';			
+								}
+								echo '</table>';
+							}
 						}
 						
 					}
@@ -108,27 +147,27 @@
 								$act=$_POST['act'];
 								$q="SELECT * FROM enzyme WHERE activity LIKE '%$act%';";
 								
-								echo $q."</br></br>";
+								echo $q."</br>";
 								$query = $db->query($q);
 								echo '<table> 
 								<tr>
-									<td>EC Number</td>
-									<td>Accepted Names</td>
-									<td>Systematic Names</td>
-									<td>Synonyms</td>
-									<td>Cofactors</td>
-									<td>Activity</td>
-									<td>History</td>			
+									<th>EC Number</th>
+									<th>Accepted Names</th>
+									<th>Systematic Names</th>
+									<th>Synonyms</th>
+									<th>Cofactors</th>
+									<th>Activity</th>
+									<th>History</th>			
 								</tr>';
-
+								
 								while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
-									$res=$res.$row['ec']."\t".$row['accepted_name']."\t".$row['systematic_name']."\t".$row['synonym']."\t".$row['cofactors']."\t".$row['activity']."\t".$row['history'].'\n';
+									$file=$file.$row['ec1'].$row['ec2'].$row['ec3'].$row['ec4']."\t".$row['accepted_name']."\t".$row['systematic_name']."\t".$row['synonym']."\t".$row['cofactors']."\t".$row['activity']."\t".$row['history'].'\n';
 									echo '
 									<tr>
-									   <td>'.$row['ec'].'</td>
+									   <td>'.$row['ec1'].$row['ec2'].$row['ec3'].$row['ec4'].'</td>
 									   <td>'.$row['accepted_name'].'</td>
 									   <td>'.$row['systematic_name'].'</td>
-										   <td>'.$row['synonym'].'</td>
+									   <td>'.$row['synonym'].'</td>
 									   <td>'.$row['cofactors'].'</td>
 									   <td>'.$row['activity'].'</td>
 									   <td>'.$row['history'].'</td>
@@ -145,24 +184,24 @@
 									$co=$_POST['cofactors'];
 									$q="SELECT * FROM enzyme WHERE cofactors LIKE'%$co%';";
 									
-									echo $q."</br></br>";
+									echo $q."</br>";
 									$query = $db->query($q);
 									echo '<table> 
 									<tr>
-										<td>EC Number</td>
-										<td>Accepted Names</td>
-										<td>Systematic Names</td>
-										<td>Synonyms</td>
-										<td>Cofactors</td>
-										<td>Activity</td>
-										<td>History</td>			
+										<th>EC Number</th>
+										<th>Accepted Names</th>
+										<th>Systematic Names</th>
+										<th>Synonyms</th>
+										<th>Cofactors</th>
+										<th>Activity</th>
+										<th>History</th>			
 									</tr>';
 									
 									while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
-										$res=$res.$row['ec']."\t".$row['accepted_name']."\t".$row['systematic_name']."\t".$row['synonym']."\t".$row['cofactors']."\t".$row['activity']."\t".$row['history'].'\n';
+										$file=$file.$row['ec1'].$row['ec2'].$row['ec3'].$row['ec4']."\t".$row['accepted_name']."\t".$row['systematic_name']."\t".$row['synonym']."\t".$row['cofactors']."\t".$row['activity']."\t".$row['history'].'\n';
 										echo '
 										<tr>
-										   <td>'.$row['ec'].'</td>
+										   <td>'.$row['ec1'].$row['ec2'].$row['ec3'].$row['ec4'].'</td>
 										   <td>'.$row['accepted_name'].'</td>
 										   <td>'.$row['systematic_name'].'</td>
 										   <td>'.$row['synonym'].'</td>

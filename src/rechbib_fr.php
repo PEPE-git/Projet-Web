@@ -36,6 +36,7 @@
 		<div id="corps">
 			<h1><?php echo $titre ?></h1>
 			<div id="form">
+				<form method="post" action="traitementbib_fr.php" enctype="multipart/form-data" target="_blank">
 					<div>
 						<!--Rechercher les informations associés aux articles -->
 						<fieldset>
@@ -93,7 +94,7 @@
 
 				//~ Liste active des années de publication
 				echo '<datalist id="year_art">';
-				$query_year = $db->prepare('SELECT DISTINCT year FROM article');
+				$query_year = $db->prepare('SELECT DISTINCT year FROM article ORDER BY year ASC');
 				$query_year->execute();
 				$result_year = $query_year->fetchAll(PDO::FETCH_ASSOC);
 				foreach ($result_year as $row_year) {

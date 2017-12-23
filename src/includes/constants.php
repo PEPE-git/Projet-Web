@@ -16,10 +16,13 @@
 				<a class="a_entete" href="./accueil_fr.php">Accueil</a>
 			</div>
 			<div class="menu_item">
-				<a class="a_entete" href="./rechsp_fr.php">Recherche simple</a>
+				<a class="a_entete" href="./rechsp_fr.php">Recherche Simple</a>
 			</div>
 			<div class="menu_item">
-				<a class="a_entete" href="./rechav_fr.php">Recherche avancée</a>
+				<a class="a_entete" href="./rechav_fr.php">Recherche Avancée</a>
+			</div>
+			<div class="menu_item">
+				<a class="a_entete" href="./rechbib_fr.php">Recherche Bibliographique</a>
 			</div>
 		</div>
 	</div>

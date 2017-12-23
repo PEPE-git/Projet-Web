@@ -15,11 +15,11 @@
 	</script>
 	
 	<!--
-	<script type="text/javascript">        s
+	<script type="text/javascript">       
 		var win = window.open();
 		var txt = " <?php echo $q_result ?> "; 
 		win.document.write(txt);
-	</script> 
+	</script>
 	 -->
 	
 	<script type="text/javascript">
@@ -52,7 +52,7 @@
 							<input class="form_ec" type="number" name="ec1" id="ec1" list="ec1"  maxlength="15" size="6" value="<?php echo isset($_POST['ec1']) ? $_POST['ec1'] : '' ?>" autofocus>
 							- <input class="form_ec" type="number"  name="ec2" id="ec2" list="ec2" maxlength="15" size="6" value="<?php echo isset($_POST['ec2']) ? $_POST['ec2'] : '' ?>">
 							- <input class="form_ec" type="number"  name="ec3" id="ec3" list="ec3" maxlength="15" size="6" value="<?php echo isset($_POST['ec3']) ? $_POST['ec3'] : '' ?>" >
-							- <input class="form_ec" type="number"  name="ec4" id="ec" list="ec4" maxlength="15" size="6" value="<?php echo isset($_POST['ec4']) ? $_POST['ec4'] : '' ?>" >
+							- <input class="form_ec" type="number"  name="ec4" id="ec4" list="ec4" maxlength="15" size="6" value="<?php echo isset($_POST['ec4']) ? $_POST['ec4'] : '' ?>" >
 							<br><br>
 							<input type="submit" name="rech_ec" value="Recherche" />
 						</fieldset>
@@ -71,7 +71,7 @@
 							<input type="radio" name="name_type" value="1" id="acc" /> <label for="acc">Accepted name</label>
 							<input type="radio" name="name_type" value="2" id="sys" /> <label for="sys">Systematic name</label>
 							<input type="radio" name="name_type" value="3" id="syn" /> <label for="syn">Synonyme</label>
-							<input type="radio" name="name_type" value="4" id="unk" /> <label for="unk">Je ne sais pas</label>
+							<input type="radio" name="name_type" value="4" id="unk" checked /> <label for="unk">Je ne sais pas</label>
 							<br><br>
 							<input type="submit" value="Recherche" name="rech_name"/>
 						</fieldset>
