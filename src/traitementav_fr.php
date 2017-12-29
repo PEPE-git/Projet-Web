@@ -21,7 +21,7 @@
 			echo '<div id="corps">
 				<h1><?php echo $titre ?></h1><br>
 				
-				<form method="post" action="dwl.php">
+				<form method="post" action="dwl_av.php">
 					<input type="submit" style = "display: block; margin : auto;" name="export" value="Exporter" />
 				</form>';
 

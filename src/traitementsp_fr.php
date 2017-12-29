@@ -19,7 +19,7 @@
 
 			echo '<div id="corps">
 				<h1><?php echo $titre ?></h1><br/>
-				<form method="post" action="dwl.php">
+				<form method="post" action="dwl_sp.php">
 					<input type="submit" style = "display: block; margin : auto;" name="export" value="Exporter les résultats" />
 				</form>';
 				
@@ -124,7 +124,7 @@
 								
 								while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
 									//~ $file=$file.$row['ec1'].$row['ec2'].$row['ec3'].$row['ec4']."\t".$row['accepted_name']."\t".$row['systematic_name']."\t".$row['synonym']."\t".$row['cofactors']."\t".$row['activity']."\t".$row['history'].'\n';
-									$file=$file.$row['ec']."\t".$row['accepted_name']."\t".$row['systematic_name']."\t".$row['synonym']."\t".$row['cofactors']."\t".$row['activity']."\t".$row['history'].'\n';
+									$file=$file.$row['ec']."\t".$row['accepted_name']."\t".$row['systematic_name']."\t".$row['synonym']."\t".$row['cofactors']."\t".$row['activity']."\t".$row['history']."\n";
 									echo '
 									<tr>
 									   <td>'.$row['ec'].'</td>
@@ -163,7 +163,7 @@
 								
 								while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
 									//~ $file=$file.$row['ec1'].$row['ec2'].$row['ec3'].$row['ec4']."\t".$row['accepted_name']."\t".$row['systematic_name']."\t".$row['synonym']."\t".$row['cofactors']."\t".$row['activity']."\t".$row['history'].'\n';
-									$file=$file.$row['ec']."\t".$row['accepted_name']."\t".$row['systematic_name']."\t".$row['synonym']."\t".$row['cofactors']."\t".$row['activity']."\t".$row['history'].'\n';
+									$file=$file.$row['ec']."\t".$row['accepted_name']."\t".$row['systematic_name']."\t".$row['synonym']."\t".$row['cofactors']."\t".$row['activity']."\t".$row['history']."\n";
 									echo '
 									<tr>
 									   <td>'.$row['ec'].'</td>
@@ -201,7 +201,7 @@
 									
 									while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
 										//~ $file=$file.$row['ec1'].$row['ec2'].$row['ec3'].$row['ec4']."\t".$row['accepted_name']."\t".$row['systematic_name']."\t".$row['synonym']."\t".$row['cofactors']."\t".$row['activity']."\t".$row['history'].'\n';
-										$file=$file.$row['ec']."\t".$row['accepted_name']."\t".$row['systematic_name']."\t".$row['synonym']."\t".$row['cofactors']."\t".$row['activity']."\t".$row['history'].'\n';
+										$file=$file.$row['ec']."\t".$row['accepted_name']."\t".$row['systematic_name']."\t".$row['synonym']."\t".$row['cofactors']."\t".$row['activity']."\t".$row['history']."\n";
 										echo '
 										<tr>
 										   <td>'.$row['ec'].'</td>
@@ -218,7 +218,7 @@
 							}
 						}
 					}
-					$_SESSION['res'] = $file;
+					$_SESSION['res_sp'] = $file;
 				}
 				echo PIED;
 			?>
