@@ -62,6 +62,7 @@
 						</fieldset>
 						<input type="submit" value="Rechercher">
 						</form></div></div>';
+	echo PIED;
 	?>
 	</body>
 </html>

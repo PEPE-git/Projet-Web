@@ -137,5 +137,6 @@
 				echo '</datalist></br></br>';
 			?>
 		</div>
+	<?php echo PIED; ?>
 	</body>
 </html>

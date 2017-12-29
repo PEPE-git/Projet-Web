@@ -92,8 +92,7 @@
 			echo 'Si la redirection n\'est pas automatique, cliquez <a class="bottom" href=accueil_fr.php>ICI</a>';
 			exit();
 		}
-	?>
-		
+	?>		
 	</body>
 </html>
 

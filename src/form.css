@@ -5,6 +5,9 @@ div#entete {
  margin  : 50 px;
  text-align:center;
  text-shadow: 0 0 40px #FEFEFE;
+ position:fixed;
+ top:0;
+ left:0;
 }
 
 div#corps {
@@ -15,10 +18,10 @@ div#corps {
  }
 
 div#pied {
- width  : auto;
- height : auto;
- color  : gray;
- text-align : center;
+ color: gray;
+ text-align: center;
+ width: 100%;
+ display: inline-block;
 }
 
 div#elem1 {
@@ -82,7 +85,9 @@ div#elem50_col2 {
 div#menu {
  height : 50px;
  width  : 100%;
+/*
  display : inline;
+*/
 }
 
 #menu .menu_item {

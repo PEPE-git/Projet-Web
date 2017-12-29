@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="fr">
 	
 	<head>
@@ -18,7 +17,6 @@
 
 		echo '<div id="corps"><h1>Bienvenue <?php echo $_SESSION[\'pseudo\'] ?><br/><br/><?php echo $titre ?></h1>'.INFO.PIED;
 	?>
-
 	</body>
 </html>
 

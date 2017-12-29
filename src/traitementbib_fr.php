@@ -180,6 +180,7 @@
 					}
 					$_SESSION['res'] = $res;
 				}
+				echo PIED;
 			?>
 		</div>
 	</body>

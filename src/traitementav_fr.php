@@ -152,6 +152,7 @@
 				$res.="\n";
 			}
 			echo '</table>';
+			echo PIED;
 		?>
 	</body>
 </html>
