@@ -14,7 +14,6 @@
 
 		if ($id==0)	erreur(ERR_IS_NOT_CO.REDIRECT);
 		echo MENU;
-
 		echo '<div id="corps"><h1>Bienvenue <?php echo $_SESSION[\'pseudo\'] ?><br/><br/><?php echo $titre ?></h1>'.INFO.PIED;
 	?>
 	</body>

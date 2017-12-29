@@ -14,7 +14,7 @@
 			$titre="Déconnexion";
 			include("./includes/debut.php");
 
-			if ($id==0)	erreur(ERR_IS_NOT_CO);
+			if ($id==0)	erreur(ERR_IS_NOT_CO.REDIRECT);
 			else {
 				header('Location: fpage_fr.php');
 				exit();

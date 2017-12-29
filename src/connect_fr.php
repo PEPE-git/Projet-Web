@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="fr">
 	
 	<head>
@@ -15,8 +14,10 @@
 
 		if ($id != 0) {
 			echo MENU;
-			echo "<h1>$titre</h1>";
-			erreur(ERR_IS_CO);
+			echo '<body class="first">
+					<div id="corps">
+					<h1>'.$titre.'</h1>';
+			erreur(ERR_IS_CO.PIED);
 		}
 
 		if (!isset($_POST['pseudo'])){ //On est dans la page de formulaire
@@ -37,19 +38,7 @@
 						<a href="./subscribe_fr.php">Pas encore inscrit ?</a>
 					</form>
 				</div>
-			</div>
-			
-			<div id="pied">
-				<br><br><br>
-				<a class="bottom" href="./connect_fr.php">connexion - </a>
-				<a class="bottom" href="./subscribe_fr.php">inscription - </a>
-				<a class="bottom" href="./info_fr.php">informations - </a>
-				<a class="bottom" href="./credit.html">crédits - </a>
-				<a class="bottom" href="./legal.html">mentions légales - </a>
-				<a class="bottom" href="./blabla.html">blabla</a>
-			</div>
-			</body>
-			</html>';
+			</div>'.PIED;
 		}
 		else {
 			$message='';
@@ -73,18 +62,13 @@
 				}
 				$query->CloseCursor();
 			}
-			echo $message.'</div></body></html>';
+			echo $message.'<p><a href="./connect_fr.php">Réessayer</a></p>'.PIED.'</div></body></html>';
 		}
 	?>
-	
 	<input type="hidden" name="page" value="<?php echo $_SERVER['HTTP_REFERER']; ?>" />
 
 	<?php
 		if($_SESSION['id']>0){
-			//~ $page = htmlspecialchars($_POST['page']);
-			//~ echo '<a class="bottom" href=accueil_fr.php>Accueil</a><br>
-			//~ <a class="bottom" href="'.$page.'">Page précédente</a><br>';
-			
 			header('Location: accueil_fr.php');
 			echo 'Si la redirection n\'est pas automatique, cliquez <a class="bottom" href=accueil_fr.php>ICI</a>';
 			exit();

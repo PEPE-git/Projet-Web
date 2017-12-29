@@ -4,7 +4,6 @@ div#entete {
  width   : 100%;
  margin  : 50 px;
  text-align:center;
- text-shadow: 0 0 40px #FEFEFE;
  position:fixed;
  top:0;
  left:0;
@@ -119,7 +118,7 @@ body.first {
 /*
  background-color : rgb(32,32,32,0.95);
 */
- color  :white;
+ color: white;
 }
 
 body.principal {
@@ -131,6 +130,9 @@ body.principal {
 
 h1 {
  text-align:center;
+/*
+ text-shadow: 0 0 40px #FEFEFE;
+*/
 }
 
 h2 {

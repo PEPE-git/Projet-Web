@@ -59,7 +59,7 @@
 							
 							<select name="list_0" size="1">'.$var_opt.'</select> '.$sign.' <input type="input" name="name_0_0" /> <span id="champs_0_1"><a href="javascript:create_champOR(0,1)">OU</a><br/>
 							<span id="champs_1_0"><a href="javascript:create_champAND(1,0)">ET</a>
-						</fieldset>
+						</fieldset></br>
 						<input type="submit" value="Rechercher">
 						</form></div></div>';
 	echo PIED;

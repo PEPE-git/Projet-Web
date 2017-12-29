@@ -14,8 +14,10 @@
 
 		if ($id != 0) {
 			echo MENU;
-			echo "<h1>$titre</h1>";
-			erreur(ERR_IS_CO);
+			echo '<body class="first">
+					<div id="corps">
+					<h1>'.$titre.'</h1>';
+			erreur(ERR_IS_CO.PIED);
 		}
 
 		if (empty($_POST['pseudo'])){ // vide --> sur page formulaire
@@ -35,19 +37,7 @@
 						<p><input type="submit" value="S\'inscrire" /></p></form>
 					</form>
 				</div>
-			</div>
-			
-			<div id="pied">
-				<br><br><br>
-				<a class="bottom" href="./connect_fr.php">connexion - </a>
-				<a class="bottom" href="./subscribe_fr.php">inscription - </a>
-				<a class="bottom" href="./info_fr.php">informations - </a>
-				<a class="bottom" href="./credit.html">crédits - </a>
-				<a class="bottom" href="./legal.html">mentions légales - </a>
-				<a class="bottom" href="./blabla.html">blabla</a>
-			</div>
-			</body>
-			</html>';
+			</div>'.PIED;
 		}
 		
 		else {
@@ -97,7 +87,7 @@
 				$i++;
 			}
 			if (!preg_match("#^[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]{2,}\.[a-z]{2,4}$#", $email) || empty($email)) {
-				$email_erreur2 = "Formet email invalide";
+				$email_erreur2 = "Format email invalide";
 				$i++;
 			}
 			//Vérification case cochée
@@ -107,9 +97,12 @@
 			}
 
 			if ($i==0) {
-				echo'<h1>Inscription terminée</h1>';
-				echo'<p>Bienvenue '.stripslashes(htmlspecialchars($_POST['pseudo'])).'</p>
-			<p>Cliquez <a href="./accueil_fr.php">Accédez au site</a> </p>';
+				echo MENU;
+				echo'<body class="first">
+						<div id="corps">
+						<h1>Inscription terminée</h1>';
+				echo'<p>Bienvenue '.stripslashes(htmlspecialchars($_POST['pseudo'])).', votre inscription est terminée.</p>
+			<p>Cliquez <a href="./accueil_fr.php">ici</a> pour accéder au site</p>'.PIED;
 			
 				$query=$db->prepare('INSERT INTO members (membre_pseudo, membre_mdp, membre_email)
 				VALUES (:pseudo, :pass, :email)');
@@ -133,7 +126,7 @@
 				echo'<p>'.$email_erreur2.'</p>';
 				echo'<p>'.$case_erreur.'</p>';
 				
-				echo'<p><a href="./subscribe_fr.php">Recommencer</a></p>';
+				echo'<p><a href="./subscribe_fr.php">Recommencer</a></p>'.PIED;
 			}
 		}
 	?>

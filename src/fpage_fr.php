@@ -11,7 +11,7 @@
 	include("./includes/identifiants.php");
 	include("./includes/debut.php");
 
-	if ($id>0) echo MENU;
+	if ($id!=0) echo MENU;
 	echo '
 	<body class="first">
 		<div id="corps">
