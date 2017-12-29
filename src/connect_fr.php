@@ -3,25 +3,22 @@
 <html lang="fr">
 	
 	<head>
-	  <meta charset="UTF-8">
-	  <title>Enzym search - Connexion</title>
 	  <link rel="stylesheet" type="text/css" href="./form.css">
 	</head>
 	
 	<body class="first">
-		<?php
+	<?php
 		session_start();
 		$titre="Connexion";
 		include("./includes/identifiants.php");
 		include("./includes/debut.php");
-	?>
-	
-	<?php
-		echo '<h1>Connexion</h1>';
-		if ($id != 0) erreur(ERR_IS_CO);
-	?>
-	
-	<?php
+
+		if ($id != 0) {
+			echo MENU;
+			echo "<h1>$titre</h1>";
+			erreur(ERR_IS_CO);
+		}
+
 		if (!isset($_POST['pseudo'])){ //On est dans la page de formulaire
 			echo
 			'<div id="entete">

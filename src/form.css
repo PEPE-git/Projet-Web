@@ -46,6 +46,16 @@ div#elem75 {
   width: 75%;
 }
 
+div#col1 {
+ float: left;
+ width: 50%;
+}
+
+div#col2 {
+ width: auto;
+ float: right;
+ padding: 1%;
+}
 
 /*-------------------INSCRIPTION---------------------*/
 div#form {
@@ -145,6 +155,10 @@ a.a_entete {
  color: purple;
  text-decoration: none;
  font-size:1.2em;
+}
+
+a {
+ color: white;
 }
 
 div.zoom {

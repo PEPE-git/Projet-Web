@@ -2,22 +2,21 @@
 <html>
 	
 	<head>
-	  <meta charset="UTF-8">
-	  <title>Enzym search - Connexion</title>
 	  <link rel="stylesheet" type="text/css" href="./form.css">
 	</head>
 
-	<body class = "first">		
-		
+	<body class = "first">				
 		<?php
 		session_start();
 		$titre="Inscription";
 		include("./includes/identifiants.php");
 		include("./includes/debut.php");
 
-		echo '<h1>Inscription</h1>';
-		if ($id > 0) erreur(ERR_IS_CO);
-
+		if ($id != 0) {
+			echo MENU;
+			echo "<h1>$titre</h1>";
+			erreur(ERR_IS_CO);
+		}
 
 		if (empty($_POST['pseudo'])){ // vide --> sur page formulaire
 			echo '<div id="entete">

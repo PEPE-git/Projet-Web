@@ -17,11 +17,9 @@
 		echo MENU;
 	?>
 
+	<h1>Bienvenue <?php echo $_SESSION['pseudo'] ?><br/><br/><?php echo $titre ?></h1>
 	<div id="corps">
-		<h1>Bienvenue <?php echo $_SESSION['pseudo'] ?><br/><?php echo $titre ?></h1>
-	
 		<ul>
-		
 		<li>EnzymSearch</li>
 		<b>EnzymSearch</b> est un site permettant de recueillir des informations sur les enzymes dont la nomenclatures suit les recommendations du Comité de Nomenclature de l'Union Internationale de Biochimie et de Biologie Moléculaire (e.g. Nomenclature Committee of the International Union of Biochemistry and Molecular Biology, IUBMB).
 		La dernière mise à jour a été réalisé en janvier 2018.
@@ -39,14 +37,14 @@
 		--> insertion image du schéma relationel --> du coup, possibilité de rentrer une commande SQL ?? <br>
 		</p>
 		
-		<h2>Aide</h2>
-		<p>
-			Pour toute demande d'aide, contactez : <br>
-			pierre.mkt7@gmail.com <br>
-			oph.dasilva@gmail.com <br>
-			<b>[--> voir comment mettre un lien de création direct' d'email]
-			[Logo upsud]</b>
-		
+		<li>Aide</li>
+		<div id="col1">
+		Pour toute demande d'aide, contactez : <br>
+		pierre.mkt7@gmail.com <br>
+		oph.dasilva@gmail.com <br>
+		<b>[--> voir comment mettre un lien de création direct' d'email]</b>
+		</div>
+		<div id="col2"><img src="img/upsaclay.png" alt="Paris Saclay University" width="400" height="150" /></div>
 		</ul>
 	</div>
 	
@@ -57,17 +55,4 @@
 	</body>
 </html>
 
-
-<!--
-		<div id="menu">
-			<div class="element_menu">
-				<p>
-					<option>Accueil</option>
-					<option>Requête simple</option>
-					<option>Requête avancée</option>
-					<option>Contact</option>
-				</p>
-			</div>
-		</div>
--->
 
