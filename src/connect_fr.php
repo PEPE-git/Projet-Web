@@ -21,12 +21,9 @@
 
 		if (!isset($_POST['pseudo'])){ //On est dans la page de formulaire
 			echo
-			'<div id="entete">
-				<h1>Bienvenue sur EnzymSearch
-				<br><br><br>
-				Connexion<br><br></h1>
-			</div>
-			<div id="corps">
+			'<div id="corps">
+				<h1>'.$titre.'</h1>
+
 				<div id="form">
 					<form method="post" action="connect_fr.php">
 						<fieldset>

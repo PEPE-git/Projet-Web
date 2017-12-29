@@ -18,14 +18,13 @@
 		
 
 			echo '<div id="corps">
-				<h1><?php echo $titre ?></h1>
-				
+				<h1><?php echo $titre ?></h1><br/>
 				<form method="post" action="dwl.php">
-					<input type="submit" style = "display: block; margin : auto;" name="export" value="Exporter" />
+					<input type="submit" style = "display: block; margin : auto;" name="export" value="Exporter les résultats" />
 				</form>';
 				
 			
-				$res="EC Number\tAccepted Names\tSystematic Names\tSynonyms\tCofactors\tActivity\tHistory\n";
+				$file="EC Number\tAccepted Names\tSystematic Names\tSynonyms\tCofactors\tActivity\tHistory\n";
 				//~ Requete sur le numéro EC d'un enzyme
 				if(!empty($_POST['rech_ec'])) {
 					if(!empty($_POST['ec1'])) {
@@ -219,14 +218,11 @@
 							}
 						}
 					}
-					$_SESSION['res'] = $res;
+					$_SESSION['res'] = $file;
 				}
 				echo PIED;
 			?>
 		</div>
 	</body>
 </html>
-<!--
-<td>'.$row['ec1'].$row['ec2'].$row['ec3'].$row['ec4'].'</td>
--->
 							   

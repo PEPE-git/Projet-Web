@@ -19,7 +19,7 @@
 
 
 			echo '<div id="corps">
-				<h1><?php echo $titre ?></h1>
+				<h1><?php echo $titre ?></h1><br>
 				
 				<form method="post" action="dwl.php">
 					<input type="submit" style = "display: block; margin : auto;" name="export" value="Exporter" />

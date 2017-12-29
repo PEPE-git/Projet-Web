@@ -19,12 +19,8 @@
 		}
 
 		if (empty($_POST['pseudo'])){ // vide --> sur page formulaire
-			echo '<div id="entete">
-				<h1>EnzymSearch</h1>
-				</div>
-				</div>
-				
-				<div id="corps">
+			echo '<div id="corps">
+				<h1>'.$titre.'</h1>
 					<div id="form">
 						<form method="post" action="subscribe_fr.php" enctype="multipart/form-data">
 						<fieldset><legend>Identifiants</legend>

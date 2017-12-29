@@ -12,13 +12,10 @@
 	include("./includes/debut.php");
 
 	if ($id>0) echo MENU;
-?>
-
+	echo '
 	<body class="first">
-		<div id="entete">
-			<h1>Bienvenue sur EnzymSearch</h1>
-		</div>
 		<div id="corps">
+			<h1>Bienvenue sur EnzymSearch</h1>
 			<div id ="elem1">			
 				<div class="zoom">
 					Connexion<br>
@@ -34,10 +31,10 @@
 				</div>
 			<div id="elem2_col2">
 				<div class="zoom">
-					Plus d'informations<br>
-					<a href="./info_fr.php"><img src="./img/enz3.jpg" alt="plus d'information"/></a>
+					Plus d\'informations<br>
+					<a href="./info_fr.php"><img src="./img/enz3.jpg" alt="plus d\'information"/></a>
 				</div>
-			</div>
-		<?php echo PIED; ?>
+			</div>'.PIED;
+		?>
 	</body>
 </html>
