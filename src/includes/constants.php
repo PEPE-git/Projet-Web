@@ -52,5 +52,14 @@
 		<div id="col2"><img src="img/upsaclay.png" alt="Paris Saclay University" width="400" height="150" /></div>
 		</ul>
 	</div>');
+	define('PIED','<div id="pied">
+			<br><br><br>
+			<a class="bottom" href="./connect_fr.php">connexion - </a>
+			<a class="bottom" href="./subcribe_fr.php">inscription - </a>
+			<a class="bottom" href="./info_fr.php">informations - </a>
+			<a class="bottom" href="./credit.html">crédits - </a>
+			<a class="bottom" href="./legal.html">mentions légales - </a>
+			<a class="bottom" href="./blabla.html">blabla</a>
+		</div>');
 ?>
 

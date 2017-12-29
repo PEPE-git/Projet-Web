@@ -44,7 +44,6 @@
 					<a href="./info_fr.php"><img src="./img/enz3.jpg" alt="plus d'information"/></a>
 				</div>
 			</div>
-		</div>
 		
 		<div id="pied">
 			<br><br><br>
