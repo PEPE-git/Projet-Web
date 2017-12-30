@@ -1,4 +1,4 @@
-/*----------------------- FORMAT PAGE -----------------------*/
+w/*----------------------- FORMAT PAGE -----------------------*/
 
 div#entete {
  width   : 100%;
@@ -93,6 +93,7 @@ div#menu {
 /*
  border : 1px ridge #CD5C5C;
 */
+ text-align : center;
  border-right : 1px ridge #CD5C5C;
  float:left;
  width:23%;

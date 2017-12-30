@@ -7,20 +7,10 @@
 	
 	<!-- Affichage des popups -->
 	<script language="javascript">
-		function popup(x) {
-			window.open(x,'./rechbib_fr.php','height=100,width=300,resizable=no');
-			//~ soit ouvrir la fenetre au niveau de la souris
-			//~ soit pas par clic, mais glissé et ouverture que quand au dessus du lien
+		function popup(x,h,w) {
+			window.open(x,'./rechbib_fr.php','height='+h+',width='+w+',resizable=yes');
 		}
 	</script>
-	
-	<!--
-	<script type="text/javascript">       
-		var win = window.open();
-		var txt = " <?php echo $q_result ?> "; 
-		win.document.write(txt);
-	</script>
-	 -->
 	
 	<body class = "principal">			
 		<?php
@@ -40,7 +30,7 @@
 					<div>
 						<!--Rechercher les informations associés aux articles -->
 						<fieldset>
-							<legend>Recherche par les auteurs d'articles<SUP><a id="pop_info" href="rechsp_fr.php" onClick="popup('./popup/auteur.html')">?</a></SUP></legend>
+							<legend>Recherche par les auteurs d'articles<SUP><a id="pop_info" href="rechsp_fr.php" onClick="popup('./popup/auteur.html',200,500)">?</a></SUP></legend>
 
 							<input class="form" name="aut_art" list="aut_art" maxlength="15" size="6" value="<?php echo isset($_POST['aut_art']) ? $_POST['aut_art'] : '' ?>">
 							<br><br>
@@ -50,7 +40,7 @@
 						</fieldset>
 
 						<fieldset>
-							<legend>Recherche par les titres d'articles<SUP><a id="pop_info" href="rechsp_fr.php" onClick="popup('./popup/titre.html')">?</a></SUP></legend>
+							<legend>Recherche par les titres d'articles<SUP><a id="pop_info" href="rechsp_fr.php" onClick="popup('./popup/titre.html',200,500)">?</a></SUP></legend>
 
 							<input class="form" name="tit_art" list="tit_art" maxlength="15" size="6" value="<?php echo isset($_POST['tit_art']) ? $_POST['tit_art'] : '' ?>">
 							<br><br>
@@ -60,7 +50,7 @@
 						</fieldset>
 
 						<fieldset>
-							<legend>Recherche selon les années de publication<SUP><a id="pop_info" href="rechsp_fr.php" onClick="popup('./popup/annee.html')">?</a></SUP></legend>
+							<legend>Recherche selon les années de publication<SUP><a id="pop_info" href="rechsp_fr.php" onClick="popup('./popup/annee.html',200,500)">?</a></SUP></legend>
 
 							<input class="form" name="year_art" list="year_art" maxlength="15" size="6" value="<?php echo isset($_POST['year_art']) ? $_POST['year_art'] : '' ?>">
 							<br><br>

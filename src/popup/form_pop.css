@@ -1,34 +1,14 @@
-body.popup {
- background-image : url("bg_pop.png");
- background-attachment: fixed;
- background-repeat: no-repeat ;
+div.popup {
  color:black;
  font-family:Tahoma, Geneva, Kalimati, sans-serif;
- position:fixed;
- left: 50%;
- top: 50%;
+ position:absolute;
 }
 
 /*
-.holder{        
-    width:100%;
-    display:block;
-}
-.content{
-    background:#fff;
-    padding: 28px 26px 33px 25px;
-}
-.popup{
-    border-radius: 7px;
-    background:#6b6a63;
-    margin:30px auto 0;
-    padding:6px;  
-    // here it comes
-    position:absolute;
-    width:800px;
-    top: 50%;
-    left: 50%;
-    margin-left: -400px; // 1/2 width
-    margin-top: -40px; // 1/2 height
+body {
+ background-image : url("bg_pop.png");
+ background-attachment: fixed;
+ background-repeat: no-repeat ;
 }
 */
+

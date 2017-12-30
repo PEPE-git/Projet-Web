@@ -7,23 +7,9 @@
 	
 	<!-- Affichage des popups -->
 	<script language="javascript">
-		function popup(x) {
-			window.open(x,'./rechsp_fr.php','height=100,width=300,resizable=no');
-			//~ soit ouvrir la fenetre au niveau de la souris
-			//~ soit pas par clic, mais glissé et ouverture que quand au dessus du lien
+		function popup(x,h,w) {
+			window.open(x,'./rechsp_fr.php','height='+h+',width='+w+',resizable=yes');
 		}
-	</script>
-	
-	<!--
-	<script type="text/javascript">       
-		var win = window.open();
-		var txt = " <?php echo $q_result ?> "; 
-		win.document.write(txt);
-	</script>
-	 -->
-	
-	<script type="text/javascript">
-		var ecnum1 = document.getElementById('ec1').value;
 	</script>
 
 	<body class = "principal">			
@@ -45,7 +31,7 @@
 					<div>
 						<!--Rechercher les informations associées à un unique numéro EC -->
 						<fieldset>
-							<legend>Recherche sur le code enzyme<SUP><a id="pop_info" href="rechsp_fr.php" onClick="popup('./popup/info_enz_ec.html')">?</a></SUP></legend>
+							<legend>Recherche sur le code enzyme<SUP><a id="pop_info" href="rechsp_fr.php" onClick="popup('./popup/info_enz_ec.html',600,500)">?</a></SUP></legend>
 <!--
 							<label for="ec">EC Number</label> </br>
 -->
@@ -61,7 +47,7 @@
 					<div>
 						<!--Rechercher les informations associées à un nom d'enzyme -->
 						<fieldset>
-							<legend>Recherche par le nom<SUP><a id="pop_info" href="rechsp_fr.php" onClick="popup('./popup/info_enz_name.html')">?</a></SUP></legend>
+							<legend>Recherche par le nom<SUP><a id="pop_info" href="rechsp_fr.php" onClick="popup('./popup/info_enz_name.html',320,500)">?</a></SUP></legend>
 <!--
 							<label for="name">Name</label> </br>
 -->
@@ -80,7 +66,7 @@
 					<div>
 						<!--Rechercher les informations associées à une activité enzymatique -->	
 						<fieldset>
-							<legend>Recherche d'enzymes faisant intervenir des composés chimiques pour leur activités<SUP><a id="pop_info" href="rechsp_fr.php" onClick="popup('./popup/info_enz_fct.html')">?</a></SUP></legend>
+							<legend>Recherche d'enzymes faisant intervenir des composés chimiques pour leur activités<SUP><a id="pop_info" href="rechsp_fr.php" onClick="popup('./popup/info_enz_fct.html',400,500)">?</a></SUP></legend>
 <!--
 							<label for="act">Activité</label> </br>
 -->
@@ -93,7 +79,7 @@
 					<div>
 						<!--Rechercher les enzymes et informations associés à un unique cofacteur -->
 						<fieldset>
-							<legend>Recherche d'enzymes ayant comme cofacteur(s)<SUP><a id="pop_info" href="rechsp_fr.php" onClick="popup('./popup/info_enz_fct.html')">?</a></SUP></legend>
+							<legend>Recherche d'enzymes ayant comme cofacteur(s)<SUP><a id="pop_info" href="rechsp_fr.php" onClick="popup('./popup/info_enz_cofact.html',400,500)">?</a></SUP></legend>
 <!--
 							<label for="cofactors">Cofactors</label></br>
 -->

@@ -65,7 +65,7 @@
 							   <td>'.$row['ec'].'</td>
 							   <td>'.$row['accepted_name'].'</td>
 							   <td>'.$row['systematic_name'].'</td>
-							   <td>'.$row['synonym'].'</td>
+							   <td>'.$row['synonyme'].'</td>
 							   <td>'.$row['cofactors'].'</td>
 							   <td>'.$row['activity'].'</td>
 							   <td>'.$row['history'].'</td>
@@ -122,7 +122,7 @@
 								   <td>'.$row['ec'].'</td>
 								   <td>'.$row['accepted_name'].'</td>
 								   <td>'.$row['systematic_name'].'</td>
-								   <td>'.$row['synonym'].'</td>
+								   <td>'.$row['synonyme'].'</td>
 								   <td>'.$row['cofactors'].'</td>
 								   <td>'.$row['activity'].'</td>
 								   <td>'.$row['history'].'</td>
@@ -160,7 +160,7 @@
 									   <td>'.$row['ec'].'</td>
 									   <td>'.$row['accepted_name'].'</td>
 									   <td>'.$row['systematic_name'].'</td>
-									   <td>'.$row['synonym'].'</td>
+									   <td>'.$row['synonyme'].'</td>
 									   <td>'.$row['cofactors'].'</td>
 									   <td>'.$row['activity'].'</td>
 									   <td>'.$row['history'].'</td>
@@ -198,7 +198,7 @@
 										   <td>'.$row['ec'].'</td>
 										   <td>'.$row['accepted_name'].'</td>
 										   <td>'.$row['systematic_name'].'</td>
-										   <td>'.$row['synonym'].'</td>
+										   <td>'.$row['synonyme'].'</td>
 										   <td>'.$row['cofactors'].'</td>
 										   <td>'.$row['activity'].'</td>
 										   <td>'.$row['history'].'</td>
