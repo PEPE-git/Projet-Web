@@ -30,7 +30,7 @@
 					<div>
 						<!--Rechercher les informations associés aux articles -->
 						<fieldset>
-							<legend>Recherche par les auteurs d'articles<SUP><a id="pop_info" href="rechsp_fr.php" onClick="popup('./popup/auteur.html',200,500)">?</a></SUP></legend>
+							<legend>Recherche par les auteurs d'articles<SUP><a id="pop_info" href="rechbib_fr.php" onClick="popup('./popup/auteur.html',320,500)">?</a></SUP></legend>
 
 							<input class="form" name="aut_art" list="aut_art" maxlength="15" size="6" value="<?php echo isset($_POST['aut_art']) ? $_POST['aut_art'] : '' ?>">
 							<br><br>
@@ -40,7 +40,7 @@
 						</fieldset>
 
 						<fieldset>
-							<legend>Recherche par les titres d'articles<SUP><a id="pop_info" href="rechsp_fr.php" onClick="popup('./popup/titre.html',200,500)">?</a></SUP></legend>
+							<legend>Recherche par les titres d'articles<SUP><a id="pop_info" href="rechbib_fr.php" onClick="popup('./popup/titre.html',350,500)">?</a></SUP></legend>
 
 							<input class="form" name="tit_art" list="tit_art" maxlength="15" size="6" value="<?php echo isset($_POST['tit_art']) ? $_POST['tit_art'] : '' ?>">
 							<br><br>
@@ -50,7 +50,7 @@
 						</fieldset>
 
 						<fieldset>
-							<legend>Recherche selon les années de publication<SUP><a id="pop_info" href="rechsp_fr.php" onClick="popup('./popup/annee.html',200,500)">?</a></SUP></legend>
+							<legend>Recherche selon les années de publication<SUP><a id="pop_info" href="rechbib_fr.php" onClick="popup('./popup/annee.html',150,500)">?</a></SUP></legend>
 
 							<input class="form" name="year_art" list="year_art" maxlength="15" size="6" value="<?php echo isset($_POST['year_art']) ? $_POST['year_art'] : '' ?>">
 							<br><br>
