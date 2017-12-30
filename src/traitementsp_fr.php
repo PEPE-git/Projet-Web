@@ -103,41 +103,32 @@
 							echo $q."</br>";
 							$query = $db->query($q);
 
-							#FONCTIONNE PAS !!!!!!!!
-							#Test si le résultat de la requête est vide et renvoie msg d'erreur.
-							echo $query->fetchColumn();
-							if ($query->fetchColumn() > 0) { 
-								echo 'Query returned nothing, please try again.';
-							}
-
-							else{
-								echo '<table> 
+							echo '<table> 
+							<tr>
+								<th>EC Number</th>
+								<th>Accepted Names</th>
+								<th>Systematic Names</th>
+								<th>Synonyms</th>
+								<th>Cofactors</th>
+								<th>Activity</th>
+								<th>History</th>			
+							</tr>';
+							
+							while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
+								//~ $file=$file.$row['ec1'].$row['ec2'].$row['ec3'].$row['ec4']."\t".$row['accepted_name']."\t".$row['systematic_name']."\t".$row['synonym']."\t".$row['cofactors']."\t".$row['activity']."\t".$row['history'].'\n';
+								$file=$file.$row['ec']."\t".$row['accepted_name']."\t".$row['systematic_name']."\t".$row['synonym']."\t".$row['cofactors']."\t".$row['activity']."\t".$row['history']."\n";
+								echo '
 								<tr>
-									<th>EC Number</th>
-									<th>Accepted Names</th>
-									<th>Systematic Names</th>
-									<th>Synonyms</th>
-									<th>Cofactors</th>
-									<th>Activity</th>
-									<th>History</th>			
-								</tr>';
-								
-								while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
-									//~ $file=$file.$row['ec1'].$row['ec2'].$row['ec3'].$row['ec4']."\t".$row['accepted_name']."\t".$row['systematic_name']."\t".$row['synonym']."\t".$row['cofactors']."\t".$row['activity']."\t".$row['history'].'\n';
-									$file=$file.$row['ec']."\t".$row['accepted_name']."\t".$row['systematic_name']."\t".$row['synonym']."\t".$row['cofactors']."\t".$row['activity']."\t".$row['history']."\n";
-									echo '
-									<tr>
-									   <td>'.$row['ec'].'</td>
-									   <td>'.$row['accepted_name'].'</td>
-									   <td>'.$row['systematic_name'].'</td>
-									   <td>'.$row['synonym'].'</td>
-									   <td>'.$row['cofactors'].'</td>
-									   <td>'.$row['activity'].'</td>
-									   <td>'.$row['history'].'</td>
-								   </tr>';			
-								}
-								echo '</table>';
+								   <td>'.$row['ec'].'</td>
+								   <td>'.$row['accepted_name'].'</td>
+								   <td>'.$row['systematic_name'].'</td>
+								   <td>'.$row['synonym'].'</td>
+								   <td>'.$row['cofactors'].'</td>
+								   <td>'.$row['activity'].'</td>
+								   <td>'.$row['history'].'</td>
+							   </tr>';			
 							}
+							echo '</table>';
 						}
 						
 					}
