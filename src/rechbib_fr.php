@@ -28,27 +28,40 @@
 			<div id="form">
 				<form method="post" action="traitementbib_fr.php" enctype="multipart/form-data" target="_blank">
 					<div>
-						<!--Rechercher les informations associés aux articles -->
+						<!--Rechercher les articles associées à un numéro EC -->
+						<fieldset>
+							<legend>Recherche sur le code enzyme<SUP><a id="pop_info" href="rechbib_fr.php" onClick="popup('./popup/info_enz_ec.html',600,500)">?</a></SUP></legend>
+							<input class="form_ec" type="number" name="ec1" id="ec1" list="ec1"  maxlength="15" size="6" value="<?php echo isset($_POST['ec1']) ? $_POST['ec1'] : '' ?>" autofocus>
+							- <input class="form_ec" type="number"  name="ec2" id="ec2" list="ec2" maxlength="15" size="6" value="<?php echo isset($_POST['ec2']) ? $_POST['ec2'] : '' ?>">
+							- <input class="form_ec" type="number"  name="ec3" id="ec3" list="ec3" maxlength="15" size="6" value="<?php echo isset($_POST['ec3']) ? $_POST['ec3'] : '' ?>" >
+							- <input class="form_ec" type="number"  name="ec4" id="ec4" list="ec4" maxlength="15" size="6" value="<?php echo isset($_POST['ec4']) ? $_POST['ec4'] : '' ?>" >
+							<br><br>
+							<input type="submit" name="rech_ec" value="Recherche" />
+						</fieldset>
+					</div>
+					<br>								
+					<div>
+						<!--Rechercher les informations associés aux articles par noms d'auteur -->
 						<fieldset>
 							<legend>Recherche par les auteurs d'articles<SUP><a id="pop_info" href="rechbib_fr.php" onClick="popup('./popup/auteur.html',320,500)">?</a></SUP></legend>
-
 							<input class="form" name="aut_art" list="aut_art" maxlength="15" size="6" value="<?php echo isset($_POST['aut_art']) ? $_POST['aut_art'] : '' ?>">
 							<br><br>
-
 							<input type="submit" value="Recherche" name="rech_aut" />
-
 						</fieldset>
-
+					</div>
+					<br>
+					<div>
+						<!--Rechercher les articles suivant les mots clés du titre -->
 						<fieldset>
 							<legend>Recherche par les titres d'articles<SUP><a id="pop_info" href="rechbib_fr.php" onClick="popup('./popup/titre.html',350,500)">?</a></SUP></legend>
-
 							<input class="form" name="tit_art" list="tit_art" maxlength="15" size="6" value="<?php echo isset($_POST['tit_art']) ? $_POST['tit_art'] : '' ?>">
 							<br><br>
-
 							<input type="submit" value="Recherche" name="rech_tit" />
-
 						</fieldset>
-
+					</div>
+					<br>
+					<div>
+						<!--Rechercher les articles suivant leur année de publication -->
 						<fieldset>
 							<legend>Recherche selon les années de publication<SUP><a id="pop_info" href="rechbib_fr.php" onClick="popup('./popup/annee.html',150,500)">?</a></SUP></legend>
 
