@@ -25,13 +25,31 @@
 
 		<div id="corps">
 			<h1><?php echo $titre ?></h1>
+
 			<div id="form">
 
 				<form method="post" action="traitementsp_fr.php" enctype="multipart/form-data" target="_blank">
+
+					<fieldset>
+						<legend>Caractéristiques d'intérêt</legend>
+						<input type="checkbox" name="display_tab[]" value="ch_ec"><label>EC Number</label> 
+						<input type="checkbox" name="display_tab[]" value="ch_systematic"><label>Nom Systématique</label>     
+						<input type="checkbox" name="display_tab[]" value="ch_accepted"><label>Nom Accepté</label>   
+						<input type="checkbox" name="display_tab[]" value="ch_synonym"><label>Synonyme</label>   
+						<input type="checkbox" name="display_tab[]" value="ch_cofactors"><label>Cofacteurs</label>      
+						<input type="checkbox" name="display_tab[]" value="ch_activity"><label>Activité</label>      
+						<input type="checkbox" name="display_tab[]" value="ch_history"><label>Historique</label><br>    
+						<input type="checkbox" name="display_tab[]" value="ch_all" checked><label>Tout</label>
+					</fieldset>
+
+
 					<div>
 						<!--Rechercher les informations associées à un unique numéro EC -->
 						<fieldset>
-							<legend>Recherche sur le code enzyme<SUP><a id="pop_info" href="rechsp_fr.php" onClick="popup('./popup/info_enz_ec.html',600,500)">?</a></SUP></legend>
+							<legend>Recherche sur le code enzyme<SUP><a id="pop_info" href="rechsp_fr.php" onClick="popup('./popup/info_enz_ec.html')">?</a></SUP></legend>
+<!--
+							<label for="ec">EC Number</label> </br>
+-->
 							<input class="form_ec" type="number" name="ec1" id="ec1" list="ec1"  maxlength="15" size="6" value="<?php echo isset($_POST['ec1']) ? $_POST['ec1'] : '' ?>" autofocus>
 							- <input class="form_ec" type="number"  name="ec2" id="ec2" list="ec2" maxlength="15" size="6" value="<?php echo isset($_POST['ec2']) ? $_POST['ec2'] : '' ?>">
 							- <input class="form_ec" type="number"  name="ec3" id="ec3" list="ec3" maxlength="15" size="6" value="<?php echo isset($_POST['ec3']) ? $_POST['ec3'] : '' ?>" >
@@ -44,7 +62,7 @@
 					<div>
 						<!--Rechercher les informations associées à un nom d'enzyme -->
 						<fieldset>
-							<legend>Recherche par le nom<SUP><a id="pop_info" href="rechsp_fr.php" onClick="popup('./popup/info_enz_name.html',320,500)">?</a></SUP></legend>
+							<legend>Recherche par le nom<SUP><a id="pop_info" href="rechsp_fr.php" onClick="popup('./popup/info_enz_name.html')">?</a></SUP></legend>
 							<input class="form" name="name" list="name" maxlength="15" size="6" value="<?php echo isset($_POST['name']) ? $_POST['name'] : '' ?>">
 							<br>
 							<input type="radio" name="name_type" value="1" id="acc" /> <label for="acc">Accepted name</label>
@@ -59,7 +77,7 @@
 					<div>
 						<!--Rechercher les informations associées à une activité enzymatique -->	
 						<fieldset>
-							<legend>Recherche d'enzymes faisant intervenir des composés chimiques pour leur activités<SUP><a id="pop_info" href="rechsp_fr.php" onClick="popup('./popup/info_enz_fct.html',400,500)">?</a></SUP></legend>
+							<legend>Recherche d'enzymes faisant intervenir des composés chimiques pour leur activités<SUP><a id="pop_info" href="rechsp_fr.php" onClick="popup('./popup/info_enz_fct.html')">?</a></SUP></legend>
 							<input class="form" name="act" list="act" maxlength="15" size="6" value="<?php echo isset($_POST['act']) ? $_POST['act'] : '' ?>">
 							<br><br>
 							<input type="submit" value="Recherche" name="rech_act"/>
@@ -69,7 +87,7 @@
 					<div>
 						<!--Rechercher les enzymes et informations associés à un unique cofacteur -->
 						<fieldset>
-							<legend>Recherche d'enzymes ayant comme cofacteur(s)<SUP><a id="pop_info" href="rechsp_fr.php" onClick="popup('./popup/info_enz_cofact.html',400,500)">?</a></SUP></legend>
+							<legend>Recherche d'enzymes ayant comme cofacteur(s)<SUP><a id="pop_info" href="rechsp_fr.php" onClick="popup('./popup/info_enz_fct.html')">?</a></SUP></legend>
 							<input class="form"name="cofactors" list="cofactors" maxlength="15" size="6" value="<?php echo isset($_POST['cofactors']) ? $_POST['cofactors'] : '' ?>">
 							<br><br>
 							<input type="submit" value="Recherche" name="rech_co" />
@@ -80,12 +98,16 @@
 			<?php
 				//~ Liste active des noms
 				echo '<datalist id="name">';
-				$query_sn = $db->prepare('SELECT systematic_name FROM enzyme');
+				$query_sn = $db->prepare('
+					SELECT systematic_name AS name FROM enzyme
+					UNION ALL
+					SELECT accepted_name AS name FROM enzyme
+					UNION ALL
+					SELECT synonyme AS name FROM synonym');
 				$query_sn->execute();
 				$result_sn = $query_sn->fetchAll(PDO::FETCH_ASSOC);
-				//~ ajouter les synonymes et accepted names
 				foreach ($result_sn as $row_sn) {
-					echo "<option value='".$row_sn['systematic_name']. "'>";
+					echo "<option value='".$row_sn['name']. "'>";
 				}
 				echo '</datalist></br></br>';
 				
