@@ -3,6 +3,9 @@
 
 	<head>
 		<link rel="stylesheet" type="text/css" href="./form.css">
+
+		<!-- Import de jquery via internet. pour le dynamisme des checkbox. -->
+		<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
 	</head>
 	
 	<!-- Affichage des popups -->
@@ -10,6 +13,25 @@
 		function popup(x,h,w) {
 			window.open(x,'./rechbib_fr.php','height='+h+',width='+w+',resizable=yes');
 		}
+
+		// Décoche "Tout" si une autre checkbox est cohée
+		// Décoche les autres checkbox si "Tout" est cochée 
+		$(document).ready(function(){
+		    $(".rest").click(function(){
+		        $("#ch_all").prop("checked", false);
+		    });
+		    $(".all").click(function(){
+		        $("#ch_ec").prop("checked", false);
+		        $("#ch_author").prop("checked", false);
+		        $("#ch_title").prop("checked", false);
+		        $("#ch_year").prop("checked", false);
+		        $("#ch_volume").prop("checked", false);
+		        $("#ch_fpage").prop("checked", false);
+		        $("#ch_lpage").prop("checked", false);
+		        $("#ch_pubmed").prop("checked", false);
+		        $("#ch_medline").prop("checked", false);
+		    });
+		});
 	</script>
 	
 	<body class = "principal">			
@@ -27,6 +49,25 @@
 			<h1><?php echo $titre ?></h1>
 			<div id="form">
 				<form method="post" action="traitementbib_fr.php" enctype="multipart/form-data" target="_blank">
+				
+
+
+				<form method="post" action="traitementsp_fr.php" enctype="multipart/form-data" target="_blank">
+
+					<fieldset>
+						<legend>Caractéristiques d'intérêt</legend>
+						<input type="checkbox" name="display_tab[]" class="rest" id="ch_ec" value="ch_ec"><label>EC Number</label> 
+						<input type="checkbox" name="display_tab[]" class="rest" id="ch_author" value="ch_author"><label>Auteur</label>     
+						<input type="checkbox" name="display_tab[]" class="rest" id="ch_title" value="ch_title"><label>Titre</label>   
+						<input type="checkbox" name="display_tab[]" class="rest" id="ch_year" value="ch_year"><label>Année</label>   
+						<input type="checkbox" name="display_tab[]" class="rest" id="ch_volume" value="ch_volume"><label>Volume</label>      
+						<input type="checkbox" name="display_tab[]" class="rest" id="ch_fpage" value="ch_fpage"><label>Première page</label>      
+						<input type="checkbox" name="display_tab[]" class="rest" id="ch_lpage" value="ch_lpage"><label>Dernière page</label><br>    
+						<input type="checkbox" name="display_tab[]" class="rest" id="ch_pubmed" value="ch_pubmed"><label>Pubmed</label>   
+						<input type="checkbox" name="display_tab[]" class="rest" id="ch_medline" value="ch_medline"><label>Medline</label>   
+						<input type="checkbox" name="display_tab[]" class="all" id="ch_all" value="ch_all" checked><label>Tout</label>
+					</fieldset>
+
 					<div>
 						<!--Rechercher les articles associées à un numéro EC -->
 						<fieldset>
@@ -73,6 +114,7 @@
 						</fieldset>
 					</div>
 				</form>
+				<?php echo PIED; ?>
 			</div>
 			<?php
 				//~ Liste active des auteurs d'articles
@@ -104,7 +146,6 @@
 					echo "<option value='".$row_year['year']. "'>";
 				}
 				echo '</datalist></br></br>';
-				echo PIED;
 			?>
 		</div>
 	</body>

@@ -6,19 +6,15 @@
 
 		<!-- Import de jquery via internet. Pour pouvoir utiliser datatables. -->
 		<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
-		 
+
+		<!-- Import des fichiers de DataTables en local -->
+		<link rel="stylesheet" type="text/css" href="DataTables/datatables.css">
+		<script type="text/javascript" charset="utf8" src="DataTables/datatables.js"></script>	
 	</head>
 	
 	<body class = "principal">
 
-		<!-- Import des fichiers pour le tableau en local -->
-		<link rel="stylesheet" type="text/css" href="DataTables/datatables.css">
-		<script type="text/javascript" charset="utf8" src="DataTables/datatables.js"></script>	
-		 
-			
 		<?php
-			
-
 			session_start();
 			$titre = "Recherche Simple - Résultats";
 			include("./includes/identifiants.php");
@@ -38,7 +34,7 @@
 				//~ Requete sur le numéro EC d'un enzyme
 				if(!empty($_POST['rech_ec'])) {
 					if(!empty($_POST['ec1'])) {
-						$q="SELECT * FROM enzyme, synonym WHERE synonym.id_enzyme=enzyme.id_enzyme ";
+						$q="SELECT * FROM enzyme LEFT JOIN synonym ON synonym.id_enzyme=enzyme.id_enzyme WHERE synonym.id_enzyme=enzyme.id_enzyme ";
 						$ec1 =$_POST['ec1'];
 						$q=$q."AND ec1=$ec1 ";
 						if(!empty($_POST['ec2'])) {
@@ -57,12 +53,11 @@
 						$query = $db->query($q);
 
 						// Si le résultat de la query n'est pas vide, execute la fonction d'affichage du tableau pour le site et pour l'export (VOIR DANS /includes/functions.php)
-						if ($query->fetchColumn() == 0) { 
+						if ($query->rowCount() == 0) { 
 								echo 'Query returned nothing, please try again.';
 						}
-
 						else{
-							$file = echo_resultats($query);
+							$file = echo_resultats_sp($query);
 						}
 					}
 
@@ -77,33 +72,31 @@
 							$name_type=$_POST['name_type'];
 							$name=$_POST['name'];
 							if($name_type == "1") {
-								$q=$q."SELECT * FROM enzyme, synonym WHERE synonym.id_enzyme=enzyme.id_enzyme AND accepted_name LIKE '%$name%';";
+								$q=$q."SELECT * FROM enzyme LEFT JOIN synonym ON synonym.id_enzyme=enzyme.id_enzyme WHERE accepted_name LIKE '%$name%';";
 							}
 							else {
 								if($name_type == "2") {
-									$q=$q."SELECT * FROM enzyme, synonym WHERE synonym.id_enzyme=enzyme.id_enzyme AND systematic_name LIKE'%$name%';";
+									$q=$q."SELECT * FROM enzyme LEFT JOIN synonym ON synonym.id_enzyme=enzyme.id_enzyme WHERE systematic_name LIKE'%$name%';";
 								}
 								else {
 									if($name_type == "3") {
-										$q=$q."SELECT * FROM enzyme,synonym WHERE synonym.synonyme LIKE'%$name%' AND synonym.id_enzyme=enzyme.id_enzyme;";
+										$q=$q."SELECT * FROM enzyme LEFT JOIN synonym ON synonym.id_enzyme=enzyme.id_enzyme WHERE synonym.synonyme LIKE'%$name%';";
 									}
 									else {
-										$q=$q."SELECT * FROM enzyme,synonym WHERE synonym.id_enzyme=enzyme.id_enzyme AND (accepted_name LIKE '%$name%' OR systematic_name LIKE '%$name%' OR synonym.synonyme LIKE '%$name%');";
+										$q=$q."SELECT * FROM enzyme LEFT JOIN synonym ON synonym.id_enzyme=enzyme.id_enzyme WHERE (accepted_name LIKE '%$name%' OR systematic_name LIKE '%$name%' OR synonym.synonyme LIKE '%$name%');";
 									}
 								}
 							}
 
 							echo $q."</br>";
 							$query = $db->query($q);
-
 							
 							// Si le résultat de la query n'est pas vide, execute la fonction d'affichage du tableau pour le site et pour l'export (VOIR DANS /includes/functions.php)
-							if ($query->fetchColumn() == 0) { 
+							if ($query->rowCount() == 0) { 
 								echo 'Query returned nothing, please try again.';
 							}
-
 							else{
-								$file = echo_resultats($query);
+								$file = echo_resultats_sp($query);
 							}
 						}
 					}
@@ -112,18 +105,17 @@
 						if(!empty($_POST['rech_act'])) {
 							if(isset($_POST['act'])) {
 								$act=$_POST['act'];
-								$q="SELECT * FROM enzyme, synonym WHERE synonym.id_enzyme=enzyme.id_enzyme AND activity LIKE '%$act%';";
+								$q="SELECT * FROM enzyme LEFT JOIN synonym ON synonym.id_enzyme=enzyme.id_enzyme WHERE activity LIKE '%$act%';";
 								
 								echo $q."</br>";
 								$query = $db->query($q);
 
 								// Si le résultat de la query n'est pas vide, execute la fonction d'affichage du tableau pour le site et pour l'export (VOIR DANS /includes/functions.php)
-								if ($query->fetchColumn() == 0) {  
+								if ($query->rowCount() == 0) {  
 									echo 'Query returned nothing, please try again.';
 								}
-
 								else{
-									$file = echo_resultats($query);
+									$file = echo_resultats_sp($query);
 								}
 							}
 				
@@ -133,18 +125,17 @@
 							if(!empty($_POST['rech_co'])) {
 								if(isset($_POST['cofactors'])) {
 									$co=$_POST['cofactors'];
-									$q="SELECT * FROM enzyme, synonym WHERE synonym.id_enzyme=enzyme.id_enzyme AND cofactors LIKE'%$co%';";
+									$q="SELECT * FROM enzyme LEFT JOIN synonym ON synonym.id_enzyme=enzyme.id_enzyme WHERE cofactors LIKE'%$co%';";
 									
 									echo $q."</br>";
 									$query = $db->query($q);
 
 									// Si le résultat de la query n'est pas vide, execute la fonction d'affichage du tableau pour le site et pour l'export (VOIR DANS /includes/functions.php)
-									if ($query->fetchColumn() == 0) { 
+									if ($query->rowCount() == 0) { 
 										echo 'Query returned nothing, please try again.';
 									}
-
 									else{
-										$file = echo_resultats($query);
+										$file = echo_resultats_sp($query);
 									}
 								}
 							}

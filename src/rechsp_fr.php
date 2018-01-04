@@ -3,6 +3,9 @@
 
 	<head>
 		<link rel="stylesheet" type="text/css" href="./form.css">
+
+		<!-- Import de jquery via internet. pour le dynamisme des checkbox. -->
+		<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
 	</head>
 	
 	<!-- Affichage des popups -->
@@ -27,19 +30,37 @@
 			<h1><?php echo $titre ?></h1>
 
 			<div id="form">
+				<!-- Décoche "Tout" si une autre checkbox est cohée
+					 Décoche les autres checkbox si "Tout" est cochée -->
+				<script type="text/javascript">
+					$(document).ready(function(){
+					    $(".rest").click(function(){
+					        $("#ch_all").prop("checked", false);
+					    });
+					    $(".all").click(function(){
+					        $("#ch_ec").prop("checked", false);
+					        $("#ch_systematic").prop("checked", false);
+					        $("#ch_accepted").prop("checked", false);
+					        $("#ch_synonym").prop("checked", false);
+					        $("#ch_cofactors").prop("checked", false);
+					        $("#ch_activity").prop("checked", false);
+					        $("#ch_history").prop("checked", false);
+					    });
+					});
+				</script>
 
 				<form method="post" action="traitementsp_fr.php" enctype="multipart/form-data" target="_blank">
 
 					<fieldset>
 						<legend>Caractéristiques d'intérêt</legend>
-						<input type="checkbox" name="display_tab[]" value="ch_ec"><label>EC Number</label> 
-						<input type="checkbox" name="display_tab[]" value="ch_systematic"><label>Nom Systématique</label>     
-						<input type="checkbox" name="display_tab[]" value="ch_accepted"><label>Nom Accepté</label>   
-						<input type="checkbox" name="display_tab[]" value="ch_synonym"><label>Synonyme</label>   
-						<input type="checkbox" name="display_tab[]" value="ch_cofactors"><label>Cofacteurs</label>      
-						<input type="checkbox" name="display_tab[]" value="ch_activity"><label>Activité</label>      
-						<input type="checkbox" name="display_tab[]" value="ch_history"><label>Historique</label><br>    
-						<input type="checkbox" name="display_tab[]" value="ch_all" checked><label>Tout</label>
+						<input type="checkbox" name="display_tab[]" class="rest" id="ch_ec" value="ch_ec"><label>EC Number</label> 
+						<input type="checkbox" name="display_tab[]" class="rest" id="ch_systematic" value="ch_systematic"><label>Nom Systématique</label>     
+						<input type="checkbox" name="display_tab[]" class="rest" id="ch_accepted" value="ch_accepted"><label>Nom Accepté</label>   
+						<input type="checkbox" name="display_tab[]" class="rest" id="ch_synonym" value="ch_synonym"><label>Synonyme</label>   
+						<input type="checkbox" name="display_tab[]" class="rest" id="ch_cofactors" value="ch_cofactors"><label>Cofacteurs</label>      
+						<input type="checkbox" name="display_tab[]" class="rest" id="ch_activity" value="ch_activity"><label>Activité</label>      
+						<input type="checkbox" name="display_tab[]" class="rest" id="ch_history" value="ch_history"><label>Historique</label><br>    
+						<input type="checkbox" name="display_tab[]" class="all" id="ch_all" value="ch_all" checked><label>Tout</label>
 					</fieldset>
 
 
@@ -94,6 +115,7 @@
 						</fieldset>
 					</div>
 				</form>
+				<?php echo PIED; ?>
 			</div>
 			<?php
 				//~ Liste active des noms
@@ -132,6 +154,5 @@
 				echo '</datalist></br></br>';
 			?>
 		</div>
-	<?php echo PIED; ?>
 	</body>
 </html>

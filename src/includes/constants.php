@@ -45,9 +45,8 @@
 		<li>Aide</li>
 		<div id="col1">
 		Pour toute demande d\'aide, contactez : <br>
-		pierre.mkt7@gmail.com <br>
-		oph.dasilva@gmail.com <br>
-		<b>[--> voir comment mettre un lien de création direct\' d\'email]</b>
+		merckaert.pierre@gmail.com <a href="mailto:merckaert.pierre@gmail.com?Subject=Hello" target="_top">Send Mail</a> <br>
+		oph.dasilva@gmail.com <a href="mailto:oph.dasilva@gmail.com?Subject=Hello" target="_top">Send Mail</a> <br> <br>
 		</div>
 		<div id="col2"><img src="img/upsaclay.png" alt="Paris Saclay University" width="400" height="150" /></div>
 		</ul>
