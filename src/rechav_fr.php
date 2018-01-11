@@ -31,7 +31,6 @@
 		<option value=notes.type>Notes";
 		
 		$select_all="enzyme.ec, enzyme.accepted_name, enzyme.systematic_name, synonym.synonyme, enzyme.activity, enzyme.cofactors, swissprot.num_swissprot, swissprot.code_swissprot, prosite.num_prosite, article.authors, article.title, article.year, article.volume, article.first_page, article.last_page, article.pubmed, article.medline, edition.editorial_place, edition.city, edition.edition, edition.editor, comments.comment, enzyme.history, note.note, note.type;Numéro EC,Nom officiel,Nom commun,Synonyme,Activité,Cofacteurs,Num Swissprot,Swissprot,Prosite,Auteur,Titre,Année,Volume,Première page,Dernière page,Pubmed,Medline,Lieu édition,Ville,Edition,Editeur,Commentaire,Historique,Note,Note type";
-		//~ $select_all="enzyme.ec, enzyme.accepted_name, enzyme.systematic_name, synonym.synonyme, enzyme.activity, enzyme.cofactors, swissprot.code_swissprot, swissprot.num_swissprot, prosite.num_prosite, article.authors, article.title, article.year, article.volume, article.first_page, article.last_page, article.pubmed, article.medline, edition.editorial_place, edition.city, edition.edition, edition.editor, comments.comment, enzyme.history, note.note, note.type";
 		$sign = '<select name="sign_0_0"><option value="=">Egal à</option><option value="!=">Différent de</option><option value=">">Supérieur à</option><option value="<">Inférieur à</option></select>';
 		 
 		echo '<div id="corps">
@@ -45,25 +44,26 @@
 							<select multiple name="selection[]">
 								<option value="'.$select_all.'">Toutes les informations disponibles</option>
 								<optgroup label="Enzyme">
-								<option value="enzyme.ec">Numéro EC</option>
-								<option value="enzyme.accepted_name,enzyme.systematic_name">Enzyme - Nom(s)</option>
-								<option value="synonym.synonyme">Enzyme - Synonyme(s)</option>
-								<option value="enzyme.activity">Activité(s) chimiques(s)</option>
-								<option value="enzyme.cofactors">Cofacteur(s)</option>
+								<option value="enzyme.ec;Numéro EC">Numéro EC</option>
+								<option value="enzyme.accepted_name;Nom officiel">Enzyme - Nom(s) officiel(s)</option>
+								<option value="enzyme.systematic_name;Nom commun">Enzyme - Nom(s) commun(s)</option>
+								<option value="synonym.synonyme;Synonyme">Enzyme - Synonyme(s)</option>
+								<option value="enzyme.activity;Activité">Activité(s) chimiques(s)</option>
+								<option value="enzyme.cofactors;Cofacteur">Cofacteur(s)</option>
 								</optgroup>
 								<optgroup label="Références">
-								<option value="swissprot.num_swissprot,swissprot.code_swissprot">swissprot</option>
-								<option value="prosite.num_prosite">prosite</option>
+								<option value="swissprot.num_swissprot,swissprot.code_swissprot;Num Swissprot, Code Swissprot">swissprot</option>
+								<option value="prosite.num_prosite;Prosite">prosite</option>
 								</optgroup>
 								<optgroup label="Littérature">
-								<option value="article.title">titre</option>
-								<option value="article.authors">auteur</option>
-								<option value="article.year">année</option>
-								<option value="edition.editorial_place,edition.city,edition.edition,edition.editor">Informations d\'édition</option>
+								<option value="article.title;Titre">titre</option>
+								<option value="article.authors;Auteurs">auteur</option>
+								<option value="article.year;Année">année</option>
+								<option value="edition.editorial_place,edition.city,edition.edition,edition.editor;Lieu édition,Ville,Edition,Editeur">Informations d\'édition</option>
 								</optgroup>
 								<optgroup label="Notes et commentaires">
-								<option value="comments.comments">Commentaires</option>
-								<option value="note.type,note.note">Notes</option>
+								<option value="comments.comments;Commentaires">Commentaires</option>
+								<option value="note.type,note.note;Note type,Note">Notes</option>
 								</optgroup>
 							</select> <br \>
 							<br \>
