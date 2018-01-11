@@ -232,7 +232,22 @@ def writecsv(d_ec) :
 		if "authors" in d_ec[e] :			
 			for i in range(len(d_ec[e]["authors"])) :
 				id_art += 1
-
+				
+				if d_ec[e]['title'] == "" :
+					d_ec[e]['title'] = "NULL"
+				if d_ec[e]['year'] == "" :
+					d_ec[e]['year'] = "NULL"
+				if d_ec[e]['volume'] == "" :
+					d_ec[e]['volume'] = "NULL"
+				if d_ec[e]['first_page'] == "" :
+					d_ec[e]['first_page'] = "NULL"
+				if d_ec[e]['last_page'] == "" :
+					d_ec[e]['last_page'] = "NULL"
+				if d_ec[e]['medline'] == "" :
+					d_ec[e]['medline'] = "NULL"
+				if d_ec[e]['pubmed'] == "" :
+					d_ec[e]['pubmed'] = "NULL"
+				
 				publief.writerow([str(id_enz),str(id_art)])
 				articlef.writerow([str(id_art),d_ec[e]["authors"][i],d_ec[e]["title"][i],str(d_ec[e]["year"][i]),str(d_ec[e]["volume"][i]),str(d_ec[e]["first_page"][i]),str(d_ec[e]["last_page"][i]),str(d_ec[e]["pubmed"][i]),str(d_ec[e]["medline"][i])])
 				

@@ -25,8 +25,6 @@
 
 			if ($id==0)	erreur(ERR_IS_NOT_CO.REDIRECT);
 			else echo MENU;
-		
-		
 
 				//~ Requete sur le numéro EC d'un enzyme
 				if(!empty($_POST['rech_ec'])) {
@@ -43,7 +41,6 @@
 								if(!empty($_POST['ec4'])) {
 									$ec4=$_POST['ec4'];
 									$q=$q."AND (ec4 REGEXP '[a-zA-Z]$ec4$' OR ec4=$ec4)";
-
 								}
 							}
 						}
@@ -52,7 +49,7 @@
 
 						// Si le résultat de la query n'est pas vide, execute la fonction d'affichage du tableau pour le site et pour l'export (VOIR DANS /includes/functions.php)
 						if ($query->rowCount() == 0) { 
-								echo 'Query returned nothing, please try again.';
+							echo 'Query returned nothing, please try again.';
 						}
 						else{
 							// $file=echo_resultats_sp($query);

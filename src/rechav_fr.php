@@ -16,10 +16,22 @@
 		if ($id==0)	erreur(ERR_IS_NOT_CO.REDIRECT);
 		else echo MENU;
 
-		$var_opt="<option value=enzyme.ec1>EC1<option value=enzyme.ec2>EC2<option value=enzyme.ec3>EC3<option value=enzyme.ec4>EC4<option value=article.title>titre de l'article (un mot clé)<option value=article.year>année de publication<option value=article.authors>auteur(s) article (séparés par des espaces)<option value=enzyme.activity>activité chimique (composés)<option value=enzyme.cofactors>cofacteurs<option value=comments.comments>commentaires<option value=enzyme.history>historique<option value=notes.type>notes";
+		$var_opt="<option value=enzyme.ec1>EC1<option value=enzyme.ec2>EC2<option value=enzyme.ec3>EC3<option value=enzyme.ec4>EC4
+		<option value=enzyme.accepted_name>Nom officiel
+		<option value=enzyme.systematic_name>Nom commun
+		<option value=synonym.synonyme>Synonymes
+		<option value=allname>Parmi tous les noms 
+		<option value=article.title>Titre des articles (séparés par des espaces)
+		<option value=article.year>Année de publication
+		<option value=article.authors>Auteur(s) des articles (séparés par des espaces)
+		<option value=enzyme.activity>Activité chimique (composés)
+		<option value=enzyme.cofactors>Cofacteurs
+		<option value=comments.comments>Commentaires
+		<option value=enzyme.history>Historique
+		<option value=notes.type>Notes";
 		
-		
-		$select_all="enzyme.ec, enzyme.accepted_name, enzyme.systematic_name, synonym.synonyme, enzyme.activity, enzyme.cofactors, swissprot.code_swissprot, swissprot.num_swissprot, prosite.num_prosite, article.authors, article.title, article.year, article.volume, article.first_page, article.last_page, article.pubmed, article.medline, edition.editorial_place, edition.city, edition.edition, edition.editor, comments.comment, enzyme.history, note.note, note.type";
+		$select_all="enzyme.ec, enzyme.accepted_name, enzyme.systematic_name, synonym.synonyme, enzyme.activity, enzyme.cofactors, swissprot.num_swissprot, swissprot.code_swissprot, prosite.num_prosite, article.authors, article.title, article.year, article.volume, article.first_page, article.last_page, article.pubmed, article.medline, edition.editorial_place, edition.city, edition.edition, edition.editor, comments.comment, enzyme.history, note.note, note.type;Numéro EC,Nom officiel,Nom commun,Synonyme,Activité,Cofacteurs,Num Swissprot,Swissprot,Prosite,Auteur,Titre,Année,Volume,Première page,Dernière page,Pubmed,Medline,Lieu édition,Ville,Edition,Editeur,Commentaire,Historique,Note,Note type";
+		//~ $select_all="enzyme.ec, enzyme.accepted_name, enzyme.systematic_name, synonym.synonyme, enzyme.activity, enzyme.cofactors, swissprot.code_swissprot, swissprot.num_swissprot, prosite.num_prosite, article.authors, article.title, article.year, article.volume, article.first_page, article.last_page, article.pubmed, article.medline, edition.editorial_place, edition.city, edition.edition, edition.editor, comments.comment, enzyme.history, note.note, note.type";
 		$sign = '<select name="sign_0_0"><option value="=">Egal à</option><option value="!=">Différent de</option><option value=">">Supérieur à</option><option value="<">Inférieur à</option></select>';
 		 
 		echo '<div id="corps">
@@ -36,7 +48,7 @@
 								<option value="enzyme.ec">Numéro EC</option>
 								<option value="enzyme.accepted_name,enzyme.systematic_name">Enzyme - Nom(s)</option>
 								<option value="synonym.synonyme">Enzyme - Synonyme(s)</option>
-								<option value="enzyme.activity">Activité(s) enzymatique(s)</option>
+								<option value="enzyme.activity">Activité(s) chimiques(s)</option>
 								<option value="enzyme.cofactors">Cofacteur(s)</option>
 								</optgroup>
 								<optgroup label="Références">
@@ -79,7 +91,7 @@
 		 //~ sign += '<input type="radio" id="radio3'+x+'_'+y+'" name="radio_'+x+'_'+y+'" value=">"><label for="radio3"><</label> ';
 		 
 		 // List
-		 sign = '<select name="sign_'+x+'_'+y+'"><option value="=">Egal à</option><option value="!=">Différent de</option><option value="sup">Supérieur à</option><option value="<">Inférieur à</option></select>';
+		 sign = '<select name="sign_'+x+'_'+y+'"><option value="=">Egal à</option><option value="!=">Différent de</option><option value=">">Supérieur à</option><option value="<">Inférieur à</option></select>';
 		 return sign;
 	}
 	
