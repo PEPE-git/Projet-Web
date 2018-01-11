@@ -4,12 +4,15 @@
 	<head>
 		<link rel="stylesheet" type="text/css" href="./form.css">
 
-		<!-- Import de jquery via internet. Pour pouvoir utiliser datatables. -->
-		<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
-
 		<!-- Import des fichiers de DataTables en local -->
+		<script type="text/javascript" charset="utf8" src="DataTables/jQuery-3.2.1/jquery-3.2.1.js"></script>
 		<link rel="stylesheet" type="text/css" href="DataTables/datatables.css">
 		<script type="text/javascript" charset="utf8" src="DataTables/datatables.js"></script>	
+
+		<!-- <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.js"></script> -->
+		<!-- <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script> -->
+		
+		
 	</head>
 	
 	<body class = "principal">
@@ -23,20 +26,14 @@
 			if ($id==0)	erreur(ERR_IS_NOT_CO.REDIRECT);
 			else echo MENU;
 		
-
-			echo '<div id="corps">
-				<h1><?php echo $titre ?></h1><br/>
-				<form method="post" action="dwl_sp.php">
-					<input type="submit" style = "display: block; margin : auto;" name="export" value="Exporter les résultats" />
-				</form>';
-				
+		
 
 				//~ Requete sur le numéro EC d'un enzyme
 				if(!empty($_POST['rech_ec'])) {
 					if(!empty($_POST['ec1'])) {
-						$q="SELECT * FROM enzyme LEFT JOIN synonym ON synonym.id_enzyme=enzyme.id_enzyme WHERE synonym.id_enzyme=enzyme.id_enzyme ";
+						$q="SELECT * FROM enzyme LEFT JOIN synonym ON synonym.id_enzyme=enzyme.id_enzyme LEFT JOIN swissprot ON swissprot.id_enzyme=enzyme.id_enzyme WHERE ";
 						$ec1 =$_POST['ec1'];
-						$q=$q."AND ec1=$ec1 ";
+						$q=$q."ec1=$ec1 ";
 						if(!empty($_POST['ec2'])) {
 							$ec2=$_POST['ec2'];
 							$q=$q."AND ec2=$ec2 ";
@@ -45,7 +42,7 @@
 								$q=$q."AND ec3=$ec3 ";
 								if(!empty($_POST['ec4'])) {
 									$ec4=$_POST['ec4'];
-									$q=$q."AND ec4=$ec4 ";
+									$q=$q."AND ec4 LIKE '%$ec4%'; ";
 								}
 							}
 						}
@@ -57,7 +54,8 @@
 								echo 'Query returned nothing, please try again.';
 						}
 						else{
-							$file = echo_resultats_sp($query);
+							// $file=echo_resultats_sp($query);
+							echo_resultats_sp($query);
 						}
 					}
 
@@ -72,18 +70,18 @@
 							$name_type=$_POST['name_type'];
 							$name=$_POST['name'];
 							if($name_type == "1") {
-								$q=$q."SELECT * FROM enzyme LEFT JOIN synonym ON synonym.id_enzyme=enzyme.id_enzyme WHERE accepted_name LIKE '%$name%';";
+								$q=$q."SELECT * FROM enzyme LEFT JOIN synonym ON synonym.id_enzyme=enzyme.id_enzyme LEFT JOIN swissprot ON swissprot.id_enzyme=enzyme.id_enzyme WHERE accepted_name LIKE '%$name%';";
 							}
 							else {
 								if($name_type == "2") {
-									$q=$q."SELECT * FROM enzyme LEFT JOIN synonym ON synonym.id_enzyme=enzyme.id_enzyme WHERE systematic_name LIKE'%$name%';";
+									$q=$q."SELECT * FROM enzyme LEFT JOIN synonym ON synonym.id_enzyme=enzyme.id_enzyme LEFT JOIN swissprot ON swissprot.id_enzyme=enzyme.id_enzyme WHERE systematic_name LIKE'%$name%';";
 								}
 								else {
 									if($name_type == "3") {
-										$q=$q."SELECT * FROM enzyme LEFT JOIN synonym ON synonym.id_enzyme=enzyme.id_enzyme WHERE synonym.synonyme LIKE'%$name%';";
+										$q=$q."SELECT * FROM enzyme LEFT JOIN synonym ON synonym.id_enzyme=enzyme.id_enzyme LEFT JOIN swissprot ON swissprot.id_enzyme=enzyme.id_enzyme WHERE synonym.synonyme LIKE'%$name%';";
 									}
 									else {
-										$q=$q."SELECT * FROM enzyme LEFT JOIN synonym ON synonym.id_enzyme=enzyme.id_enzyme WHERE (accepted_name LIKE '%$name%' OR systematic_name LIKE '%$name%' OR synonym.synonyme LIKE '%$name%');";
+										$q=$q."SELECT * FROM enzyme LEFT JOIN synonym ON synonym.id_enzyme=enzyme.id_enzyme LEFT JOIN swissprot ON swissprot.id_enzyme=enzyme.id_enzyme WHERE (accepted_name LIKE '%$name%' OR systematic_name LIKE '%$name%' OR synonym.synonyme LIKE '%$name%');";
 									}
 								}
 							}
@@ -96,7 +94,8 @@
 								echo 'Query returned nothing, please try again.';
 							}
 							else{
-								$file = echo_resultats_sp($query);
+								// $file=echo_resultats_sp($query);
+								echo_resultats_sp($query);
 							}
 						}
 					}
@@ -105,7 +104,7 @@
 						if(!empty($_POST['rech_act'])) {
 							if(isset($_POST['act'])) {
 								$act=$_POST['act'];
-								$q="SELECT * FROM enzyme LEFT JOIN synonym ON synonym.id_enzyme=enzyme.id_enzyme WHERE activity LIKE '%$act%';";
+								$q="SELECT * FROM enzyme LEFT JOIN synonym ON synonym.id_enzyme=enzyme.id_enzyme LEFT JOIN swissprot ON swissprot.id_enzyme=enzyme.id_enzyme WHERE activity LIKE '%$act%';";
 								
 								echo $q."</br>";
 								$query = $db->query($q);
@@ -115,7 +114,8 @@
 									echo 'Query returned nothing, please try again.';
 								}
 								else{
-									$file = echo_resultats_sp($query);
+									// $file=echo_resultats_sp($query);
+									echo_resultats_sp($query);
 								}
 							}
 				
@@ -125,7 +125,7 @@
 							if(!empty($_POST['rech_co'])) {
 								if(isset($_POST['cofactors'])) {
 									$co=$_POST['cofactors'];
-									$q="SELECT * FROM enzyme LEFT JOIN synonym ON synonym.id_enzyme=enzyme.id_enzyme WHERE cofactors LIKE'%$co%';";
+									$q="SELECT * FROM enzyme LEFT JOIN synonym ON synonym.id_enzyme=enzyme.id_enzyme LEFT JOIN swissprot ON swissprot.id_enzyme=enzyme.id_enzyme WHERE cofactors LIKE'%$co%';";
 									
 									echo $q."</br>";
 									$query = $db->query($q);
@@ -135,20 +135,18 @@
 										echo 'Query returned nothing, please try again.';
 									}
 									else{
-										$file = echo_resultats_sp($query);
+										// $file=echo_resultats_sp($query);
+										echo_resultats_sp($query);
 									}
 								}
 							}
 						}
 					}
 				}
-				$_SESSION['res_sp'] = $file;
+				// $_SESSION['res_sp'] = $file;
 				echo PIED;
 			?>
 		</div>
 	</body>
 </html>
-<!--
-<td>'.$row['ec1'].$row['ec2'].$row['ec3'].$row['ec4'].'</td>
--->
 							   

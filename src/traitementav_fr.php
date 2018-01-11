@@ -3,6 +3,10 @@
 
 	<head>
 		<link rel="stylesheet" type="text/css" href="./form.css">
+
+		<script type="text/javascript" charset="utf8" src="DataTables/jQuery-3.2.1/jquery-3.2.1.js"></script>
+		<link rel="stylesheet" type="text/css" href="DataTables/datatables.css">
+		<script type="text/javascript" charset="utf8" src="DataTables/datatables.js"></script>	
 	</head>
 	
 	<body class = "principal">
@@ -136,7 +140,14 @@
 			//~ $db->setAttribute(PDO::MYSQL_ATTR_USE_BUFFERED_QUERY, false);
 			$query=$db->query($q);			
 			$res="";
-			echo '<table>';
+			echo '<table id="traitementav_fr" class="display" width="100%" cellspacing="0">
+					<thead>
+						<tr>
+							<th>ec</th>
+						</tr>
+					</thead>
+
+					<tbody>';
 			while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
 				//~ echo '<tr>';
 				$tmp='<tr>';
@@ -151,7 +162,74 @@
 				echo $tmp;
 				$res.="\n";
 			}
-			echo '</table>';
+			echo '
+				</tbody>
+			</table>';
+
+			echo "
+		<script type=\"text/javascript\">
+			$(document).ready(function() {
+				$('#traitementav_fr').DataTable({
+					dom: 'Bfrtip',
+					lengthMenu: [
+			            [ 10, 25, 50, -1 ],
+			            [ '10 rows', '25 rows', '50 rows', 'Show all' ]
+			        ],
+			        // columnDefs: [
+			        //     {
+			        //         targets: -1,
+			        //         visible: false
+			        //     } 
+       				// ],
+
+					buttons: [
+					 	{
+							extend: 'collection',
+			                text: 'Export',
+			                buttons: [
+			                	{
+					                extend: 'copyHtml5',
+					                exportOptions: {
+					                    columns: ':visible'
+					                }
+					            },
+					            {
+					                extend: 'csvHtml5',
+					                exportOptions: {
+					                    columns: ':visible'
+					                }
+					            },
+					            {
+					                extend: 'excelHtml5',
+					                exportOptions: {
+					                    columns: ':visible'
+					                }
+					            },
+					            {
+					                extend: 'pdfHtml5',
+					                orientation: 'landscape',
+               						pageSize: 'LEGAL',
+					                exportOptions: {
+					                    columns: ':visible'
+					                }
+					            },
+					            {
+					                extend: 'print',
+					                exportOptions: {
+					                    columns: ':visible'
+					            	}
+					            }
+			                ]
+						},
+						'pageLength',
+						{
+							extend: 'colvis'
+						}
+					]
+				});
+			} );
+		</script>";
+
 			echo PIED;
 		?>
 	</body>

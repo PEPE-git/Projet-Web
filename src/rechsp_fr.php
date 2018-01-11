@@ -4,8 +4,9 @@
 	<head>
 		<link rel="stylesheet" type="text/css" href="./form.css">
 
-		<!-- Import de jquery via internet. pour le dynamisme des checkbox. -->
-		<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+		<!-- <link rel="stylesheet" type="text/css" href="DataTables/datatables.css"> -->
+		<script type="text/javascript" src="DataTables/jQuery-3.2.1/jquery-3.2.1.js"></script>
+		
 	</head>
 	
 	<!-- Affichage des popups -->
@@ -33,25 +34,26 @@
 				<!-- Décoche "Tout" si une autre checkbox est cohée
 					 Décoche les autres checkbox si "Tout" est cochée -->
 				<script type="text/javascript">
-					$(document).ready(function(){
-					    $(".rest").click(function(){
-					        $("#ch_all").prop("checked", false);
-					    });
-					    $(".all").click(function(){
-					        $("#ch_ec").prop("checked", false);
-					        $("#ch_systematic").prop("checked", false);
-					        $("#ch_accepted").prop("checked", false);
-					        $("#ch_synonym").prop("checked", false);
-					        $("#ch_cofactors").prop("checked", false);
-					        $("#ch_activity").prop("checked", false);
-					        $("#ch_history").prop("checked", false);
-					    });
-					});
+					// $(document).ready(function(){
+					//     $(".rest").click(function(){
+					//         $("#ch_all").prop("checked", false);
+					//     });
+					//     $(".all").click(function(){
+					//         $("#ch_ec").prop("checked", false);
+					//         $("#ch_systematic").prop("checked", false);
+					//         $("#ch_accepted").prop("checked", false);
+					//         $("#ch_synonym").prop("checked", false);
+					//         $("#ch_cofactors").prop("checked", false);
+					//         $("#ch_activity").prop("checked", false);
+					//         $("#ch_history").prop("checked", false);
+					//         $("#ch_swissprot").prop("checked", false);
+					//     });
+					// });
 				</script>
 
 				<form method="post" action="traitementsp_fr.php" enctype="multipart/form-data" target="_blank">
 
-					<fieldset>
+					<!-- <fieldset>
 						<legend>Caractéristiques d'intérêt</legend>
 						<input type="checkbox" name="display_tab[]" class="rest" id="ch_ec" value="ch_ec"><label>EC Number</label> 
 						<input type="checkbox" name="display_tab[]" class="rest" id="ch_systematic" value="ch_systematic"><label>Nom Systématique</label>     
@@ -59,9 +61,10 @@
 						<input type="checkbox" name="display_tab[]" class="rest" id="ch_synonym" value="ch_synonym"><label>Synonyme</label>   
 						<input type="checkbox" name="display_tab[]" class="rest" id="ch_cofactors" value="ch_cofactors"><label>Cofacteurs</label>      
 						<input type="checkbox" name="display_tab[]" class="rest" id="ch_activity" value="ch_activity"><label>Activité</label>      
-						<input type="checkbox" name="display_tab[]" class="rest" id="ch_history" value="ch_history"><label>Historique</label><br>    
+						<input type="checkbox" name="display_tab[]" class="rest" id="ch_history" value="ch_history"><label>Historique</label>  
+						<input type="checkbox" name="display_tab[]" class="rest" id="ch_swissprot" value="ch_swissprot"><label>Swissprot</label><br>  
 						<input type="checkbox" name="display_tab[]" class="all" id="ch_all" value="ch_all" checked><label>Tout</label>
-					</fieldset>
+					</fieldset> -->
 
 
 					<div>
@@ -71,10 +74,10 @@
 <!--
 							<label for="ec">EC Number</label> </br>
 -->
-							<input class="form_ec" type="number" name="ec1" id="ec1" list="ec1"  maxlength="15" size="6" value="<?php echo isset($_POST['ec1']) ? $_POST['ec1'] : '' ?>" autofocus>
-							- <input class="form_ec" type="number"  name="ec2" id="ec2" list="ec2" maxlength="15" size="6" value="<?php echo isset($_POST['ec2']) ? $_POST['ec2'] : '' ?>">
-							- <input class="form_ec" type="number"  name="ec3" id="ec3" list="ec3" maxlength="15" size="6" value="<?php echo isset($_POST['ec3']) ? $_POST['ec3'] : '' ?>" >
-							- <input class="form_ec" type="number"  name="ec4" id="ec4" list="ec4" maxlength="15" size="6" value="<?php echo isset($_POST['ec4']) ? $_POST['ec4'] : '' ?>" >
+							<input class="form_ec" type="number" min="1" name="ec1" id="ec1" list="ec1"  maxlength="15" size="6" value="<?php echo isset($_POST['ec1']) ? $_POST['ec1'] : '' ?>" autofocus>
+							- <input class="form_ec" type="number" min="1" name="ec2" id="ec2" list="ec2" maxlength="15" size="6" value="<?php echo isset($_POST['ec2']) ? $_POST['ec2'] : '' ?>">
+							- <input class="form_ec" type="number" min="1" name="ec3" id="ec3" list="ec3" maxlength="15" size="6" value="<?php echo isset($_POST['ec3']) ? $_POST['ec3'] : '' ?>" >
+							- <input class="form_ec" type="varchar"  name="ec4" id="ec4" list="ec4" maxlength="15" size="6" value="<?php echo isset($_POST['ec4']) ? $_POST['ec4'] : '' ?>" >
 							<br><br>
 							<input type="submit" name="rech_ec" value="Recherche" />
 						</fieldset>
@@ -121,11 +124,15 @@
 				//~ Liste active des noms
 				echo '<datalist id="name">';
 				$query_sn = $db->prepare('
-					SELECT systematic_name AS name FROM enzyme
+					SELECT DISTINCT systematic_name AS name FROM enzyme
+					WHERE systematic_name IS NOT NULL
 					UNION ALL
-					SELECT accepted_name AS name FROM enzyme
+					SELECT DISTINCT accepted_name AS name FROM enzyme
+					WHERE accepted_name IS NOT NULL
 					UNION ALL
-					SELECT synonyme AS name FROM synonym');
+					SELECT DISTINCT synonyme AS name FROM synonym
+					WHERE synonyme IS NOT NULL
+					');
 				$query_sn->execute();
 				$result_sn = $query_sn->fetchAll(PDO::FETCH_ASSOC);
 				foreach ($result_sn as $row_sn) {
@@ -135,7 +142,7 @@
 				
 				//~ Liste active d'activité
 				echo '<datalist id="act">';
-				$query_act = $db->prepare('SELECT activity FROM enzyme');
+				$query_act = $db->prepare('SELECT DISTINCT activity FROM enzyme WHERE activity IS NOT NULL ');
 				$query_act->execute();
 				$result_act = $query_act->fetchAll(PDO::FETCH_ASSOC);
 				foreach ($result_act as $row_act) {
@@ -145,7 +152,7 @@
 				
 				//~ Liste active de cofacteurs
 				echo '<datalist id="cofactors">';
-				$query_co = $db->prepare('SELECT cofactors FROM enzyme');
+				$query_co = $db->prepare('SELECT DISTINCT cofactors FROM enzyme WHERE cofactors IS NOT NULL');
 				$query_co->execute();
 				$result_co = $query_co->fetchAll(PDO::FETCH_ASSOC);
 				foreach ($result_co as $row_co) {

@@ -4,8 +4,8 @@
 	<head>
 		<link rel="stylesheet" type="text/css" href="./form.css">
 
-		<!-- Import de jquery via internet. pour le dynamisme des checkbox. -->
-		<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+		<!-- Import de jquery via les fichiers en local. pour le dynamisme des checkbox. -->
+		<script type="text/javascript" src="DataTables/jQuery-3.2.1/jquery-3.2.1.js"></script>
 	</head>
 	
 	<!-- Affichage des popups -->
@@ -16,22 +16,23 @@
 
 		// Décoche "Tout" si une autre checkbox est cohée
 		// Décoche les autres checkbox si "Tout" est cochée 
-		$(document).ready(function(){
-		    $(".rest").click(function(){
-		        $("#ch_all").prop("checked", false);
-		    });
-		    $(".all").click(function(){
-		        $("#ch_ec").prop("checked", false);
-		        $("#ch_author").prop("checked", false);
-		        $("#ch_title").prop("checked", false);
-		        $("#ch_year").prop("checked", false);
-		        $("#ch_volume").prop("checked", false);
-		        $("#ch_fpage").prop("checked", false);
-		        $("#ch_lpage").prop("checked", false);
-		        $("#ch_pubmed").prop("checked", false);
-		        $("#ch_medline").prop("checked", false);
-		    });
-		});
+		// $(document).ready(function(){
+		//     $(".rest").click(function(){
+		//         $("#ch_all").prop("checked", false);
+		//     });
+		//     $(".all").click(function(){
+		//         $("#ch_ec").prop("checked", false);
+		//         $("#ch_author").prop("checked", false);
+		//         $("#ch_title").prop("checked", false);
+		//         $("#ch_year").prop("checked", false);
+		//         $("#ch_volume").prop("checked", false);
+		//         $("#ch_fpage").prop("checked", false);
+		//         $("#ch_lpage").prop("checked", false);
+		//         $("#ch_pubmed").prop("checked", false);
+		//         $("#ch_medline").prop("checked", false);
+		//         $("#ch_swissprot").prop("checked", false);
+		//     });
+		// });
 	</script>
 	
 	<body class = "principal">			
@@ -54,7 +55,7 @@
 
 				<form method="post" action="traitementsp_fr.php" enctype="multipart/form-data" target="_blank">
 
-					<fieldset>
+					<!-- <fieldset>
 						<legend>Caractéristiques d'intérêt</legend>
 						<input type="checkbox" name="display_tab[]" class="rest" id="ch_ec" value="ch_ec"><label>EC Number</label> 
 						<input type="checkbox" name="display_tab[]" class="rest" id="ch_author" value="ch_author"><label>Auteur</label>     
@@ -65,17 +66,18 @@
 						<input type="checkbox" name="display_tab[]" class="rest" id="ch_lpage" value="ch_lpage"><label>Dernière page</label><br>    
 						<input type="checkbox" name="display_tab[]" class="rest" id="ch_pubmed" value="ch_pubmed"><label>Pubmed</label>   
 						<input type="checkbox" name="display_tab[]" class="rest" id="ch_medline" value="ch_medline"><label>Medline</label>   
+						<input type="checkbox" name="display_tab[]" class="rest" id="ch_swissprot" value="ch_swissprot"><label>Swissprot</label>   
 						<input type="checkbox" name="display_tab[]" class="all" id="ch_all" value="ch_all" checked><label>Tout</label>
-					</fieldset>
+					</fieldset> -->
 
 					<div>
 						<!--Rechercher les articles associées à un numéro EC -->
 						<fieldset>
 							<legend>Recherche sur le code enzyme<SUP><a id="pop_info" href="rechbib_fr.php" onClick="popup('./popup/info_enz_ec.html',600,500)">?</a></SUP></legend>
-							<input class="form_ec" type="number" name="ec1" id="ec1" list="ec1"  maxlength="15" size="6" value="<?php echo isset($_POST['ec1']) ? $_POST['ec1'] : '' ?>" autofocus>
-							- <input class="form_ec" type="number"  name="ec2" id="ec2" list="ec2" maxlength="15" size="6" value="<?php echo isset($_POST['ec2']) ? $_POST['ec2'] : '' ?>">
-							- <input class="form_ec" type="number"  name="ec3" id="ec3" list="ec3" maxlength="15" size="6" value="<?php echo isset($_POST['ec3']) ? $_POST['ec3'] : '' ?>" >
-							- <input class="form_ec" type="number"  name="ec4" id="ec4" list="ec4" maxlength="15" size="6" value="<?php echo isset($_POST['ec4']) ? $_POST['ec4'] : '' ?>" >
+							<input class="form_ec" type="number" min="1" name="ec1" id="ec1" list="ec1"  maxlength="15" size="6" value="<?php echo isset($_POST['ec1']) ? $_POST['ec1'] : '' ?>" autofocus>
+							- <input class="form_ec" type="number" min="1"  name="ec2" id="ec2" list="ec2" maxlength="15" size="6" value="<?php echo isset($_POST['ec2']) ? $_POST['ec2'] : '' ?>">
+							- <input class="form_ec" type="number" min="1" name="ec3" id="ec3" list="ec3" maxlength="15" size="6" value="<?php echo isset($_POST['ec3']) ? $_POST['ec3'] : '' ?>" >
+							- <input class="form_ec" type="varchar"  name="ec4" id="ec4" list="ec4" maxlength="15" size="6" value="<?php echo isset($_POST['ec4']) ? $_POST['ec4'] : '' ?>" >
 							<br><br>
 							<input type="submit" name="rech_ec" value="Recherche" />
 						</fieldset>
