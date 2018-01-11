@@ -18,9 +18,8 @@
 
 		$var_opt="<option value=enzyme.ec1>EC1<option value=enzyme.ec2>EC2<option value=enzyme.ec3>EC3<option value=enzyme.ec4>EC4<option value=article.title>titre de l'article (un mot clé)<option value=article.year>année de publication<option value=article.authors>auteur(s) article (séparés par des espaces)<option value=enzyme.activity>activité chimique (composés)<option value=enzyme.cofactors>cofacteurs<option value=comments.comments>commentaires<option value=enzyme.history>historique<option value=notes.type>notes";
 		
-		//~ $sign = '<input type="radio" id="radio1" name="radio_0_0" value="<"><label for="radio1">></label>';
-		//~ $sign .= '<input type="radio" id="radio2" name="radio_0_0" value="="><label for="radio2">=</label>';
-		//~ $sign .= '<input type="radio" id="radio3" name="radio_0_0" value=">"><label for="radio3"><</label> ';
+		
+		$select_all="enzyme.ec, enzyme.accepted_name, enzyme.systematic_name, synonym.synonyme, enzyme.activity, enzyme.cofactors, swissprot.code_swissprot, swissprot.num_swissprot, prosite.num_prosite, article.authors, article.title, article.year, article.volume, article.first_page, article.last_page, article.pubmed, article.medline, edition.editorial_place, edition.city, edition.edition, edition.editor, comments.comment, enzyme.history, note.note, note.type";
 		$sign = '<select name="sign_0_0"><option value="=">Egal à</option><option value="!=">Différent de</option><option value=">">Supérieur à</option><option value="<">Inférieur à</option></select>';
 		 
 		echo '<div id="corps">
@@ -32,7 +31,7 @@
 								
 							<label for="select">Informations que vous désirez<br/><br/></label>
 							<select multiple name="selection[]">
-								<option value="*">Toutes les informations disponibles</option>
+								<option value="'.$select_all.'">Toutes les informations disponibles</option>
 								<optgroup label="Enzyme">
 								<option value="enzyme.ec">Numéro EC</option>
 								<option value="enzyme.accepted_name,enzyme.systematic_name">Enzyme - Nom(s)</option>
