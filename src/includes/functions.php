@@ -344,8 +344,8 @@ function echo_resultats_bib($query){
 			 	<td>'.$row['first_page'].'</td>
 			 	<td>'.$row['last_page'].'</td>
 				<td><a target="_blank" href="'.$pb.$row['pubmed'].'">'.$row['pubmed'].'</a></td>
-				<td>'.$row['medline'].'</td>';
-
+				<td><a target="_blank" href="https://www.ncbi.nlm.nih.gov/pubmed?cmd=PureSearch&term='.$row['ec1'].'.'.$row['ec2'].'.'.$row['ec3'].'.'.$row['ec4'].'"[EC%2FRN Number]>'.$row['medline'].'</a></td>';
+				
 			// $file=$file.$row['ec']."\t".$row['authors']."\t".$row['title']."\t".$row['year']."\t".$row['volume']."\t".$row['first_page']."\t".$row['last_page']."\t".$row['pubmed'].$row['medline'];
 
 			echo '<td>';

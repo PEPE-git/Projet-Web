@@ -71,7 +71,7 @@
 					if(!empty($_POST['rech_aut'])) {
 						if(isset($_POST['aut_art'])) {
 							$aut=$_POST['aut_art'];
-							$q="SELECT * FROM enzyme LEFT JOIN publie ON enzyme.id_enzyme=publie.id_enzyme LEFT JOIN article ON article.id_article=publie.id_article LEFT JOIN swissprot ON swissprot.id_enzyme=enzyme.id_enzyme WHERE authors LIKE '$aut';";
+							$q="SELECT * FROM enzyme LEFT JOIN publie ON enzyme.id_enzyme=publie.id_enzyme LEFT JOIN article ON article.id_article=publie.id_article LEFT JOIN swissprot ON swissprot.id_enzyme=enzyme.id_enzyme WHERE authors LIKE '%$aut%';";
 							
 							echo $q."</br></br>";
 							$query = $db->query($q);
@@ -90,7 +90,7 @@
 						if(!empty($_POST['rech_tit'])) {
 							if(isset($_POST['tit_art'])) {
 								$tit=$_POST['tit_art'];
-								$q="SELECT * FROM enzyme LEFT JOIN publie ON enzyme.id_enzyme=publie.id_enzyme LEFT JOIN article ON article.id_article=publie.id_article LEFT JOIN swissprot ON swissprot.id_enzyme=enzyme.id_enzyme WHERE title LIKE '$tit';";
+								$q="SELECT * FROM enzyme LEFT JOIN publie ON enzyme.id_enzyme=publie.id_enzyme LEFT JOIN article ON article.id_article=publie.id_article LEFT JOIN swissprot ON swissprot.id_enzyme=enzyme.id_enzyme WHERE title LIKE '%$tit%';";
 								
 								echo $q."</br></br>";
 								$query = $db->query($q);
@@ -110,7 +110,7 @@
 							if(!empty($_POST['rech_year'])) {
 								if(isset($_POST['year_art'])) {
 									$year=$_POST['year_art'];
-									$q="SELECT * FROM enzyme LEFT JOIN publie ON enzyme.id_enzyme=publie.id_enzyme LEFT JOIN article ON article.id_article=publie.id_article LEFT JOIN swissprot ON swissprot.id_enzyme=enzyme.id_enzyme WHERE year LIKE '$year' ;";
+									$q="SELECT * FROM enzyme LEFT JOIN publie ON enzyme.id_enzyme=publie.id_enzyme LEFT JOIN article ON article.id_article=publie.id_article LEFT JOIN swissprot ON swissprot.id_enzyme=enzyme.id_enzyme WHERE year = '$year' ;";
 									
 									echo $q."</br></br>";
 									$query = $db->query($q);
