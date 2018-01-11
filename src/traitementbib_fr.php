@@ -43,7 +43,8 @@
 								$q=$q."AND ec3=$ec3 ";
 								if(!empty($_POST['ec4'])) {
 									$ec4=$_POST['ec4'];
-									$q=$q."AND ec4 LIKE '%$ec4%'; ";
+									//~ $q=$q."AND ec4 LIKE '%$ec4'; ";
+									$q=$q."AND (ec4 REGEXP '[a-zA-Z]$ec4$' OR ec4=$ec4)";
 								}
 							}
 						}
