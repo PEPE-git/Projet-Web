@@ -8,21 +8,11 @@
 			<a class="a_entete" href="./deconnect_fr.php">Déconnexion</a><br>
 		</div>
 		<div id="menu">
-			<div class="menu_item">
-				<a class="a_entete" href="./accueil_fr.php">Accueil</a>
-			</div>
-			<div class="menu_item">
-				<a class="a_entete" href="./ficheind_fr.php">Fiches enzyme</a>
-			</div>
-			<div class="menu_item">
-				<a class="a_entete" href="./rechsp_fr.php">Recherche Simple</a>
-			</div>
-			<div class="menu_item">
-				<a class="a_entete" href="./rechbib_fr.php">Recherche Bibliographique</a>
-			</div>
-			<div class="menu_item">
-				<a class="a_entete" href="./rechav_fr.php">Recherche Avancée</a>
-			</div>
+			<a class="a_entete" href="./accueil_fr.php"><div class="menu_item">Accueil</div></a>
+			<a class="a_entete" href="./ficheind_fr.php"><div class="menu_item">Fiches enzyme</div></a>
+			<a class="a_entete" href="./rechsp_fr.php"><div class="menu_item">Recherche Simple</div></a>
+			<a class="a_entete" href="./rechbib_fr.php"><div class="menu_item">Recherche Bibliographique</div></a>
+			<a class="a_entete" href="./rechav_fr.php"><div class="menu_item">Recherche Avancée</div></a>
 		</div>
 	</div>
 	<br><br><br>');
