@@ -123,6 +123,7 @@ function verif_ec($sign,$cdt,$val) {
 			$var_real_name=array();
 			$db_var=array();
 			$var_select=false;
+			$var_flag=false;
 			
 			foreach($_POST as $key => $val) {
 				if($val=="") exit("ERREUR : il y a des champs incomplets. Veuillez revoir votre requête.");
@@ -186,7 +187,9 @@ function verif_ec($sign,$cdt,$val) {
 											//~ else exit("ERREUR : EC1 doit être renseigné si la requête porte sur EC2");
 										//~ }
 									} else {
+										$var_flag=true;
 										if ($var=="enzyme.ec3") {
+											$var_flag=false;
 											if (!($val>0)) exit("ERREUR : EC3 doit être un entier positif");								
 											array_push($ec,"ec3");
 											//~ if (in_array("ec1", $ec) && in_array("ec2", $ec)) array_push($ec,"ec3");
@@ -315,13 +318,27 @@ function verif_ec($sign,$cdt,$val) {
 						// Si EC2
 						if (in_array("ec2",$ec)) {
 							if (!(in_array("ec1",$ec))) exit("ERREUR : EC1 doit être renseigné si la requête porte sur EC2"); // pas d'EC1
+							else {
+								// S'il n'y a que EC1 et EC2, il ne faut pas que la requête soit trop grande
+								$error_long_select="</br>ERREUR : Le résultats de la requête est trop grand. Veuillez la préciser ou réduire le nombre de variables d'intérêt";
+								// S'il n'y a pas d'autre variable de requête que EC1 et EC2
+								if(!($var_flag)) {
+									if ($save_select==$s1) {
+										exit($error_long_select);
+									} else if ($save_select==$s2) exit($error_long_select);
+								}
+							}
 						}
+						// Que EC1		
 						else {
-							// Si il n'y a que EC1, il ne faut pas que la requête soit trop grande
+							// S'il n'y a que EC1, il ne faut pas que la requête soit trop grande
 							$error_long_select="</br>ERREUR : Le résultats de la requête est trop grand. Veuillez la préciser ou réduire le nombre de variables d'intérêt";
-							if ($save_select==$s1) {
-								exit($error_long_select);
-							} else if ($save_select==$s2) exit($error_long_select);
+							// S'il n'y a pas d'autre variable de requête que EC1
+							if(!($var_flag)) {
+								if ($save_select==$s1) {
+									exit($error_long_select);
+								} else if ($save_select==$s2) exit($error_long_select);
+							}				
 						}
 					}
 				}
@@ -376,8 +393,6 @@ function verif_ec($sign,$cdt,$val) {
 										else { 
 											$t='<td>'.$val.'</td>';					
 											$tmp.=$t;
-											//~ $t='<td>'.$key.'</td>';					
-											//~ $tmp.=$t;
 										}
 									}
 								}
@@ -388,29 +403,6 @@ function verif_ec($sign,$cdt,$val) {
 				$tmp.='</tr>';
 				echo $tmp;
 			}
-			//~ $n = $query->rowCount();
-			//~ $i=0;
-			//~ $all = $query->fetchAll(PDO::FETCH_ASSOC);
-			//~ while ($i<$n) {
-				//~ $row = $all[$i];			
-				//~ $tmp='<tr>';
-				//~ $m=count($row);
-				
-				//~ for($j=0;$j<$m;$j++) {
-					//~ if($key=="swissprot.num_swissprot") $sw=$val;
-					//~ else if($key=="swissprot.code_swissprot") {
-						//~ $t='<td><a target="_blank" href="http://www.uniprot.org/uniprot/'.$sw.'">'.$val.'</a></td>';					
-						//~ $tmp.=$t;
-					//~ }
-					//~ else { 
-						//~ $t='<td>'.$val.'</td>';					
-						//~ $tmp.=$t;
-					//~ }
-				//~ }
-				//~ $tmp.='</tr>';
-				//~ echo $tmp;
-				//~ $i+=1;
-			//~ }
 			echo '
 				</tbody>
 			</table>';
