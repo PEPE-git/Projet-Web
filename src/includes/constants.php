@@ -5,25 +5,28 @@
 	define('MENU','<div id="entete">
 		<div id = "param">
 			<a class="a_entete" href="./deconnect_fr.php">Déconnexion</a><br>
-			<b>fr</b> - <a class="a_entete" href="./accueil_en.php">en</a>
 		</div>
 		<div id="menu">
 			<div class="menu_item">
 				<a class="a_entete" href="./accueil_fr.php">Accueil</a>
 			</div>
 			<div class="menu_item">
+				<a class="a_entete" href="./ficheind_fr.php">Fiches enzyme</a>
+			</div>
+			<div class="menu_item">
 				<a class="a_entete" href="./rechsp_fr.php">Recherche Simple</a>
 			</div>
 			<div class="menu_item">
-				<a class="a_entete" href="./rechav_fr.php">Recherche Avancée</a>
+				<a class="a_entete" href="./rechbib_fr.php">Recherche Bibliographique</a>
 			</div>
 			<div class="menu_item">
-				<a class="a_entete" href="./rechbib_fr.php">Recherche Bibliographique</a>
+				<a class="a_entete" href="./rechav_fr.php">Recherche Avancée</a>
 			</div>
 		</div>
 	</div>
 	<br><br><br>');
 	define('INFO','<div id="corps">
+	<p style="text-align:center"><table id="fiche"><tr><td><a href="ficheind_fr.php">Consulter les fiches enzymes</a></td></tr></table></p>
 		<ul>
 		<li>EnzymSearch</li>
 		<b>EnzymSearch</b> est un site permettant de recueillir des informations sur les enzymes dont la nomenclatures suit les recommendations du Comité de Nomenclature de l\'Union Internationale de Biochimie et de Biologie Moléculaire (e.g. Nomenclature Committee of the International Union of Biochemistry and Molecular Biology, IUBMB).

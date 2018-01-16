@@ -17,6 +17,60 @@ function verif_txt($sign,$cdt,$val) {
 	return array($cdt,$val);
 }
 
+function verif_com($sign,$cdt,$val) {
+	$com=explode(" ",$val);
+	$n=sizeof($com);
+
+	if ($sign=="=") {
+		$cdt=substr($cdt, 0, -1);
+		$val= " LIKE '%".$com[0]."%'";
+		if($n!=1) {
+			for ($i=1;$i<$n;$i++) $val.= "AND (comments.comment LIKE '%".$com[$i]."%')";
+		}
+	} else {
+		if ($sign=="!=") {
+			$cdt=substr($cdt, 0, -2);
+			$val= " NOT LIKE '%".$com[0]."%'";
+			if($n!=1) {
+				for ($i=1;$i<$n;$i++) $val.= "AND (comments.comment NOT LIKE '%".$com[$i]."%')";
+			}
+		} else {
+			exit("ERREUR : Le signe associé au champ $var ne peut être que 'Egal' ou 'Différent de'.");
+		}
+	}
+	return array($cdt,$val);
+}
+
+function verif_aut($sign,$cdt,$val) {
+	if ($sign=="=") {
+		$cdt=substr($cdt, 0, -1);
+		$aut=explode(" ",$val);
+		
+		$n=sizeof($aut);
+		$val=" LIKE '% ".$aut[0]."%' OR article.authors LIKE '".$aut[0]."%'";
+		
+		if($n!=1) {
+			for ($i=1;$i<$n;$i++) $val.= "AND (article.authors LIKE '% ".$aut[$i]."%' OR article.authors LIKE '".$aut[$i]."%')";
+		}
+		
+	} else {
+		if ($sign=="!=") {
+			$cdt=substr($cdt, 0, -2);
+			$aut=explode(" ",$val);
+		
+			$n=sizeof($aut);
+			$val=" NOT LIKE '% ".$aut[0]."%' OR article.authors NOT LIKE '".$aut[0]."%'";
+			
+			if($n!=1) {
+				for ($i=1;$i<$n;$i++) $val.= "AND (article.authors NOT LIKE '% ".$aut[$i]."%' OR article.authors NOT LIKE '".$aut[$i]."%')";
+			}
+		} else {
+			exit("ERREUR : Le signe associé au champ $var ne peut être que 'Egal' ou 'Différent de'.");
+		}
+	}
+	return array($cdt,$val);
+}
+
 function verif_ec($sign,$cdt,$val) {
 	if ($sign=="=") {
 		$cdt=substr($cdt, 0, -1);
@@ -65,6 +119,7 @@ function verif_ec($sign,$cdt,$val) {
 			$var_real_name=array();
 			$db_var=array();
 			foreach($_POST as $key => $val) {
+				if($val=="") exit("ERREUR : il y a des champs incomplets. Veuillez revoir votre requête.");
 				// Création de la sélection sur gros tableau (clauses SELECT+FROM)
 				if(preg_match("#^selection#", $key)) {
 					$select= "SELECT DISTINCT ";
@@ -110,7 +165,7 @@ function verif_ec($sign,$cdt,$val) {
 						else {
 							if(preg_match("#^name#", $key)) {
 								if($var=="enzyme.ec1") {
-									if (!($val>0 & $val < 6)) exit("ERREUR : EC1 doit être compris entre 1 et 6");
+									if (!($val>0 & $val <= 6)) exit("ERREUR : EC1 doit être compris entre 1 et 6");
 									array_push($ec,"ec1");
 								}
 								else {
@@ -139,7 +194,7 @@ function verif_ec($sign,$cdt,$val) {
 											}
 											else {
 												if($var=="article.year") {
-													if (!($val>1980)) exit("ERREUR : L'année de publication est un entier supérieur à 1980");
+													if (!($val>1900)) exit("ERREUR : L'année de publication est un entier supérieur à 1980");
 												}
 												else {
 													if($var=="notes.type") {
@@ -174,13 +229,13 @@ function verif_ec($sign,$cdt,$val) {
 																		}
 																		else {
 																			if($var=="article.authors") {
-																				$tmp=verif_txt($sign,$cdt,$val);
+																				$tmp=verif_aut($sign,$cdt,$val);
 																				$val=$tmp[1];
 																				$cdt=$tmp[0];
 																			}
 																			else {
 																				if($var=="comments.comment") {
-																					$tmp=verif_txt($sign,$cdt,$val);
+																					$tmp=verif_com($sign,$cdt,$val);
 																					$val=$tmp[1];
 																					$cdt=$tmp[0];
 																				}
@@ -278,7 +333,7 @@ function verif_ec($sign,$cdt,$val) {
 				foreach ($row as $key => $val) {
 					if($key=="ec") {
 						$ec_nb=substr($val,3);
-						$t='<td>'.$val.'</td>';					
+						$t='<td><a target="_blank" href="traitementfiche_fr.php?ec='.$val.'">'.$val.'</a></td>';					
 						$tmp.=$t;						
 					}
 					else {
@@ -293,7 +348,7 @@ function verif_ec($sign,$cdt,$val) {
 							}
 							else {
 								if($key=="num_prosite") {
-									$t='<td><a target="_blank" href="https://prosite.expasy.org/cgi-bin/prosite/prosite_search_full.pl?SEARCH='.$val.'">'.$val.'</a></td>';
+									$t='<td><a target="_blank" href="https://prosite.expasy.org/'.$val.'">'.$val.'</a></td>';
 									$tmp.=$t;
 								}
 								else {
