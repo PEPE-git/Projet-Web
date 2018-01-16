@@ -116,18 +116,25 @@ function verif_ec($sign,$cdt,$val) {
 			//~ echo var_dump($_POST);
 			
 			//~ $flag=0;
+			
+			$s1="SELECT DISTINCT enzyme.ec, enzyme.accepted_name, enzyme.systematic_name, synonym.synonyme, enzyme.activity, enzyme.cofactors, swissprot.num_swissprot, swissprot.code_swissprot, prosite.num_prosite, article.authors, article.title, article.year, article.volume, article.first_page, article.last_page, article.pubmed, article.medline, edition.editorial_place, edition.city, edition.edition, edition.editor, comments.comment, enzyme.history, note.note, note.type";
+			$s2="SELECT DISTINCT enzyme.ec, enzyme.accepted_name, enzyme.systematic_name, synonym.synonyme, enzyme.activity, enzyme.cofactors, swissprot.num_swissprot,swissprot.code_swissprot, prosite.num_prosite, article.title, article.authors, article.year, edition.editorial_place,edition.city,edition.edition,edition.editor, comments.comment, note.type,note.note";
+			
 			$var_real_name=array();
 			$db_var=array();
+			$var_select=false;
+			
 			foreach($_POST as $key => $val) {
 				if($val=="") exit("ERREUR : il y a des champs incomplets. Veuillez revoir votre requête.");
 				// Création de la sélection sur gros tableau (clauses SELECT+FROM)
-				if(preg_match("#^selection#", $key)) {
+				if(preg_match("#^selection#", $key)) {					
 					$select= "SELECT DISTINCT ";
+					$var_select=true;
+					
 					$f=true;
 					
 					foreach($val as $i => $j) {
 						$tmp=explode(";",$j);
-						//~ echo var_dump("$tmp");
 						$j=$tmp[0];
 						array_push($db_var,$j);
 						array_push($var_real_name,$tmp[1]);
@@ -137,6 +144,8 @@ function verif_ec($sign,$cdt,$val) {
 						}
 						else $select.= ", $j";
 					}
+					
+					$save_select=$select;
 					
 					$select.=" FROM enzyme LEFT JOIN comments ON enzyme.id_enzyme=comments.id_enz LEFT JOIN note ON note.id_enzyme=enzyme.id_enzyme LEFT JOIN prosite ON prosite.id_enzyme=enzyme.id_enzyme LEFT JOIN swissprot ON swissprot.id_enzyme=enzyme.id_enzyme LEFT JOIN synonym ON synonym.id_enzyme=enzyme.id_enzyme LEFT JOIN publie ON publie.id_enzyme=enzyme.id_enzyme LEFT JOIN article ON article.id_article=publie.id_article LEFT JOIN edition ON edition.id_article=article.id_article";
 					$select.=" WHERE ";
@@ -271,41 +280,48 @@ function verif_ec($sign,$cdt,$val) {
 			}
 			$cdt.=");";
 			$q=$select.$cdt;
-			echo $q;
 			
-			//~ $key_select=array();
-			//~ foreach($_POST["selection"] as $key) {
-				//~ $tmp=preg_split("#,#",$key);
-				//~ $key_select=array_merge($key_select,$tmp);
-			//~ }
-			//~ echo var_dump($key_select);
-								
-			//~ $t = array("a1" => "b1","a2" => "b2","a3" => "b3");					
-			//~ for ($i=0;$i<sizeof($key_select);$i++) {
-				//~ echo $t[$i];
-			//~ }
+			//~ echo $q;
+			
+			if(!($var_select)) exit("</br>ERREUR : Aucune variable d'intérêt sélectionnée. Veuillez modifier votre requête.");
 			
 			// Test de validité de la requete si elle implique des numéros EC
 			if(!(empty($ec))) {
+				
+				// Si EC4 renseigné
 				if (in_array("ec4",$ec)) {
+					// Il doit y avoir EC3
 					if (in_array("ec3",$ec)) {
+						//Il doit y avoir EC2
 						if (in_array("ec2",$ec)) {
-							if (!(in_array("ec1",$ec))) exit("ERREUR : EC1, EC2 et EC3 doivent être renseignés si la requête porte sur EC4");
+							// Il doit y avoir EC1
+							if (!(in_array("ec1",$ec))) exit("ERREUR : EC1, EC2 et EC3 doivent être renseignés si la requête porte sur EC4"); // il manque EC1
 						}
-						else exit("ERREUR : EC1, EC2 et EC3 doivent être renseignés si la requête porte sur EC4");
+						else exit("ERREUR : EC1, EC2 et EC3 doivent être renseignés si la requête porte sur EC4"); // il manque EC2
 					}
-					else exit("ERREUR : EC1, EC2 et EC3 doivent être renseignés si la requête porte sur EC4");
+					else exit("ERREUR : EC1, EC2 et EC3 doivent être renseignés si la requête porte sur EC4"); // il manque EC3
 				}
 				else {
+					// Si EC3
 					if (in_array("ec3",$ec)) {
+						// EC2 ?
 						if (in_array("ec2",$ec)) {
-							if (!(in_array("ec1",$ec))) exit("ERREUR : EC1 et EC2 doivent être renseignés si la requête porte sur EC3");
+							// EC1 ?
+							if (!(in_array("ec1",$ec))) exit("ERREUR : EC1 et EC2 doivent être renseignés si la requête porte sur EC3"); // pas d'EC1
 						}
-						else exit("ERREUR : EC1 et EC2 doivent être renseignés si la requête porte sur EC3");
+						else exit("ERREUR : EC1 et EC2 doivent être renseignés si la requête porte sur EC3"); // pas d'EC2
 					}
 					else {
-						if (in_array("ec3",$ec)) {
-							if (!(in_array("ec2",$ec))) exit("ERREUR : EC1 doit être renseigné si la requête porte sur EC2");
+						// Si EC2
+						if (in_array("ec2",$ec)) {
+							if (!(in_array("ec1",$ec))) exit("ERREUR : EC1 doit être renseigné si la requête porte sur EC2"); // pas d'EC1
+						}
+						else {
+							// Si il n'y a que EC1, il ne faut pas que la requête soit trop grande
+							$error_long_select="</br>ERREUR : Le résultats de la requête est trop grand. Veuillez la préciser ou réduire le nombre de variables d'intérêt";
+							if ($save_select==$s1) {
+								exit($error_long_select);
+							} else if ($save_select==$s2) exit($error_long_select);
 						}
 					}
 				}
@@ -322,7 +338,6 @@ function verif_ec($sign,$cdt,$val) {
 				$n=count($tmp);
 				if ($n>1) for ($i=0;$i<$n;$i++) {
 					if ($tmp[$i]!="Num Swissprot") echo '<th>'.$tmp[$i].'</th>';
-					//~ echo '<th>'.$tmp[$i].'</th>';
 				}
 				else echo '<th>'.$key.'</th>';	
 			}
@@ -468,3 +483,5 @@ function verif_ec($sign,$cdt,$val) {
 		?>
 	</body>
 </html>
+
+
