@@ -22,17 +22,12 @@
 			if ($id==0)	erreur(ERR_IS_NOT_CO.REDIRECT);
 			else echo MENU;
 		
-			$pb="https://www.ncbi.nlm.nih.gov/pubmed/";
-			$md="";
-			
-		
-				
 				//~ INSERTION DEBUT
 				//~ Requete sur le numéro EC d'un enzyme
 				if(!empty($_POST['rech_ec'])) {
 					if(!empty($_POST['ec1'])) {
 						// ATTENTION j'ai mis id-enzyme, pas id-enz (pareil pour id_article)
-						$q="SELECT * FROM enzyme LEFT JOIN publie ON enzyme.id_enzyme=publie.id_enzyme LEFT JOIN article ON article.id_article=publie.id_article LEFT JOIN swissprot ON swissprot.id_enzyme=enzyme.id_enzyme WHERE ";
+						$q="SELECT enzyme.ec, article.authors, article.title, article.year, article.volume, article.first_page, article.last_page, article.pubmed, article.medline, swissprot.num_swissprot, swissprot.code_swissprot, prosite.num_prosite FROM enzyme LEFT JOIN publie ON enzyme.id_enzyme=publie.id_enzyme LEFT JOIN article ON article.id_article=publie.id_article LEFT JOIN edition ON article.id_article=edition.id_article LEFT JOIN prosite ON prosite.id_enzyme=enzyme.id_enzyme LEFT JOIN swissprot ON swissprot.id_enzyme=enzyme.id_enzyme WHERE ";
 						$ec1 =$_POST['ec1'];
 						$q=$q."ec1=$ec1 ";
 						if(!empty($_POST['ec2'])) {
@@ -52,7 +47,7 @@
 						$query = $db->query($q);
 						// Si le résultat de la query n'est pas vide, execute la fonction d'affichage du tableau pour le site et pour l'export (VOIR DANS /includes/functions.php)
 						if ($query->rowCount() == 0) { 
-								echo 'Query returned nothing, please try again.';
+								echo 'Aucun résultat pour la requête, veuillez réessayer svp.';
 						}
 						else{
 							// $file = echo_resultats_bib($query);
@@ -77,7 +72,7 @@
 							$query = $db->query($q);
 							// Si le résultat de la query n'est pas vide, execute la fonction d'affichage du tableau pour le site et pour l'export (VOIR DANS /includes/functions.php)
 							if ($query->rowCount() == 0) { 
-									echo 'Query returned nothing, please try again.';
+									echo 'Aucun résultat pour la requête, veuillez réessayer svp.';
 							}
 							else{
 								// $file = echo_resultats_bib($query);
@@ -97,7 +92,7 @@
 
 								// Si le résultat de la query n'est pas vide, execute la fonction d'affichage du tableau pour le site et pour l'export (VOIR DANS /includes/functions.php)
 								if ($query->rowCount() == 0) { 
-										echo 'Query returned nothing, please try again.';
+										echo 'Aucun résultat pour la requête, veuillez réessayer svp.';
 								}
 								else{
 									// $file = echo_resultats_bib($query);
@@ -117,7 +112,7 @@
 
 									// Si le résultat de la query n'est pas vide, execute la fonction d'affichage du tableau pour le site et pour l'export (VOIR DANS /includes/functions.php)
 									if ($query->rowCount() == 0) { 
-											echo 'Query returned nothing, please try again.';
+											echo 'Aucun résultat pour la requête, veuillez réessayer svp.';
 									}
 									else{
 										// $file = echo_resultats_bib($query);

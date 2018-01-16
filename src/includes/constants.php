@@ -27,7 +27,7 @@
 		<ul>
 		<li>EnzymSearch</li>
 		<b>EnzymSearch</b> est un site permettant de recueillir des informations sur les enzymes dont la nomenclatures suit les recommendations du Comité de Nomenclature de l\'Union Internationale de Biochimie et de Biologie Moléculaire (e.g. Nomenclature Committee of the International Union of Biochemistry and Molecular Biology, IUBMB).
-		La dernière mise à jour a été réalisé en janvier 2018.
+		La dernière mise à jour a été réalisée en janvier 2018.
 		
 		<li>Informations sur les données</li>
 		Les données sont issues de : <br/>
@@ -37,10 +37,18 @@
 		
 		
 		<li>Informations sur la base de données</li>
-		blablabla sur les différentes recherches<br>
-		--> version mySQL utilisée <br>
-		--> insertion image du schéma relationel --> du coup, possibilité de rentrer une commande SQL ?? <br>
+		<p><img src="./img/schema_rel.png" alt="schema_rel" style="float:left;">
+		EnzymeSearch donne la possibilité d\'effectuer 4 types de recherches :<br/>
+		-La <b>Recherche Simple</b> permet trier les enzymes en fonction de leur Numéro EC, Nom, Activité enzymatique ou Cofacteurs associés et renvoie des informations pertinentes sur les enzymes correspondant.<br/>
+		-La <b>Recherche Avancée</b> est très versatile et permet de chercher très précisément une information d\intérêt selon tous les critères possibles.<br/>
+		-La <b>Recherche Bibliographique</b> permet trier les enzymes en fonction de leur Numéro EC, Auteurs, Titre d\'article ou Année de publication et renvoie des informations pertinentes sur la bibliographie des enzymes correspondant.<br/>
+		-La <b>Recherche Unique ?????????????</b> renvoie toutes les informations disponibles à propos d\'une seule enzyme sélectionnée.<br/>
+		<br/>
+
+		MySQL Ver 9.1 Distrib 10.1.30-MariaDB, for Linux on x86_64<br/>
+		 <br>
 		</p>
+		<br/><br/><br/><br/><br/><br/>
 		
 		<li>Aide</li>
 		<div id="col1">

@@ -29,7 +29,7 @@
 				//~ Requete sur le numéro EC d'un enzyme
 				if(!empty($_POST['rech_ec'])) {
 					if(!empty($_POST['ec1'])) {
-						$q="SELECT * FROM enzyme LEFT JOIN synonym ON synonym.id_enzyme=enzyme.id_enzyme LEFT JOIN swissprot ON swissprot.id_enzyme=enzyme.id_enzyme WHERE ";
+						$q="SELECT enzyme.ec, enzyme.accepted_name, enzyme.systematic_name, enzyme.cofactors, enzyme.activity, enzyme.history, synonym.synonyme,swissprot.num_swissprot, swissprot.code_swissprot, prosite.num_prosite FROM enzyme LEFT JOIN synonym ON synonym.id_enzyme=enzyme.id_enzyme LEFT JOIN swissprot ON swissprot.id_enzyme=enzyme.id_enzyme LEFT JOIN prosite ON prosite.id_enzyme=enzyme.id_enzyme WHERE ";
 						$ec1 =$_POST['ec1'];
 						$q=$q."ec1=$ec1 ";
 						if(!empty($_POST['ec2'])) {
@@ -40,26 +40,26 @@
 								$q=$q."AND ec3=$ec3 ";
 								if(!empty($_POST['ec4'])) {
 									$ec4=$_POST['ec4'];
-									$q=$q."AND (ec4 REGEXP '[a-zA-Z]$ec4$' OR ec4=$ec4)";
+									$q=$q."AND (ec4 REGEXP '[a-zA-Z]$ec4' OR ec4=$ec4)";
 								}
 							}
 						}
 						echo $q."</br>";
-						$query = $db->query($q);
+
+						try{
+							$query = $db->prepare($q);
+							$query -> execute();
+						}
+						catch (Exception $e){
+							echo 'Erreur : '.$e->getMessage();
+						}
 
 						// Si le résultat de la query n'est pas vide, execute la fonction d'affichage du tableau pour le site et pour l'export (VOIR DANS /includes/functions.php)
-						if ($query->rowCount() == 0) { 
-							echo 'Query returned nothing, please try again.';
-						}
-						else{
-							// $file=echo_resultats_sp($query);
-							echo_resultats_sp($query);
-						}
+						if ($query->rowCount() == 0) echo 'Aucun résultat pour la requête, veuillez réessayer svp.';
+						else echo_resultats_sp($query);
 					}
 
-					else {
-						echo 'Requête non conforme : veuillez remplir les numéros EC de la gauche vers la droite';
-					}
+					else echo 'Requête non conforme : veuillez remplir les numéros EC de la gauche vers la droite';
 				}
 				else {
 					//~ Requete sur le nom d'un enzyme
@@ -68,18 +68,18 @@
 							$name_type=$_POST['name_type'];
 							$name=$_POST['name'];
 							if($name_type == "1") {
-								$q=$q."SELECT * FROM enzyme LEFT JOIN synonym ON synonym.id_enzyme=enzyme.id_enzyme LEFT JOIN swissprot ON swissprot.id_enzyme=enzyme.id_enzyme WHERE accepted_name LIKE '%$name%';";
+								$q=$q."SELECT enzyme.ec, enzyme.accepted_name, enzyme.systematic_name, enzyme.cofactors, enzyme.activity, enzyme.history, synonym.synonyme,swissprot.num_swissprot, swissprot.code_swissprot, prosite.num_prosite FROM enzyme LEFT JOIN synonym ON synonym.id_enzyme=enzyme.id_enzyme LEFT JOIN swissprot ON swissprot.id_enzyme=enzyme.id_enzyme LEFT JOIN prosite ON prosite.id_enzyme=enzyme.id_enzyme WHERE accepted_name LIKE '%$name%';";
 							}
 							else {
 								if($name_type == "2") {
-									$q=$q."SELECT * FROM enzyme LEFT JOIN synonym ON synonym.id_enzyme=enzyme.id_enzyme LEFT JOIN swissprot ON swissprot.id_enzyme=enzyme.id_enzyme WHERE systematic_name LIKE'%$name%';";
+									$q=$q."SELECT enzyme.ec, enzyme.accepted_name, enzyme.systematic_name, enzyme.cofactors, enzyme.activity, enzyme.history, synonym.synonyme,swissprot.num_swissprot, swissprot.code_swissprot, prosite.num_prosite FROM enzyme LEFT JOIN synonym ON synonym.id_enzyme=enzyme.id_enzyme LEFT JOIN swissprot ON swissprot.id_enzyme=enzyme.id_enzyme LEFT JOIN prosite ON prosite.id_enzyme=enzyme.id_enzyme WHERE systematic_name LIKE'%$name%';";
 								}
 								else {
 									if($name_type == "3") {
-										$q=$q."SELECT * FROM enzyme LEFT JOIN synonym ON synonym.id_enzyme=enzyme.id_enzyme LEFT JOIN swissprot ON swissprot.id_enzyme=enzyme.id_enzyme WHERE synonym.synonyme LIKE'%$name%';";
+										$q=$q."SELECT enzyme.ec, enzyme.accepted_name, enzyme.systematic_name, enzyme.cofactors, enzyme.activity, enzyme.history, synonym.synonyme,swissprot.num_swissprot, swissprot.code_swissprot, prosite.num_prosite FROM enzyme LEFT JOIN synonym ON synonym.id_enzyme=enzyme.id_enzyme LEFT JOIN swissprot ON swissprot.id_enzyme=enzyme.id_enzyme LEFT JOIN prosite ON prosite.id_enzyme=enzyme.id_enzyme WHERE synonym.synonyme LIKE'%$name%';";
 									}
 									else {
-										$q=$q."SELECT * FROM enzyme LEFT JOIN synonym ON synonym.id_enzyme=enzyme.id_enzyme LEFT JOIN swissprot ON swissprot.id_enzyme=enzyme.id_enzyme WHERE (accepted_name LIKE '%$name%' OR systematic_name LIKE '%$name%' OR synonym.synonyme LIKE '%$name%');";
+										$q=$q."SELECT enzyme.ec, enzyme.accepted_name, enzyme.systematic_name, enzyme.cofactors, enzyme.activity, enzyme.history, synonym.synonyme,swissprot.num_swissprot, swissprot.code_swissprot, prosite.num_prosite FROM enzyme LEFT JOIN synonym ON synonym.id_enzyme=enzyme.id_enzyme LEFT JOIN swissprot ON swissprot.id_enzyme=enzyme.id_enzyme LEFT JOIN prosite ON prosite.id_enzyme=enzyme.id_enzyme WHERE (accepted_name LIKE '%$name%' OR systematic_name LIKE '%$name%' OR synonym.synonyme LIKE '%$name%');";
 									}
 								}
 							}
@@ -89,7 +89,7 @@
 							
 							// Si le résultat de la query n'est pas vide, execute la fonction d'affichage du tableau pour le site et pour l'export (VOIR DANS /includes/functions.php)
 							if ($query->rowCount() == 0) { 
-								echo 'Query returned nothing, please try again.';
+								echo 'Aucun résultat pour la requête, veuillez réessayer svp.';
 							}
 							else{
 								// $file=echo_resultats_sp($query);
@@ -102,14 +102,14 @@
 						if(!empty($_POST['rech_act'])) {
 							if(isset($_POST['act'])) {
 								$act=$_POST['act'];
-								$q="SELECT * FROM enzyme LEFT JOIN synonym ON synonym.id_enzyme=enzyme.id_enzyme LEFT JOIN swissprot ON swissprot.id_enzyme=enzyme.id_enzyme WHERE activity LIKE '%$act%';";
+								$q="SELECT enzyme.ec, enzyme.accepted_name, enzyme.systematic_name, enzyme.cofactors, enzyme.activity, enzyme.history, synonym.synonyme,swissprot.num_swissprot, swissprot.code_swissprot, prosite.num_prosite FROM enzyme LEFT JOIN synonym ON synonym.id_enzyme=enzyme.id_enzyme LEFT JOIN swissprot ON swissprot.id_enzyme=enzyme.id_enzyme LEFT JOIN prosite ON prosite.id_enzyme=enzyme.id_enzyme WHERE activity LIKE '%$act%';";
 								
 								echo $q."</br>";
 								$query = $db->query($q);
 
 								// Si le résultat de la query n'est pas vide, execute la fonction d'affichage du tableau pour le site et pour l'export (VOIR DANS /includes/functions.php)
 								if ($query->rowCount() == 0) {  
-									echo 'Query returned nothing, please try again.';
+									echo 'Aucun résultat pour la requête, veuillez réessayer svp.';
 								}
 								else{
 									// $file=echo_resultats_sp($query);
@@ -123,14 +123,14 @@
 							if(!empty($_POST['rech_co'])) {
 								if(isset($_POST['cofactors'])) {
 									$co=$_POST['cofactors'];
-									$q="SELECT * FROM enzyme LEFT JOIN synonym ON synonym.id_enzyme=enzyme.id_enzyme LEFT JOIN swissprot ON swissprot.id_enzyme=enzyme.id_enzyme WHERE cofactors LIKE'%$co%';";
+									$q="SELECT enzyme.ec, enzyme.accepted_name, enzyme.systematic_name, enzyme.cofactors, enzyme.activity, enzyme.history, synonym.synonyme,swissprot.num_swissprot, swissprot.code_swissprot, prosite.num_prosite FROM enzyme LEFT JOIN synonym ON synonym.id_enzyme=enzyme.id_enzyme LEFT JOIN swissprot ON swissprot.id_enzyme=enzyme.id_enzyme LEFT JOIN prosite ON prosite.id_enzyme=enzyme.id_enzyme WHERE cofactors LIKE'%$co%';";
 									
 									echo $q."</br>";
 									$query = $db->query($q);
 
 									// Si le résultat de la query n'est pas vide, execute la fonction d'affichage du tableau pour le site et pour l'export (VOIR DANS /includes/functions.php)
 									if ($query->rowCount() == 0) { 
-										echo 'Query returned nothing, please try again.';
+										echo 'Aucun résultat pour la requête, veuillez réessayer svp.';
 									}
 									else{
 										// $file=echo_resultats_sp($query);
