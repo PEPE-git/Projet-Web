@@ -54,7 +54,7 @@
 				//~ echo $q;
 				$query=$db->query($q);
 				echo '<div id="unit"><div id="tit">Synonymes</div><div id="txt"><p>';
-				while($syn=$query->fetch(PDO::FETCH_ASSOC)) echo $syn['synonyme']."<\br>";
+				while($syn=$query->fetch(PDO::FETCH_ASSOC)) echo $syn['synonyme']."<br>";
 				echo '</p></div></div>';
 				
 				// ACTIVITE
