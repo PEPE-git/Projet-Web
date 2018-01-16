@@ -44,7 +44,7 @@
 								}
 							}
 						}
-						echo $q."</br>";
+						// echo $q."</br>";
 
 						try{
 							$query = $db->prepare($q);
@@ -84,8 +84,14 @@
 								}
 							}
 
-							echo $q."</br>";
-							$query = $db->query($q);
+							// echo $q."</br>";
+							try{
+								$query = $db->prepare($q);
+								$query -> execute();
+							}
+							catch (Exception $e){
+								echo 'Erreur : '.$e->getMessage();
+							}
 							
 							// Si le résultat de la query n'est pas vide, execute la fonction d'affichage du tableau pour le site et pour l'export (VOIR DANS /includes/functions.php)
 							if ($query->rowCount() == 0) { 
@@ -104,8 +110,14 @@
 								$act=$_POST['act'];
 								$q="SELECT enzyme.ec, enzyme.accepted_name, enzyme.systematic_name, enzyme.cofactors, enzyme.activity, enzyme.history, synonym.synonyme,swissprot.num_swissprot, swissprot.code_swissprot, prosite.num_prosite FROM enzyme LEFT JOIN synonym ON synonym.id_enzyme=enzyme.id_enzyme LEFT JOIN swissprot ON swissprot.id_enzyme=enzyme.id_enzyme LEFT JOIN prosite ON prosite.id_enzyme=enzyme.id_enzyme WHERE activity LIKE '%$act%';";
 								
-								echo $q."</br>";
-								$query = $db->query($q);
+								// echo $q."</br>";
+								try{
+									$query = $db->prepare($q);
+									$query -> execute();
+								}
+								catch (Exception $e){
+									echo 'Erreur : '.$e->getMessage();
+								}
 
 								// Si le résultat de la query n'est pas vide, execute la fonction d'affichage du tableau pour le site et pour l'export (VOIR DANS /includes/functions.php)
 								if ($query->rowCount() == 0) {  
@@ -125,8 +137,14 @@
 									$co=$_POST['cofactors'];
 									$q="SELECT enzyme.ec, enzyme.accepted_name, enzyme.systematic_name, enzyme.cofactors, enzyme.activity, enzyme.history, synonym.synonyme,swissprot.num_swissprot, swissprot.code_swissprot, prosite.num_prosite FROM enzyme LEFT JOIN synonym ON synonym.id_enzyme=enzyme.id_enzyme LEFT JOIN swissprot ON swissprot.id_enzyme=enzyme.id_enzyme LEFT JOIN prosite ON prosite.id_enzyme=enzyme.id_enzyme WHERE cofactors LIKE'%$co%';";
 									
-									echo $q."</br>";
-									$query = $db->query($q);
+									// echo $q."</br>";
+									try{
+										$query = $db->prepare($q);
+										$query -> execute();
+									}
+									catch (Exception $e){
+										echo 'Erreur : '.$e->getMessage();
+									}
 
 									// Si le résultat de la query n'est pas vide, execute la fonction d'affichage du tableau pour le site et pour l'export (VOIR DANS /includes/functions.php)
 									if ($query->rowCount() == 0) { 

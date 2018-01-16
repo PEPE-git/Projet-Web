@@ -34,7 +34,8 @@
 					Plus d\'informations<br>
 					<a href="./info_fr.php"><img src="./img/enz3.jpg" alt="plus d\'information"/></a>
 				</div>
-			</div>'.PIED;
+			</div>
+			<p style="text-align:center"><table id="fiche"><tr><td><a href="ficheind_fr.php">Consulter les fiches enzymes</a></td></tr></table></p>'.PIED;
 		?>
 	</body>
 </html>

@@ -18,26 +18,54 @@
 		include("./includes/identifiants.php");
 		include("./includes/debut.php");
 
-		if ($id==0)	$co="first";
+		if ($id==0){
+			$co="first";
+			echo'
+			<body class="first">
+				<div id="corps">
+					<div id ="elem1">			
+						<div class="zoom">
+							Connexion<br>
+							<a href="./connect_fr.php"><img src="./img/enz1.jpg" alt="connexion"/></a>
+						</div>
+					</div>
+					<div id ="elem2">
+						<div id="elem2_col1">
+							<div class="zoom">
+								Inscription<br>
+								<a href="./subscribe_fr.php"><img src="./img/enz2.jpg" alt="inscription"/></a>
+							</div>
+						</div>
+					<div id="elem2_col2">
+						<div class="zoom">
+							Plus d\'informations<br>
+							<a href="./info_fr.php"><img src="./img/enz3.jpg" alt="plus d\'information"/></a>
+						</div>
+					</div>';
+
+		}	
 		else {
 			echo MENU;
 			$co="principal";
 		}
 	?>
 
-	<body class = <?php echo $co ?> >			
+	<body class = <?php echo $co ?> >		
 
-		<div id="corps">
-			<h1><?php echo $titre ?></h1>
+	<?php	
 
-		<?php
+		if ($co="principal") echo '<div id="corps">';
+
+			echo '<h1>'.$titre.'</h1>';
+
+		
 			$query = $db->query('SELECT DISTINCT ec FROM enzyme');
 			
 			//~ echo '<table id="ficheind_fr" class="display" width="100%" cellspacing="0"><thead><tr><th>EC Number</th></tr></thead><tbody>';
 			//~ while ($row = $query->fetch(PDO::FETCH_ASSOC)) echo '<tr><td><a target="_blank" href="traitementfiche_fr.php?ec='.$row['ec'].'">'.$row['ec'].'</a></td></tr>';
 			//~ echo '</tbody></table>';
 			
-			echo '<table id="ficheind_fr" class="display" width="100%" cellspacing="0"><thead><tr><th>EC1</th><th>EC2</th><th>EC3</th><th>EC4</th><th>EC5</th></tr></thead><tbody>';
+			echo '<table id="ficheind_fr" class="display" width="100%" cellspacing="0"><thead><tr><th>Numéro EC</th><th>Numéro EC</th><th>Numéro EC</th><th>Numéro EC</th><th>Numéro EC</th></tr></thead><tbody>';
 			$i=0;
 			while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
 				if($i==4) {

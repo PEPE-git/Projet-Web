@@ -96,15 +96,17 @@ div#menu {
  text-align : center;
  border-right : 1px ridge #CD5C5C;
  float:left;
- width:19%;
+ width:19.93%;
  line-height: 50px;
  background-color : #FFA07A;
 }
+
 
 #menu .menu_item:hover{
  border-bottom:10px solid purple;
  height: 40px;
 }
+
 
 /*----------------------- MISE EN FORME GLOBAL -----------------------*/
 body {

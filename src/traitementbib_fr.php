@@ -26,7 +26,6 @@
 				//~ Requete sur le numéro EC d'un enzyme
 				if(!empty($_POST['rech_ec'])) {
 					if(!empty($_POST['ec1'])) {
-						// ATTENTION j'ai mis id-enzyme, pas id-enz (pareil pour id_article)
 						$q="SELECT enzyme.ec, article.authors, article.title, article.year, article.volume, article.first_page, article.last_page, article.pubmed, article.medline, swissprot.num_swissprot, swissprot.code_swissprot, prosite.num_prosite FROM enzyme LEFT JOIN publie ON enzyme.id_enzyme=publie.id_enzyme LEFT JOIN article ON article.id_article=publie.id_article LEFT JOIN edition ON article.id_article=edition.id_article LEFT JOIN prosite ON prosite.id_enzyme=enzyme.id_enzyme LEFT JOIN swissprot ON swissprot.id_enzyme=enzyme.id_enzyme WHERE ";
 						$ec1 =$_POST['ec1'];
 						$q=$q."ec1=$ec1 ";
@@ -43,16 +42,18 @@
 							}
 						}
 					
-						echo $q."</br>";
-						$query = $db->query($q);
+						// echo $q."</br>";
+						try{
+							$query = $db->prepare($q);
+							$query -> execute();
+						}
+						catch (Exception $e){
+							echo 'Erreur : '.$e->getMessage();
+						}
+
 						// Si le résultat de la query n'est pas vide, execute la fonction d'affichage du tableau pour le site et pour l'export (VOIR DANS /includes/functions.php)
-						if ($query->rowCount() == 0) { 
-								echo 'Aucun résultat pour la requête, veuillez réessayer svp.';
-						}
-						else{
-							// $file = echo_resultats_bib($query);
-							echo_resultats_bib($query);
-						}
+						if ($query->rowCount() == 0) echo 'Aucun résultat pour la requête, veuillez réessayer svp.';
+						else echo_resultats_bib($query);
 					}
 
 					else {
@@ -68,14 +69,19 @@
 							$aut=$_POST['aut_art'];
 							$q="SELECT * FROM enzyme LEFT JOIN publie ON enzyme.id_enzyme=publie.id_enzyme LEFT JOIN article ON article.id_article=publie.id_article LEFT JOIN swissprot ON swissprot.id_enzyme=enzyme.id_enzyme WHERE authors LIKE '%$aut%';";
 							
-							echo $q."</br></br>";
-							$query = $db->query($q);
+							// echo $q."</br></br>";
+							try{
+								$query = $db->prepare($q);
+								$query -> execute();
+							}
+							catch (Exception $e){
+								echo 'Erreur : '.$e->getMessage();
+							}
 							// Si le résultat de la query n'est pas vide, execute la fonction d'affichage du tableau pour le site et pour l'export (VOIR DANS /includes/functions.php)
 							if ($query->rowCount() == 0) { 
 									echo 'Aucun résultat pour la requête, veuillez réessayer svp.';
 							}
 							else{
-								// $file = echo_resultats_bib($query);
 								echo_resultats_bib($query);
 							}
 						}
@@ -87,15 +93,20 @@
 								$tit=$_POST['tit_art'];
 								$q="SELECT * FROM enzyme LEFT JOIN publie ON enzyme.id_enzyme=publie.id_enzyme LEFT JOIN article ON article.id_article=publie.id_article LEFT JOIN swissprot ON swissprot.id_enzyme=enzyme.id_enzyme WHERE title LIKE '%$tit%';";
 								
-								echo $q."</br></br>";
-								$query = $db->query($q);
+								// echo $q."</br></br>";
+								try{
+									$query = $db->prepare($q);
+									$query -> execute();
+								}
+								catch (Exception $e){
+									echo 'Erreur : '.$e->getMessage();
+								}
 
 								// Si le résultat de la query n'est pas vide, execute la fonction d'affichage du tableau pour le site et pour l'export (VOIR DANS /includes/functions.php)
 								if ($query->rowCount() == 0) { 
 										echo 'Aucun résultat pour la requête, veuillez réessayer svp.';
 								}
 								else{
-									// $file = echo_resultats_bib($query);
 									echo_resultats_bib($query);
 								}
 							}
@@ -107,15 +118,20 @@
 									$year=$_POST['year_art'];
 									$q="SELECT * FROM enzyme LEFT JOIN publie ON enzyme.id_enzyme=publie.id_enzyme LEFT JOIN article ON article.id_article=publie.id_article LEFT JOIN swissprot ON swissprot.id_enzyme=enzyme.id_enzyme WHERE year = '$year' ;";
 									
-									echo $q."</br></br>";
-									$query = $db->query($q);
+									// echo $q."</br></br>";
+									try{
+										$query = $db->prepare($q);
+										$query -> execute();
+									}
+									catch (Exception $e){
+										echo 'Erreur : '.$e->getMessage();
+									}
 
 									// Si le résultat de la query n'est pas vide, execute la fonction d'affichage du tableau pour le site et pour l'export (VOIR DANS /includes/functions.php)
 									if ($query->rowCount() == 0) { 
 											echo 'Aucun résultat pour la requête, veuillez réessayer svp.';
 									}
 									else{
-										// $file = echo_resultats_bib($query);
 										echo_resultats_bib($query);
 									}
 									
@@ -125,7 +141,6 @@
 					}
 				}
 				echo PIED;
-				// $_SESSION['res_bib'] = $file;
 			?>
 		</div>
 	</body>

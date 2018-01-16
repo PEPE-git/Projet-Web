@@ -55,21 +55,6 @@
 
 				<form method="post" action="traitementsp_fr.php" enctype="multipart/form-data" target="_blank">
 
-					<!-- <fieldset>
-						<legend>Caractéristiques d'intérêt</legend>
-						<input type="checkbox" name="display_tab[]" class="rest" id="ch_ec" value="ch_ec"><label>EC Number</label> 
-						<input type="checkbox" name="display_tab[]" class="rest" id="ch_author" value="ch_author"><label>Auteur</label>     
-						<input type="checkbox" name="display_tab[]" class="rest" id="ch_title" value="ch_title"><label>Titre</label>   
-						<input type="checkbox" name="display_tab[]" class="rest" id="ch_year" value="ch_year"><label>Année</label>   
-						<input type="checkbox" name="display_tab[]" class="rest" id="ch_volume" value="ch_volume"><label>Volume</label>      
-						<input type="checkbox" name="display_tab[]" class="rest" id="ch_fpage" value="ch_fpage"><label>Première page</label>      
-						<input type="checkbox" name="display_tab[]" class="rest" id="ch_lpage" value="ch_lpage"><label>Dernière page</label><br>    
-						<input type="checkbox" name="display_tab[]" class="rest" id="ch_pubmed" value="ch_pubmed"><label>Pubmed</label>   
-						<input type="checkbox" name="display_tab[]" class="rest" id="ch_medline" value="ch_medline"><label>Medline</label>   
-						<input type="checkbox" name="display_tab[]" class="rest" id="ch_swissprot" value="ch_swissprot"><label>Swissprot</label>   
-						<input type="checkbox" name="display_tab[]" class="all" id="ch_all" value="ch_all" checked><label>Tout</label>
-					</fieldset> -->
-
 					<div>
 						<!--Rechercher les articles associées à un numéro EC -->
 						<fieldset>

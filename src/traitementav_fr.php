@@ -312,7 +312,7 @@ function verif_ec($sign,$cdt,$val) {
 			}
 			
 			//REQUETE AVANCEE - AFFICHAGE DES RESULTATS
-			$query=$db->query($q);			
+			// $query=$db->query($q);			
 			$res="";
 			
 			echo '<table id="traitementav_fr" class="display" width="100%" cellspacing="0"><thead><tr>';

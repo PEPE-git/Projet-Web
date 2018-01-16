@@ -57,7 +57,7 @@
 							<input type="radio" name="name_type" value="1" id="acc" /> <label for="acc">Accepted name</label>
 							<input type="radio" name="name_type" value="2" id="sys" /> <label for="sys">Systematic name</label>
 							<input type="radio" name="name_type" value="3" id="syn" /> <label for="syn">Synonyme</label>
-							<input type="radio" name="name_type" value="4" id="unk" checked /> <label for="unk">Je ne sais pas</label>
+							<input type="radio" name="name_type" value="4" id="unk" checked /> <label for="unk">Tous les noms</label>
 							<br><br>
 							<input type="submit" value="Recherche" name="rech_name"/>
 						</fieldset>

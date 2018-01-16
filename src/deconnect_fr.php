@@ -16,7 +16,7 @@
 
 			if ($id==0)	erreur(ERR_IS_NOT_CO.REDIRECT);
 			else {
-				header('Location: fpage_fr.php');
+				header('Location: index.php');
 				exit();
 			}
 		?>
