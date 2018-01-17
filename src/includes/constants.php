@@ -62,6 +62,7 @@
 			<a class="bottom" href="./info_fr.php">Informations</a> | 
 			<a class="bottom" href="./connect_fr.php">Connexion</a> | 
 			<a class="bottom" href="./subscribe_fr.php">Inscription</a> | 
+			<a class="bottom" href="./ficheind_fr.php">Fiches Enzyme</a> | 
 			<a class="bottom" href="./rechsp_fr.php">Recherche simple</a> | 
 			<a class="bottom" href="./rechav_fr.php">Recherche avancée</a> | 
 			<a class="bottom" href="./rechbib_fr.php">Recherche bibliographique</a> | 

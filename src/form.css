@@ -229,6 +229,9 @@ Voir dans /DataTables/datatables.css
  font-size:20pt;
  }
 
+ .form_av {
+ font-size:20px;
+}
 
 /*----------------------- POPUP -----------------------*/
 #pop_info {

@@ -25,7 +25,7 @@
 			<div id="elem50_col2">
 				<div class="zoom">
 					Inscription<br>
-					<a href="./subscribe.php"><img src="./img/enz2.jpg" alt="inscription"/></a>
+					<a href="./subscribe_fr.php"><img src="./img/enz2.jpg" alt="inscription"/></a>
 				</div>
 			</div><br>'.INFO.PIED;
 		?>

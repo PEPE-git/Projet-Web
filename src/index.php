@@ -7,7 +7,7 @@
 
 <?php
 	session_start();
-	$titre="EnzymSearch";
+	$titre="EnzymeSearch";
 	include("./includes/identifiants.php");
 	include("./includes/debut.php");
 
@@ -15,7 +15,7 @@
 	echo '
 	<body class="first">
 		<div id="corps">
-			<h1>Bienvenue sur EnzymSearch</h1>
+			<h1>Bienvenue sur EnzymeSearch</h1>
 			<div id ="elem1">			
 				<div class="zoom">
 					Plus d\'informations<br>

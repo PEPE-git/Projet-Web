@@ -71,6 +71,32 @@ function verif_aut($sign,$cdt,$val) {
 	return array($cdt,$val);
 }
 
+function verif_tit($sign,$cdt,$val) {
+	$tit=explode(" ",$val);
+	$n=sizeof($tit);
+
+	if ($sign=="=") {
+		$cdt=substr($cdt, 0, -1);
+		$val= " LIKE '%".$tit[0]."%'";
+		if($n!=1) {
+			for ($i=1;$i<$n;$i++) $val.= "AND (article.title LIKE '%".$tit[$i]."%')";
+		}
+	} else {
+		if ($sign=="!=") {
+			$cdt=substr($cdt, 0, -2);
+			$val= " NOT LIKE '%".$tit[0]."%'";
+			if($n!=1) {
+				for ($i=1;$i<$n;$i++) $val.= "AND (article.title NOT LIKE '%".$tit[$i]."%')";
+			}
+		} else {
+			exit("ERREUR : Le signe associé au champ $var ne peut être que 'Egal' ou 'Différent de'.");
+		}
+	}
+	return array($cdt,$val);
+}
+
+
+
 function verif_ec($sign,$cdt,$val) {
 	if ($sign=="=") {
 		$cdt=substr($cdt, 0, -1);
@@ -235,7 +261,7 @@ function verif_ec($sign,$cdt,$val) {
 																	// fonction particuliere a ajouter
 																	else {
 																		if($var=="article.title") {
-																			$tmp=verif_txt($sign,$cdt,$val);
+																			$tmp=verif_tit($sign,$cdt,$val);
 																			$val=$tmp[1];
 																			$cdt=$tmp[0];
 																		}

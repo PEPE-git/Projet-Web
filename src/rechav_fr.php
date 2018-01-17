@@ -20,13 +20,12 @@
 		<option value=enzyme.accepted_name>Nom officiel
 		<option value=enzyme.systematic_name>Nom commun
 		<option value=synonym.synonyme>Synonymes
-		<option value=allname>Parmi tous les noms 
-		<option value=article.title>Titre des articles (séparés par des espaces)
+		<option value=article.title>Titre des articles (mots séparés par des espaces)
 		<option value=article.year>Année de publication
-		<option value=article.authors>Auteur(s) des articles (séparés par des espaces)
+		<option value=article.authors>Auteur(s) des articles (mots séparés par des espaces)
 		<option value=enzyme.activity>Activité chimique (composés)
 		<option value=enzyme.cofactors>Cofacteurs
-		<option value=comments.comment>Commentaires
+		<option value=comments.comment>Commentaires (mots séparés par des espaces)
 		<option value=enzyme.history>Historique
 		<option value=notes.type>Notes";
 		
@@ -38,10 +37,10 @@
 					<div id="form">
 						<form method="post" action="traitementav_fr.php" enctype="multipart/form-data" target=_blank>
 						
-						<fieldset><legend>Formulaire</legend>
+						<fieldset><legend style="font-size:1.2em" >Formulaire</legend>
 								
-							<label for="select">Informations que vous désirez<br/><br/></label>
-							<select multiple name="selection[]">
+							<label style="font-size:1.2em" for="select">Informations que vous désirez<br/><br/></label>
+							<select multiple class="form_av" name="selection[]">
 								<option value="'.$select_all.'">Toutes les informations disponibles</option>
 								<optgroup label="Enzyme">
 								<option value="enzyme.ec;Numéro EC">Numéro EC</option>
@@ -52,13 +51,15 @@
 								<option value="enzyme.cofactors;Cofacteur">Cofacteur(s)</option>
 								</optgroup>
 								<optgroup label="Références">
-								<option value="swissprot.num_swissprot,swissprot.code_swissprot;Num Swissprot, Code Swissprot">swissprot</option>
-								<option value="prosite.num_prosite;Prosite">prosite</option>
+								<option value="swissprot.num_swissprot,swissprot.code_swissprot;Num Swissprot, Swissprot">Swissprot</option>
+								<option value="prosite.num_prosite;Prosite">Prosite</option>
 								</optgroup>
 								<optgroup label="Littérature">
-								<option value="article.title;Titre">titre</option>
-								<option value="article.authors;Auteurs">auteur</option>
-								<option value="article.year;Année">année</option>
+								<option value="article.title;Titre">Titre</option>
+								<option value="article.authors;Auteurs">Auteur</option>
+								<option value="article.year;Année">Année</option>
+								<option value="article.pubmed;Pubmed">Pubmed</option>
+								<option value="article.medline;Medline">Medline</option>
 								<option value="edition.editorial_place,edition.city,edition.edition,edition.editor;Lieu édition,Ville,Edition,Editeur">Informations d\'édition</option>
 								</optgroup>
 								<optgroup label="Notes et commentaires">
@@ -81,7 +82,7 @@
 <script>
 	// variables globales
 	var ncol=3; var nrow=10;
-	var	var_opt="<option value=enzyme.ec1>EC1<option value=enzyme.ec2>EC2<option value=enzyme.ec3>EC3<option value=enzyme.ec4>EC4<option value=article.title>titre de l'article (un mot clé)<option value=article.year>année de publication<option value=article.authors>auteur(s) article (séparés par des espaces)<option value=enzyme.activity>activité chimique (composés)<option value=enzyme.cofactors>cofacteurs<option value=comments.comment>commentaires<option value=enzyme.history>historique<option value=note.type>notes";
+	var	var_opt="<option value=enzyme.ec1>EC1<option value=enzyme.ec2>EC2<option value=enzyme.ec3>EC3<option value=enzyme.ec4>EC4<option value=enzyme.accepted_name>Nom officiel</option><option value=enzyme.systematic_name>Nom commun</option><option value=synonym.synonyme>Synonymes</option><option value=article.title>Titre de l'article (mots séparés par un espace)<option value=article.year>Année de publication<option value=article.authors>Auteur(s) article (mots séparés par des espaces)<option value=enzyme.activity>Activité chimique (composés)<option value=enzyme.cofactors>Cofacteurs<option value=comments.comment>Commentaires (mots séparés par un espace)<option value=enzyme.history>Historique<option value=note.type>Notes";
 	// sortir uniquement les résultats qui ont toutes les informations, code swissprot/prosite,
 	
 	function create_sign(x,y) {
